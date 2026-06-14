@@ -1,0 +1,342 @@
+Feature I want in website:
+
+Referral Exchange SPA (Form Based / or any other format):
+Take Referral: Person can look at the companies listed in for them, they can seek referral from, if they take a paid version in website they can rely on website owner (me) to take care of referral (taking their details in and working further on the requestor behalfs) or if requestor takes free version they can get the details regarding the person who can refer them in that requested organization. 
+Give Referral: People can list them and give what organization they can refer to and earn coins which they can use later in the website to take referral.
+Notifying on the visits:
+Upon each visit greet them, probably with their name and technical adjective, and let them know what number of times they have visited this site
+Website theme change:
+With background changes colour changes, animated, color theme.
+Also add a trigger if people wanna see all four theme changes
+Early: India
+Noon: Greece
+Evening: Paris, Iffeil Tower, France
+Night: Dark (Persian / Middle Eastern Deserted) 
+Hire Me Section: Areas of Interest,
+Consultation Services: Resume Review, Career Guidance
+Resume Download Section 
+Subscribe for Newsletter related to AI for current updated will build inside the Website 
+
+
+
+PortfolioData:
+PERSONAL PROFILE
+Full Name: Damak Kumar Varshney Current Title: Associate - AI Strategy & Ops Excellence / Associate Operational Excellence[cite: 1, 2, 3] Industry: FinTech / Financial Services Years of Experience: Approximately 6 years (2020–Present)[cite: 1, 3] Professional Summary: Project manager specializing in continuous improvement, automation, and AI integration. Proven track record of leading 20+ high-impact initiatives at OSTTRA, including SOX compliance automation and Salesforce optimization. Successfully delivered over 16 FTE savings and measurable efficiency gains. Combines an educational foundation in Finance and Analytics with robust technical expertise in full-stack development, Python, Google Apps Script, and AI frameworks[cite: 1, 3]. Known for building functional, automated ecosystems that eliminate manual busywork and enable cross-functional teams to focus on strategic business outcomes. Career Vision: To build functional, automated ecosystems that eliminate manual tasks, enabling teams to pivot from busywork to strategic, high-value objectives. Areas of Interest: Artificial Intelligence (AI), Agentic Automation, Operational Excellence, Continuous Improvement, FinTech Innovations, Process Digitization[cite: 1, 2, 3].
+Resume: Damak+ 3
+CAREER TIMELINE
+OSTTRA (KKR Portfolio Company) | Gurugram, Haryana
+Designation: Associate - AI Strategy & Ops Excellence (previously Associate Operational Excellence)[cite: 1, 2, 3] Duration: January/February 2026 – Present[cite: 1, 3] Responsibilities & Key Contributions: Revolutionizing client services by integrating AI and Google Workspace automation through the DigiOps Program of Work. Developed a real-time skill matrix and capacity management tool via Gemini CLI vibe coding. Developed an Atlassian Confluence data cleanup agent to label stale pages. Digitized the KYC onboarding process, integrating it with the OSTTRA Digital Onboarding tool. Spearheaded Salesforce data cleanup for AI readiness. Leveraged Vertex AI for sentiment analysis on client communications. Created comprehensive DigiOps reports via Google Looker Studio. Technologies Used: Gemini CLI, Atlassian Suite (Confluence, Jira), Salesforce, Vertex AI, Google Looker Studio, Python[cite: 1, 2, 3]. Promotions/Awards: Recognized as Highflyer: Collaborative (Q1 2026) for shipping Google Looker automations and a Salesforce auto-triage solution.
+PDF+ 2
+OSTTRA (KKR Portfolio Company) | Gurugram, Haryana
+Designation: Sr. Analyst - Process AI & Automation[cite: 2, 3] Duration: February 2024 – January 2026[cite: 1, 3] Responsibilities & Key Contributions: Project managed domains encompassing process improvements, automation, and AI. Automated SOX Compliance workflows, saving 4.1 FTEs. Delivered 10–12 continuous improvement initiatives yielding 7+ FTE savings. Built Jira workflow management systems consolidating 150+ projects. Implemented 25+ Salesforce enhancements, including auto-triaging, saving 8+ FTEs yearly. Developed "Dot," an RAG-based AI bot PoC. Directed data migration from Microsoft to Google Workspace, saving 0.4 FTEs. Launched the "Idea Mine" crowdsourcing platform. Technologies Used: Google Apps Script, Jira, Salesforce, RAG Frameworks, Google App Sheet. Promotions/Awards: Recognized as Trendsetter: Bold Innovator (Q1 2025) for automating SOX Compliance[cite: 2, 3]. Received Multiple Spot Awards in 2024.
+PDF+ 1
+Kotak Mahindra Bank | Connaught Place, Delhi NCR
+Designation: Credit Analyst Intern[cite: 1, 2, 3] Duration: February 2023 – May 2023[cite: 1, 3] Responsibilities & Key Contributions: Evaluated MSME working capital limits by analyzing financial statements, performance metrics, and industry trends[cite: 1, 3]. Ensured accurate viability assessments for fund and non-fund products. Technologies Used: Financial Modeling, Microsoft Office, Ratio Analysis.
+Resume: Damak+ 2
+RPQ IT Services | Noida, Uttar Pradesh
+Designation: React Native Developer[cite: 1, 3] Duration: April/May 2021 – May 2022[cite: 1, 3] Responsibilities & Key Contributions: Designed and developed end-to-end mobile applications. Created wireframes using Adobe XD and Figma. Delivered intuitive UI/UX prototypes that secured stakeholder approval. Technologies Used: React Native, Adobe XD, Figma.
+Resume: Damak
+Markup Design | Noida, Uttar Pradesh
+Designation: React Native Developer[cite: 1, 3] Duration: November 2020 – April 2021[cite: 1, 3] Responsibilities & Key Contributions: Built cross-platform mobile applications using React Native for Android and iOS. Developed internationally recognized applications including Chocogold, H2H, and Autobro. Technologies Used: React Native, JavaScript[cite: 1, 3].
+Resume: Damak+ 1
+SabPay (Vision IO) | India
+Designation: React Native Developer[cite: 2, 3] Duration: April 2020 – November 2020 Responsibilities & Key Contributions: Designed UI and developed Sabpay, a fintech app enabling offline payments and a B2C platform for retailers. Technologies Used: React Native, Figma, Adobe XD[cite: 2, 3].
+PDF+ 1
+PROJECT PORTFOLIO
+Project Name: SOX Compliance Automation Engine Business Problem: Manual internal audit checks causing fragmented data and delayed compliance. Objective: Digitize institutional risk frameworks and transform manual audit trails into scalable, real-time workflows. My Role: Project Lead / Developer. Stakeholders: Internal Audit, Compliance Teams. Tools & Technologies: Google Apps Script, Google Sheets, Salesforce[cite: 1, 2, 3]. Methodology: Continuous Improvement program / Process Automation. Challenges: High manual compliance overhead and cross-platform data synchronization issues. Actions Taken: Developed a one-click automated SOX Compliance engine to replace manual internal checks. Outcome: Ensured 100% process compliance and operational transparency. Metrics / Quantified Benefits: Saved 4.1 FTEs. Interview Talking Points: Bold innovation recognized with the Trendsetter award; demonstrating proactive ownership of risk frameworks.
+Resume: Damak+ 3
+Project Name: Salesforce Auto-Triaging & RAG AI Bot ("Dot")[cite: 1, 3] Business Problem: High volume of information request cases and prolonged case resolution times[cite: 1, 3]. Objective: Reduce noise for the team and accelerate resolution speed. My Role: Developer / Process AI & Automation Lead. Stakeholders: Client Services, DigiOps Teams[cite: 1, 3]. Tools & Technologies: Salesforce, RAG Framework, Python[cite: 1, 3]. Methodology: Proof of Concept (PoC) to full integration. Challenges: Fragmented knowledge base queries impacting team bandwidth. Actions Taken: Implemented 25+ DigiOps improvements including auto-triaging, case summarization, and an AI-powered bot integrating web-to-case functionality. Outcome: Improved self-service adoption and dramatically reduced manual triage work[cite: 1, 3]. Metrics / Quantified Benefits: Delivered 8+ yearly FTE savings, slashed case resolution times by 70%, and reduced information request cases from 16% to 3%[cite: 1, 3]. Interview Talking Points: High-impact AI implementation that directly empowered Client Services to breathe again[cite: 1, 3].
+Resume: Damak+ 2
+Project Name: Gemini CLI Client Services Tool Business Problem: Lack of real-time visibility into employee skill matrix and regional capacity management. Objective: Track real-time skill utilization, cross-training regimes, and team health. My Role: Lead Developer. Stakeholders: Employees, Managers, Regional Leads, Admin, Governance. Tools & Technologies: Gemini CLI, Pantomath Integration, RBAC Systems. Methodology: Vibe Coding. Challenges: Undocumented or siloed regional team metrics. Actions Taken: Developed a comprehensive client services application utilizing Gemini CLI to enforce an RBAC system for various organizational tiers. Outcome: Unified dashboard for capacity management and team utilization health. Metrics / Quantified Benefits: Qualitative operational visibility across multiple stakeholder levels. Interview Talking Points: Showcasing bleeding-edge "vibe coding" capabilities using LLMs to rapidly deploy enterprise tools.
+Resume: Damak
+ACHIEVEMENT INVENTORY
+Achievement
+Date
+Category
+Business Impact
+Quantifiable Benefit
+Leadership Demonstrated
+Skills Demonstrated
+SOX Compliance Automation
+Resume: Damak
+Q1 2025
+Damak Varshney
+Compliance / Automation
+Resume: Damak
+Ensured 100% compliance, scalable real-time workflow
+Resume: Damak+ 1
+Saved 4.1 FTEs
+Resume: Damak
+Proactive ownership
+Damak Varshney
+Google Apps Script, Risk Management
+Resume: Damak+ 1
+Highflyer: Collaborative Award
+Damak Varshney
+Mar 2026
+Damak Varshney
+Operations Excellence
+Damak Varshney
+Cut noise for team via auto-triage and dashboards
+Damak Varshney
+Leadership visibility
+Damak Varshney
+Cross-functional collaboration
+Damak Varshney
+Salesforce, Google Looker
+Damak Varshney
+Trendsetter: Bold Innovator Award
+Damak Varshney
+Mar 2025
+Damak Varshney
+Innovation
+Damak Varshney
+Digitized institutional risk frameworks
+Damak Varshney
+Reduced manual overhead
+Damak Varshney
+Bold ideation
+Damak Varshney
+Automation, Process Digitization
+Damak Varshney
+"Dot" AI Bot Integration
+Resume: Damak
+2024-2025
+Resume: Damak
+AI/ML / Customer Experience
+Resume: Damak
+Improved resolution speed and self-service
+Resume: Damak
+8+ yearly FTEs, cases from 16% to 3%
+Resume: Damak
+Technical Expertise
+Resume: Damak
+RAG Framework, Prompt Engineering[cite: 1, 3]
+1st Prize: LUMA Innovation Challenge
+Damak Varshney
+May 2023
+Damak Varshney
+Process Improvement
+Damak Varshney
+Scalable human-centric prototype
+Damak Varshney
+Qualitative friction reduction
+Damak Varshney
+Rapid ideation, Empathy mapping
+Damak Varshney
+Design Thinking, Analytical Skills
+Damak Varshney
+Outstanding Leadership Award
+Damak Varshney
+Aug 2022
+Damak Varshney
+Leadership
+Damak Varshney
+Managed scheduling & conflict resolution
+Damak Varshney
+100% compliance with deadlines
+Damak Varshney
+Liaison for 100+ students
+Damak Varshney
+Stakeholder Management
+Damak Varshney
+Multiple Spot Awards
+Resume: Damak
+2024
+Resume: Damak
+Operational Excellence
+Resume: Damak
+Recognized consistent process optimizations
+Resume: Damak
+7+ FTE savings across CI
+Resume: Damak
+Execution excellence
+Resume: Damak
+Process Automation
+Resume: Damak
+
+SKILLS INVENTORY
+Category
+Proficiency / Skills
+Evidence / Example Usage
+Leadership Skills
+Stakeholder Management, Mentoring, Event Organization
+Resume: Damak+ 1
+Managed 100+ students as Class Representative; Liaised with Internal Audit and HR
+Resume: Damak+ 1
+Project Management
+Agile Methodologies, Jira, Confluence, SDLC
+Resume: Damak+ 1
+Consolidated 150+ CI projects on Jira; managed DigiOps Program[cite: 1, 3]
+Process Improvement
+Lean Six-Sigma, Business Process Improvement[cite: 2, 3]
+Delivered 10-12 CI initiatives saving 7+ FTEs
+Resume: Damak
+Operations Excellence
+Workspace Migration, Onboarding Strategy, Capacity Management
+Resume: Damak+ 1
+Migrated VDI Microsoft to Google saving 0.4 FTEs
+Resume: Damak
+Risk Management
+Internal Audits, SOX Compliance
+Resume: Damak+ 1
+Automated SOX workflow replacing manual checks
+Resume: Damak
+Business Analysis
+Financial Modeling, Ratio Analysis, Valuation
+Resume: Damak+ 1
+Evaluated MSME working capital limits at Kotak
+Resume: Damak
+Data Analytics
+SQL, Power BI, Google BigQuery, Looker Studio
+Resume: Damak+ 1
+Created DigiOps dashboards and health reports
+Resume: Damak
+AI Skills
+Gemini Enterprise, Gemini CLI, Vertex AI, RAG, Prompt Engineering[cite: 1, 2, 3]
+Built "Dot" AI Bot; utilized Gemini for Vibe Coding
+Resume: Damak
+Automation Skills
+Google Apps Script, Python, Agentic Automation, RPA[cite: 1, 2, 3]
+Developed one-click SOX compliance tool[cite: 1, 3]
+Technical Skills
+React Native, JavaScript, Java, Salesforce Admin, Figma, Adobe XD[cite: 1, 2, 3]
+Built cross-platform fintech and mobile apps[cite: 1, 3]
+Communication Skills
+Executive Presentations, Cross-Functional Coordination
+Resume: Damak
+Hosted InspireTech 2025; Featured in Times of India
+Resume: Damak
+
+CERTIFICATION TRACKER
+Certification
+Date Earned
+Renewal/Expiration
+Relevance to Career Goals
+Data Visualization with Advanced Excel (PWC)
+Resume: Damak
+2023
+Resume: Damak
+N/A
+Enhances data storytelling
+Resume: Damak
+Certified Data Scientist (Henry Harvin)
+Resume: Damak+ 1
+Dec 2022
+Damak Varshney
+N/A
+Core ML and Data Science foundations[cite: 1, 3]
+Advanced SQL for Data Scientists (LinkedIn)
+Resume: Damak
+2023
+Resume: Damak
+N/A
+Deepens database architecture capability
+Resume: Damak
+Financial Modeling and Statement Forecasting (LinkedIn)
+Resume: Damak+ 1
+Aug 2023
+Damak Varshney
+Aug 2033
+Damak Varshney
+Validates FinOps and analytics expertise[cite: 1, 3]
+Google Data Analytics (Google / Coursera)
+Damak Varshney
+Oct 2022
+Damak Varshney
+N/A
+Establishes baseline data handling skills
+Damak Varshney
+Foundations: Data, Data, Everywhere (Google)
+Damak Varshney
+Oct 2022
+Damak Varshney
+N/A
+Foundational analytics
+Damak Varshney
+Accounting Foundations: IRR and NPV (LinkedIn)
+Damak Varshney
+Apr 2023
+Damak Varshney
+N/A
+Business value and investment appraisal
+Damak Varshney
+Power BI Essential Training (LinkedIn)
+Damak Varshney
+Apr 2023
+Damak Varshney
+N/A
+BI dashboard creation
+Damak Varshney
+Introduction to Credit (LinkedIn)
+Damak Varshney
+Apr 2023
+Damak Varshney
+N/A
+Banking and credit analysis fundamentals
+Resume: Damak+ 1
+SQL Certification (DataCamp)
+Damak Varshney
+Oct 2022
+Damak Varshney
+N/A
+Query optimization
+Damak Varshney
+IAB Digital Marketing and Media Foundations (Google)
+Damak Varshney
+Mar 2020
+Damak Varshney
+N/A
+Cross-disciplinary knowledge
+Damak Varshney
+Certified Linux Administrator LPIC-1 (IIT Bombay)
+Damak Varshney
+Nov 2018
+Damak Varshney
+N/A
+Core infrastructure competence[cite: 2, 3]
+
+EDUCATION
+Institution: ICFAI Business School (IBS), Gurgaon / IFHE Hyderabad[cite: 1, 2, 3] Degree: Master of Business Administration (MBA) / PGPM[cite: 1, 2, 3] Major: Finance and Analytics[cite: 1, 2, 3] Duration: June/March 2022 – March/June 2024[cite: 1, 2, 3] Key Subjects: Corporate Finance, Financial Markets, Business Analytics, Strategic Management, Operations Management, Organizational Behavior. Leadership Activities: Class Representative 2022-24, Coordinator - Alumni Relations Cell, Finance Club. Projects/Outcomes: Applied analytical methodologies to case studies driving operational excellence; Graduated with CGPA 9.0/10 (PGPM) and 8.75/10 (MBA).
+Damak Varshney+ 2
+Institution: Birla Institute of Technology (BIT), Mesra[cite: 1, 2, 3] Degree: Bachelor of Computer Applications (BCA) / Bachelor's in Computer Science[cite: 1, 2, 3] Major: Computer Science / Mobile Application Engineering Duration: June 2017 – June 2020[cite: 1, 2, 3] Key Subjects: Android Development, Software Engineering. Leadership Activities: Drama Club Coordinator, Event Organizing Committee, Hackathon Participant, Table Tennis Player. Projects/Outcomes: Top 1% academics with hands-on industry experience; Graduated with CGPA 7.52/10.
+Damak Varshney+ 2
+Institution: Central Board of Secondary Education[cite: 2, 3] Degree: High School Diploma & Intermediate[cite: 2, 3] Duration: 2014 – 2017[cite: 2, 3] Leadership Activities: Taekwondo (Yellow Belt)[cite: 1, 2, 3].
+LEADERSHIP PORTFOLIO
+Teams Led: Acted as primary liaison for 100+ students as Class Representative (2022-2024) ensuring zero deadline compliance failures. Managed DigiOps continuous improvement initiatives directing cross-functional resources. Mentoring: Bridged the gap between industry veterans and the 2024 cohort as Alumni Coordinator to enhance placement readiness. Cross-functional Collaboration: Partnered with IT Service Desk, HR, and Client Services to enforce an end-to-end employee onboarding strategy. Executive Presentations: Hosted InspireTech 2025, showcasing AI integrations directly to senior leadership and earning external press in the Times of India. Change Management: Orchestrated the migration from Microsoft to Google Workspace across international hubs (Tel Aviv to India) while managing stakeholder friction. Governance Contributions: Deployed RBAC (Role-Based Access Control) systems for regional capacity management enforcing secure, tiered organizational data governance.
+Damak Varshney+ 1
+BUSINESS IMPACT DASHBOARD
+Cumulative Automated FTE Savings: ~19.5 FTEs (Includes 4.1 FTEs from SOX, 8+ from Salesforce, 7+ from CI initiatives, 0.4 from Migration). Efficiency Gains: Reduced case resolution times by 70%. Customer Experience Improvements: Decreased information request cases from 16% to 3% via self-service bots. Innovation Funnel: Generated 60+ crowdsourced project concepts via the custom "Idea Mine" platform. Risks Mitigated: Attained 100% automated SOX process compliance.
+Resume: Damak+ 3
+INTERVIEW STORY BANK (STAR Format Outlines)
+Leadership & Stakeholder Management
+Situation: Cohort of 100+ students needed streamlined academic scheduling and conflict resolution.
+ Damak Varshney
+Task: Serve as Class Representative bridging students and senior faculty.
+ Damak Varshney
+Action: Executed rigorous stakeholder management and negotiation frameworks.
+ Damak Varshney
+Result: Maintained a 100% compliance rate with institutional deadlines, winning the Outstanding Leadership Award.
+ Damak Varshney
+Automation & Process Improvement
+Situation: Institutional risk frameworks relied on manual, disjointed audit trails.
+ Damak Varshney
+Task: Reduce manual compliance overhead.
+ Damak Varshney
+Action: Developed an automated SOX Compliance engine using Google Apps Script and Salesforce.
+ Damak Varshney
+Result: Achieved a scalable, real-time workflow saving 4.1 FTEs and winning the Trendsetter Innovator Award.
+ Resume: Damak+ 1
+AI Implementation & Innovation
+Situation: Client Services teams were overwhelmed by a 16% volume of repetitive information requests.
+ Resume: Damak
+Task: Slash case resolution times and improve self-service[cite: 1, 3].
+Action: Built a Proof of Concept ("Dot") utilizing RAG frameworks and Python to auto-triage and answer queries directly via Salesforce.
+ Resume: Damak
+Result: Case resolution times dropped 70%; info cases dropped to 3%; saved 8+ FTEs annually[cite: 1, 3].
+PROMOTION PORTFOLIO
+Strategic Contributions: Digitized enterprise-level risk frameworks (SOX) and unified capacity management across regions. Innovation Contributions: Recognized as an "Idea Machine," launching internal innovation hubs (Idea Mine) and building RAG-based AI tools. Business Value Delivered: Scaled automation processes directly saving ~19.5 FTEs and driving tangible cross-departmental cost reductions. Executive Visibility: Featured internally as a Q1 2025 Trendsetter and Q1 2026 Highflyer, and externally in the Times of India via InspireTech 2025. Future Potential: Transitioning rapidly from process optimization into high-level AI Strategy architectures utilizing LLMs, Agentic workflows, and Google Cloud infrastructure[cite: 1, 2, 3].
+Resume: Damak+ 2
+FUTURE ASPIRATIONS
+Target Roles: AI Strategy Manager, Senior Operations Excellence Lead, FinOps Product Manager[cite: 1, 3]. Target Industries: FinTech, Financial Services, AI/Tech Consulting[cite: 1, 3]. Skills to Build: Deeper architectural mastery in GCP (Google Cloud Platform) and advanced LLM deployment at the enterprise scale[cite: 2, 3]. Certifications Planned: Advanced Cloud Architecture, Enterprise AI Strategy. Long-Term Career Goals: To design and oversee entirely automated, intelligent business ecosystems bridging advanced technology (AI/ML) with definitive financial outcomes, effectively eliminating organizational operational bottlenecks.
+
