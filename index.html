@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Damak Varshney — AI Product Engineer | AI Strategy & Ops Leader. Specializing in RAG & Agentic AI solutions in fintech, scaling enterprise adoption, and delivering quantifiable FTE savings.">
-<meta name="keywords" content="AI Product Engineer, AI Strategy, Vertex AI, RAG, Agentic AI, Fintech, Operational Excellence, Automation, Python, Google Apps Script">
+<meta name="description" content="Damak Varshney — AI-driven Business Architect & Transformation Systems Designer. Deploys enterprise AI architectures, agentic RAG frameworks, and automations delivering quantifiable business outcomes.">
+<meta name="keywords" content="AI Strategy Consultant, Business Architect, AI Product Leader, Enterprise AI Systems, Process Optimization, Agentic AI, RAG, ROI Optimization">
 <meta name="author" content="Damak Varshney">
-<meta property="og:title" content="Damak Varshney — AI Product Engineer | AI Strategy & Ops Leader">
-<meta property="og:description" content="AI Product Engineer specializing in RAG, Agentic AI, operational automation, and fintech solutions.">
+<meta property="og:title" content="Damak Varshney — AI Strategy & Transformation Consultant">
+<meta property="og:description" content="AI-driven Business Architect designing and deploying AI systems that transform operational efficiency and scale decisions.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://damak.dev">
-<title>Damak Varshney — AI Product Engineer | AI Strategy & Ops</title>
+<meta property="og:url" content="https://damak-varshney.vercel.app">
+<title>Damak Varshney — AI Strategy & Transformation Consultant</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -88,14 +88,15 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <span class="text-zinc-900 dark:text-white">damak</span><span class="text-accent">varshney</span>
     </a>
 
-    <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
-      <li><a href="#services" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='services'?'on !text-zinc-900 dark:!text-white':''">Services</a></li>
-      <li><a href="#work"     class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='work'?'on !text-zinc-900 dark:!text-white':''">Work</a></li>
-      <li><a href="#about"   class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='about'?'on !text-zinc-900 dark:!text-white':''">About</a></li>
-      <li><a href="#reviews" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='reviews'?'on !text-zinc-900 dark:!text-white':''">Awards</a></li>
+    <ul class="hidden lg:flex items-center gap-6 text-xs" role="list">
+      <li><a href="#services" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='services'?'on !text-zinc-900 dark:!text-white':''">Approach</a></li>
+      <li><a href="#work"     class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='work'?'on !text-zinc-900 dark:!text-white':''">Case Studies</a></li>
+      <li><a href="#frameworks" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='frameworks'?'on !text-zinc-900 dark:!text-white':''">Frameworks</a></li>
+      <li><a href="#about"   class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='about'?'on !text-zinc-900 dark:!text-white':''">Capabilities</a></li>
+      <li><a href="#reviews" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='reviews'?'on !text-zinc-900 dark:!text-white':''">Results</a></li>
       <li><a href="#blog"    class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='blog'?'on !text-zinc-900 dark:!text-white':''">Journey</a></li>
       <li><a href="#referrals" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='referrals'?'on !text-zinc-900 dark:!text-white':''">Referrals</a></li>
-      <li><a href="#contact" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='contact'?'on !text-zinc-900 dark:!text-white':''">Contact</a></li>
+      <li><a href="#contact" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='contact'?'on !text-zinc-900 dark:!text-white':''">Engage</a></li>
     </ul>
 
     <div class="flex items-center gap-3">
@@ -126,15 +127,16 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
     class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
     <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
-      <li><a href="#services" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Services</a></li>
-      <li><a href="#work"     @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Work</a></li>
-      <li><a href="#about"   @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">About</a></li>
-      <li><a href="#reviews" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Awards</a></li>
+      <li><a href="#services" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Approach</a></li>
+      <li><a href="#work"     @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Case Studies</a></li>
+      <li><a href="#frameworks" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Frameworks</a></li>
+      <li><a href="#about"   @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Capabilities</a></li>
+      <li><a href="#reviews" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Results</a></li>
       <li><a href="#blog"    @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Journey</a></li>
       <li><a href="#referrals" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Referrals</a></li>
-      <li><a href="#contact" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Contact</a></li>
+      <li><a href="#contact" @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Engage</a></li>
       <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
-        <a href="#contact" @click="mm=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Hire me →</a>
+        <a href="#contact" @click="mm=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Engage →</a>
       </li>
     </ul>
   </div>
@@ -148,74 +150,162 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
   <div class="absolute bottom-1/4 left-0 w-64 h-64 bg-zinc-200/50 dark:bg-zinc-800/30 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="grid md:grid-cols-12 gap-12 items-center">
 
-      <div>
-      <div class="relative">
-        <!-- standard hero content -->
-        <div x-show="!hackerMode" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
-          <div class="reveal mb-6 inline-flex items-center gap-3 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full pl-2 pr-5 py-1.5 cursor-pointer hover:border-accent transition-all group"
-            @click="vibeIndex = (vibeIndex + 1) % vibes.length">
-            <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform" x-text="vibes[vibeIndex].icon"></div>
-            <div class="flex flex-col">
-               <span class="text-[10px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-accent transition-colors" x-text="vibes[vibeIndex].label"></span>
-               <span class="text-xs font-bold text-zinc-900 dark:text-white" x-text="vibes[vibeIndex].text"></span>
+      <div class="md:col-span-7">
+        <div class="relative">
+          <!-- standard hero content -->
+          <div x-show="!hackerMode" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
+            <div class="reveal mb-6 inline-flex items-center gap-3 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-full pl-2 pr-5 py-1.5 cursor-pointer hover:border-accent transition-all group"
+              @click="vibeIndex = (vibeIndex + 1) % vibes.length">
+              <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform" x-text="vibes[vibeIndex].icon"></div>
+              <div class="flex flex-col">
+                 <span class="text-[10px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-accent transition-colors" x-text="vibes[vibeIndex].label"></span>
+                 <span class="text-xs font-bold text-zinc-900 dark:text-white" x-text="vibes[vibeIndex].text"></span>
+              </div>
             </div>
+            <h1 class="reveal d1 font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white mb-6">
+              I Build AI Systems That Turn <span class="text-accent">Operational Chaos</span> Into Scalable Intelligence.
+            </h1>
+            <p class="reveal d2 text-md md:text-lg text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-xl mb-10">
+              <strong class="font-medium text-zinc-700 dark:text-zinc-300">AI Product Strategy | Business Transformation | Intelligent Automation</strong><br>
+              Designing and deploying robust, agentic AI architectures that transform how enterprise business teams operate, decide, and optimize.
+            </p>
           </div>
-          <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6">
-            Hi, I'm <span class="text-accent">Damak Varshney</span>
-          </h1>
-          <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-            <strong class="font-medium text-zinc-700 dark:text-zinc-300">AI Product Engineer | AI Strategy &amp; Ops Leader</strong>. Rare combo: Product Engineer + OTC Markets Expert + Agentic AI Developer. I design and scale RAG &amp; agentic solutions that drive business transformation.
-          </p>
-        </div>
 
-        <!-- hacker terminal -->
-        <div x-show="hackerMode" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
-          class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 shadow-2xl font-mono text-xs space-y-3 min-h-[300px]">
-          <div class="flex gap-1.5 mb-6">
-            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
-            <div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
-            <div class="w-3 h-3 rounded-full bg-emerald-500/50"></div>
-          </div>
-          <template x-for="line in terminalLines">
+          <!-- hacker terminal -->
+          <div x-show="hackerMode" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-105" x-transition:enter-end="opacity-100 scale-100"
+            class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800 shadow-2xl font-mono text-xs space-y-3 min-h-[300px]">
+            <div class="flex gap-1.5 mb-6">
+              <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+              <div class="w-3 h-3 rounded-full bg-amber-500/50"></div>
+              <div class="w-3 h-3 rounded-full bg-emerald-500/50"></div>
+            </div>
+            <template x-for="line in terminalLines">
+              <div class="flex gap-4">
+                <span class="text-zinc-700 shrink-0">~</span>
+                <span :class="line.color" x-text="line.text"></span>
+              </div>
+            </template>
             <div class="flex gap-4">
-              <span class="text-zinc-700 shrink-0">~</span>
-              <span :class="line.color" x-text="line.text"></span>
+               <span class="text-zinc-700 shrink-0">~</span>
+               <span class="text-white animate-pulse">_</span>
             </div>
-          </template>
-          <div class="flex gap-4">
-             <span class="text-zinc-700 shrink-0">~</span>
-             <span class="text-white animate-pulse">_</span>
           </div>
         </div>
-      </div>
         <div class="reveal d3 flex flex-wrap gap-4">
           <a href="#work" class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm">
-            View my work
+            See Case Studies
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </a>
-          <button @click="window.print()" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-sm">
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-            Download CV
-          </button>
-        </div>
-        <div class="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-100 dark:border-zinc-900">
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">16+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">FTE Savings</p></div>
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">5+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">AI Products</p></div>
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">80%+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">User Adoption</p></div>
         </div>
       </div>
 
-      <div class="reveal d2 flex justify-center md:justify-end">
-        <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-          <div class="pf w-full h-full rounded-3xl">
-            <img src="data/DamakPhoto.png" alt="Damak Varshney — AI Product Engineer | AI Strategy & Ops" loading="eager">
+      <div class="md:col-span-5 reveal d2 flex justify-center">
+        <!-- Interactive System Diagram -->
+        <div class="relative w-full aspect-[4/3] bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/50 dark:border-zinc-800/50 rounded-3xl p-6 flex flex-col justify-between overflow-hidden shadow-sm">
+          <div class="absolute inset-0 bg-gradient-to-tr from-accent/5 via-transparent to-transparent pointer-events-none"></div>
+          
+          <div class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest border-b border-zinc-200/50 dark:border-zinc-800/50 pb-3 mb-4 flex justify-between items-center">
+            <span>Transformation Loop</span>
+            <span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Live Optimization</span>
           </div>
-          <div class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Open to projects</div>
+          
+          <div class="flex-1 grid grid-cols-7 items-center relative">
+            <div class="absolute inset-0 z-0">
+              <svg class="w-full h-full" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 45 30 Q 80 30 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 45 60 L 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 45 90 Q 80 90 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 120 60 Q 160 30 195 30" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
+                <path d="M 120 60 L 195 60" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
+                <path d="M 120 60 Q 160 90 195 90" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
+              </svg>
+            </div>
+            
+            <div class="col-span-2 space-y-3 z-10">
+              <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-1.5 rounded-lg text-[9px] font-semibold text-zinc-500 shadow-sm flex items-center gap-1.5">
+                📄 PDFs &amp; Docs
+              </div>
+              <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-1.5 rounded-lg text-[9px] font-semibold text-zinc-500 shadow-sm flex items-center gap-1.5">
+                📊 Spreadsheets
+              </div>
+              <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-2 py-1.5 rounded-lg text-[9px] font-semibold text-zinc-500 shadow-sm flex items-center gap-1.5">
+                ⚙️ Manual Audits
+              </div>
+            </div>
+            
+            <div class="col-span-3 flex justify-center z-10">
+              <div class="relative w-20 h-20 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex flex-col items-center justify-center border border-zinc-200 dark:border-zinc-800 shadow-xl">
+                <div class="absolute inset-0 rounded-full border border-dashed border-accent animate-spin-slow"></div>
+                <span class="text-[10px] font-bold tracking-wider uppercase text-accent">AI ENGINE</span>
+                <span class="text-[7px] text-zinc-400 dark:text-zinc-500 mt-0.5 uppercase">RAG Loops</span>
+              </div>
+            </div>
+            
+            <div class="col-span-2 space-y-3 z-10 flex flex-col items-end">
+              <div class="w-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/25 px-2 py-1.5 rounded-lg text-[9px] font-bold text-emerald-600 dark:text-emerald-400 shadow-sm flex items-center gap-1.5">
+                📈 +16 FTE ROI
+              </div>
+              <div class="w-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/25 px-2 py-1.5 rounded-lg text-[9px] font-bold text-emerald-600 dark:text-emerald-400 shadow-sm flex items-center gap-1.5">
+                ⚡ 88% Speedup
+              </div>
+              <div class="w-full bg-emerald-500/5 dark:bg-emerald-500/10 border border-emerald-500/25 px-2 py-1.5 rounded-lg text-[9px] font-bold text-emerald-600 dark:text-emerald-400 shadow-sm flex items-center gap-1.5">
+                🛡️ 100% Control
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-[8px] text-zinc-400 dark:text-zinc-500 text-center mt-4">
+            Flow dashes represent automated ingestion routing and verified outcome mapping.
+          </div>
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ═══ IMPACT SNAPSHOT BANNER ═══ -->
+<section class="relative z-10 border-y border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 py-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="reveal d1 text-center md:text-left">
+        <p class="font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white tracking-tight">16+</p>
+        <p class="text-xs font-semibold text-accent uppercase tracking-wider mt-2">FTE Annualized Savings</p>
+        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">Via automated auditing &amp; workflows</p>
+      </div>
+      <div class="reveal d2 text-center md:text-left">
+        <p class="font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white tracking-tight">35%</p>
+        <p class="text-xs font-semibold text-accent uppercase tracking-wider mt-2">Process Time reduction</p>
+        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">Optimizing pipeline latency &amp; loops</p>
+      </div>
+      <div class="reveal d3 text-center md:text-left">
+        <p class="font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white tracking-tight">80%+</p>
+        <p class="text-xs font-semibold text-accent uppercase tracking-wider mt-2">Enterprise User Adoption</p>
+        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">Across 1,500+ active global users</p>
+      </div>
+      <div class="reveal d4 text-center md:text-left">
+        <p class="font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white tracking-tight">50+</p>
+        <p class="text-xs font-semibold text-accent uppercase tracking-wider mt-2">Intelligent Workflows</p>
+        <p class="text-[10px] text-zinc-400 dark:text-zinc-500 mt-1">Integrated into production platforms</p>
+      </div>
+    </div>
+    
+    <!-- Trust Badges -->
+    <div class="mt-8 pt-8 border-t border-zinc-100 dark:border-zinc-900 flex flex-wrap items-center justify-center md:justify-start gap-4 text-zinc-400 dark:text-zinc-500">
+      <span class="text-[10px] font-bold uppercase tracking-widest mr-2">Trust Badges:</span>
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200/50 dark:border-zinc-800 text-[10px] font-semibold px-3 py-1 rounded-lg flex items-center gap-1.5">
+          🛡️ Lean Six Sigma
+        </span>
+        <span class="bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200/50 dark:border-zinc-800 text-[10px] font-semibold px-3 py-1 rounded-lg flex items-center gap-1.5">
+          🏢 KKR Portfolio Impact
+        </span>
+        <span class="bg-zinc-50 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200/50 dark:border-zinc-800 text-[10px] font-semibold px-3 py-1 rounded-lg flex items-center gap-1.5">
+          🎓 IBS Finance PGPM (9.0 CGPA)
+        </span>
+      </div>
     </div>
   </div>
 </section>
@@ -260,7 +350,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <!-- ═══ WORK ═══ -->
 <section id="work" class="relative z-10 py-24">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
       <div>
         <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Portfolio</p>
         <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Selected work</h2>
@@ -268,61 +358,314 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <a href="projects.html" class="reveal d1 text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-accent transition-colors self-start sm:self-auto nl">All projects →</a>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-
-      <article class="card-h reveal d1 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent md:row-span-2">
-        <div class="pf w-full h-64 md:h-80">
-          <img src="https://images.unsplash.com/photo-1551288049-bbda4833effb?w=900&q=80" alt="SOX Compliance Automation Engine" loading="lazy">
-        </div>
-        <div class="p-7">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Automation</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Apps Script</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Salesforce</span>
+    <div class="space-y-8 mt-12">
+      
+      <!-- Project 1: SOX -->
+      <article class="reveal d1 group rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-accent transition-all duration-200 p-8 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+              <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Automation &amp; Compliance</span>
+              <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mt-1">SOX Compliance Automation Engine</h3>
+            </div>
+            <span class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Active Production Deployment</span>
           </div>
-          <a href="case-study.html?project=sox">
-            <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">SOX Compliance Automation Engine</h3>
+          
+          <div class="grid md:grid-cols-3 gap-6 my-6 border-y border-zinc-100 dark:border-zinc-800/50 py-6">
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Operational Challenge</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Manual audit sweeps created data silos and delayed reporting. 45-day review cycles caused severe compliance latency and high workload overhead.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Strategic Intervention</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Architected a zero-cost serverless script wrapper triggering instant platform health sweeps, compiling risk logs and access maps automatically.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Measured Business Impact</span>
+              <ul class="text-xs text-emerald-600 dark:text-emerald-400 font-bold space-y-1">
+                <li>💵 Saved 4.1 FTEs immediately</li>
+                <li>⚡ Cycle time reduced from 45 to 5 days</li>
+                <li>🛡️ 100% compliance with zero audit findings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-4 pt-4 border-t border-zinc-50 dark:border-zinc-800/20">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Apps Script</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Salesforce API</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Risk Control</span>
+          </div>
+          <a href="case-study.html?project=sox" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-900 dark:text-white hover:text-accent transition-colors">
+            Analyze Strategic Case Study <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">Manual audit sweeps created data silos and delayed reporting. I coded a high-speed script wrapper triggering instant platform health sweeps, compiling risk logs automatically.<br><br><strong class="text-zinc-700 dark:text-zinc-300">Impact:</strong> Saved 4.1 FTEs instantly. Achieved 100% audit standard compliance transparency across departments. Recognized with the Trendsetter Innovator Award.</p>
-          <a href="case-study.html?project=sox" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </article>
 
-      <article class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="pf w-full h-48">
-          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=800&q=80" alt="Salesforce Auto-Triaging & RAG AI Bot" loading="lazy">
-        </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-3">
-            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">AI / RAG</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
+      <!-- Project 2: Salesforce RAG AI Bot -->
+      <article class="reveal d2 group rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-accent transition-all duration-200 p-8 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+              <span class="text-[10px] font-bold text-accent uppercase tracking-widest">AI &amp; Retrieval Engines</span>
+              <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mt-1">Salesforce RAG AI Bot ("Dot")</h3>
+            </div>
+            <span class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Active Production Deployment</span>
           </div>
-          <a href="case-study.html?project=salesforce-bot">
-            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Salesforce RAG AI Bot ("Dot")</h3>
+          
+          <div class="grid md:grid-cols-3 gap-6 my-6 border-y border-zinc-100 dark:border-zinc-800/50 py-6">
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Operational Challenge</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Support teams wasted hours parsing unstructured document archives, resulting in high escalations (16%) and slow case resolution times.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Strategic Intervention</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Designed and integrated a Vertex AI RAG assistant inside Salesforce sidebar, leveraging vector database lookup and semantic routing.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Measured Business Impact</span>
+              <ul class="text-xs text-emerald-600 dark:text-emerald-400 font-bold space-y-1">
+                <li>📉 Case escalation rate dropped to 3%</li>
+                <li>⚡ Slashed resolution time by 70%</li>
+                <li>📈 13% reduction in total customer cases</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-4 pt-4 border-t border-zinc-50 dark:border-zinc-800/20">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Python</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Vertex AI</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">ChromaDB</span>
+          </div>
+          <a href="case-study.html?project=salesforce-bot" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-900 dark:text-white hover:text-accent transition-colors">
+            Analyze Strategic Case Study <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Slashed case resolution times by 70% and reduced information request cases from 16% to 3% using retrieval-augmented generation.</p>
-          <a href="case-study.html?project=salesforce-bot" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
         </div>
       </article>
 
-      <article class="card-h reveal d3 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="pf w-full h-48">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800&q=80" alt="NEXUS Global Resourcing & Capacity Platform" loading="lazy">
-        </div>
-        <div class="p-6">
-          <div class="flex flex-wrap gap-2 mb-3">
-            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data &amp; BI</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Looker</span>
+      <!-- Project 3: NEXUS Global Resourcing Platform -->
+      <article class="reveal d3 group rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-accent transition-all duration-200 p-8 flex flex-col justify-between shadow-sm">
+        <div>
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div>
+              <span class="text-[10px] font-bold text-accent uppercase tracking-widest">Data Strategy &amp; Modelling</span>
+              <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mt-1">NEXUS: Global Resourcing Platform</h3>
+            </div>
+            <span class="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">Active Production Deployment</span>
           </div>
-          <a href="case-study.html?project=nexus">
-            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">NEXUS: Global Resourcing Platform</h3>
+          
+          <div class="grid md:grid-cols-3 gap-6 my-6 border-y border-zinc-100 dark:border-zinc-800/50 py-6">
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Operational Challenge</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Over 150 regional planning spreadsheets created severe visibility bottlenecks and double-booking capacity planning issues.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Strategic Intervention</span>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">Built workforce database consolidated heatmap metrics and role capacity forecasting engine with strict data hierarchy model.</p>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest block mb-1.5">Measured Business Impact</span>
+              <ul class="text-xs text-emerald-600 dark:text-emerald-400 font-bold space-y-1">
+                <li>📊 Eliminated 150+ spreadsheets completely</li>
+                <li>📈 80%+ immediate user adoption across borders</li>
+                <li>👥 1,500+ active global system users</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-4 pt-4 border-t border-zinc-50 dark:border-zinc-800/20">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Python</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Looker Studio</span>
+            <span class="text-[10px] bg-zinc-50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-md font-mono border border-zinc-200/50 dark:border-zinc-700/50">Capacity Modelling</span>
+          </div>
+          <a href="case-study.html?project=nexus" class="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-900 dark:text-white hover:text-accent transition-colors">
+            Analyze Strategic Case Study <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/></svg>
           </a>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Eliminated 150+ spreadsheets. Developed a predictive workforce engine, global heatmaps, and role-based access capacity matrix with 80%+ adoption (1,500+ users).</p>
-          <a href="case-study.html?project=nexus" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
         </div>
       </article>
+      
+    </div>
+  </div>
+</section>
 
+<!-- ═══ SYSTEMS THINKING (NEW SECTION) ═══ -->
+<section id="frameworks" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-14">
+      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Methodology</p>
+      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">How I Think About AI in Business</h2>
+      <p class="reveal d2 text-zinc-500 dark:text-zinc-400 mt-2 max-w-xl text-sm">Strategic frameworks for deploying robust, enterprise-grade intelligence rather than simple AI experiments.</p>
+    </div>
+
+    <!-- Framework Tabs -->
+    <div x-data="{ activeTab: 'maturity' }" class="grid md:grid-cols-12 gap-8 items-start">
+      <!-- Left: Navigation (cols 1-4) -->
+      <div class="md:col-span-4 space-y-3">
+        <button @click="activeTab = 'maturity'" :class="activeTab === 'maturity' ? 'border-accent bg-white dark:bg-zinc-900 shadow-sm text-zinc-900 dark:text-white' : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="w-full text-left px-5 py-4 border-l-2 font-display font-bold text-sm transition-all rounded-r-xl flex items-center justify-between group">
+          <span>AI Maturity Model</span>
+          <span class="text-xs font-normal text-zinc-400 group-hover:text-accent">01</span>
+        </button>
+        <button @click="activeTab = 'matrix'" :class="activeTab === 'matrix' ? 'border-accent bg-white dark:bg-zinc-900 shadow-sm text-zinc-900 dark:text-white' : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="w-full text-left px-5 py-4 border-l-2 font-display font-bold text-sm transition-all rounded-r-xl flex items-center justify-between group">
+          <span>Opportunity Matrix</span>
+          <span class="text-xs font-normal text-zinc-400 group-hover:text-accent">02</span>
+        </button>
+        <button @click="activeTab = 'loop'" :class="activeTab === 'loop' ? 'border-accent bg-white dark:bg-zinc-900 shadow-sm text-zinc-900 dark:text-white' : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="w-full text-left px-5 py-4 border-l-2 font-display font-bold text-sm transition-all rounded-r-xl flex items-center justify-between group">
+          <span>Decision Loop</span>
+          <span class="text-xs font-normal text-zinc-400 group-hover:text-accent">03</span>
+        </button>
+        <button @click="activeTab = 'collab'" :class="activeTab === 'collab' ? 'border-accent bg-white dark:bg-zinc-900 shadow-sm text-zinc-900 dark:text-white' : 'border-transparent text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="w-full text-left px-5 py-4 border-l-2 font-display font-bold text-sm transition-all rounded-r-xl flex items-center justify-between group">
+          <span>Human + AI Model</span>
+          <span class="text-xs font-normal text-zinc-400 group-hover:text-accent">04</span>
+        </button>
+      </div>
+
+      <!-- Right: Content Display (cols 5-12) -->
+      <div class="md:col-span-8 bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 rounded-3xl p-8 shadow-sm min-h-[400px] flex flex-col justify-between">
+        
+        <!-- Tab: AI Maturity Model -->
+        <div x-show="activeTab === 'maturity'" x-cloak class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white">AI Maturity Model</h3>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full font-semibold">Strategic Roadmapping</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Transitioning enterprise systems from static scripts to autonomic, self-optimizing agents. Most organizations are stuck in levels 1-2; I guide teams to design for levels 3-4 to maximize business yield.
+          </p>
+          <!-- SVG Maturity Diagram -->
+          <div class="py-6 flex items-center justify-center">
+            <svg class="w-full max-w-lg h-36" viewBox="0 0 450 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="20" y1="100" x2="430" y2="100" stroke="#e4e4e7" stroke-width="1" class="dark:stroke-zinc-800" />
+              <rect x="25" y="80" width="80" height="20" rx="4" fill="#f4f4f5" class="dark:fill-zinc-800" />
+              <text x="65" y="93" fill="#a1a1aa" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">1. AD-HOC</text>
+              
+              <rect x="125" y="60" width="90" height="20" rx="4" fill="#e4e4e7" class="dark:fill-zinc-700" />
+              <text x="170" y="73" fill="#71717a" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">2. AUTOMATED</text>
+              
+              <rect x="235" y="40" width="90" height="20" rx="4" fill="#FF6B2B" fill-opacity="0.1" stroke="#FF6B2B" stroke-width="1.5" />
+              <text x="280" y="53" fill="#FF6B2B" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">3. AGENTIC</text>
+              
+              <rect x="345" y="20" width="90" height="20" rx="4" fill="#18181b" class="dark:fill-zinc-100" />
+              <text x="390" y="33" fill="#ffffff" class="dark:fill-zinc-900" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">4. AUTONOMIC</text>
+              
+              <path d="M 105 90 L 125 70" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
+              <path d="M 215 70 L 235 50" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
+              <path d="M 325 50 L 345 30" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
+            </svg>
+          </div>
+          <div class="grid grid-cols-4 gap-4 text-[10px] text-zinc-400 dark:text-zinc-500">
+            <div>
+              <strong class="text-zinc-700 dark:text-zinc-300 block">Ad-hoc</strong>
+              Manual scripts, isolated triggers.
+            </div>
+            <div>
+              <strong class="text-zinc-700 dark:text-zinc-300 block">Automated</strong>
+              CRON jobs, scheduled task sweeps.
+            </div>
+            <div>
+              <strong class="text-zinc-700 dark:text-zinc-300 block font-bold text-accent">Agentic</strong>
+              RAG workflows, semantic routing.
+            </div>
+            <div>
+              <strong class="text-zinc-700 dark:text-zinc-300 block">Autonomic</strong>
+              Self-correcting, dynamic execution.
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab: Opportunity Matrix -->
+        <div x-show="activeTab === 'matrix'" x-cloak class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white">Automation Opportunity Matrix</h3>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full font-semibold">Priority Alignment</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Prioritizing AI projects based on technical feasibility and business value. I focus capital on "Quick Wins" and "Strategic Bets" to secure immediate operational ROI.
+          </p>
+          <!-- SVG 2x2 Matrix -->
+          <div class="py-4 flex items-center justify-center">
+            <svg class="w-full max-w-sm h-48" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="20" y1="180" x2="180" y2="180" stroke="#a1a1aa" stroke-width="1.5" />
+              <line x1="20" y1="180" x2="20" y2="20" stroke="#a1a1aa" stroke-width="1.5" />
+              <text x="100" y="195" fill="#71717a" font-size="7" text-anchor="middle" font-weight="bold">TECHNICAL FEASIBILITY</text>
+              <text x="8" y="100" fill="#71717a" font-size="7" text-anchor="middle" font-weight="bold" transform="rotate(-90 8 100)">BUSINESS VALUE</text>
+              
+              <line x1="20" y1="100" x2="180" y2="100" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="2, 2" class="dark:stroke-zinc-800" />
+              <line x1="100" y1="180" x2="100" y2="20" stroke="#e4e4e7" stroke-width="1" stroke-dasharray="2, 2" class="dark:stroke-zinc-800" />
+              
+              <rect x="105" y="25" width="70" height="70" fill="#22c55e" fill-opacity="0.05" rx="6" />
+              <circle cx="140" cy="55" r="4" fill="#22c55e" />
+              <text x="140" y="75" fill="#22c55e" font-size="6" text-anchor="middle" font-weight="bold">Quick Wins (e.g. RAG, SOX)</text>
+              
+              <rect x="25" y="25" width="70" height="70" fill="#FF6B2B" fill-opacity="0.05" rx="6" />
+              <circle cx="60" cy="50" r="4" fill="#FF6B2B" />
+              <text x="60" y="75" fill="#FF6B2B" font-size="6" text-anchor="middle" font-weight="bold">Strategic Bets (Agents)</text>
+              
+              <circle cx="55" cy="140" r="4" fill="#ef4444" />
+              <text x="55" y="155" fill="#ef4444" font-size="6" text-anchor="middle" font-weight="bold">Avoid (Manual audits)</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Tab: Decision Loop -->
+        <div x-show="activeTab === 'loop'" x-cloak class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white">Decision Intelligence Loop</h3>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full font-semibold">Systems Integration</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Close the execution gap. Rather than just returning answers, my pipelines orchestrate full transactional loops, updating CRM entries, holding escrow funds, and verifying transaction numbers (UTRs).
+          </p>
+          <!-- SVG Loop Diagram -->
+          <div class="py-6 flex items-center justify-center">
+            <svg class="w-full max-w-md h-36" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="200" cy="60" r="45" stroke="#e4e4e7" stroke-width="1.5" stroke-dasharray="4, 4" class="dark:stroke-zinc-800 animate-spin-slow" />
+              
+              <circle cx="200" cy="15" r="14" fill="#18181b" class="dark:fill-zinc-100" />
+              <text x="200" y="19" fill="#ffffff" class="dark:fill-zinc-900" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">INGEST</text>
+              
+              <circle cx="245" cy="60" r="14" fill="#FF6B2B" />
+              <text x="245" y="64" fill="#ffffff" font-size="7" font-family="sans-serif" font-weight="bold" text-anchor="middle">SYNTHESIS</text>
+              
+              <circle cx="200" cy="105" r="14" fill="#22c55e" />
+              <text x="200" y="109" fill="#ffffff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">ACT</text>
+              
+              <circle cx="155" cy="60" r="14" fill="#71717a" />
+              <text x="155" y="64" fill="#ffffff" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">AUDIT</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Tab: Human + AI Collaboration -->
+        <div x-show="activeTab === 'collab'" x-cloak class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white">Human + AI Collaboration Model</h3>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full font-semibold">Governance</span>
+          </div>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+            Delegation based on transaction value and model confidence scores. Low-risk operations run autonomously with post-action audits, while high-risk approvals route to human supervisors.
+          </p>
+          <div class="grid grid-cols-3 gap-4 pt-6">
+            <div class="border border-zinc-200 dark:border-zinc-800 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50">
+              <span class="text-xs font-bold text-accent block mb-2">Copilot</span>
+              <p class="text-[10px] text-zinc-500 leading-relaxed">AI acts as an advisory assistant. Human makes all decisions. Ideal for complex deal sourcing &amp; pricing models.</p>
+            </div>
+            <div class="border border-accent/35 p-4 rounded-2xl bg-accent/5">
+              <span class="text-xs font-bold text-emerald-500 block mb-2">Human-in-the-Loop</span>
+              <p class="text-[10px] text-zinc-500 leading-relaxed">AI analyzes and proposes actions. Human clicks to execute. Deployed in SOX auditing and escrow vetting.</p>
+            </div>
+            <div class="border border-zinc-200 dark:border-zinc-800 p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50">
+              <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300 block mb-2">Autopilot</span>
+              <p class="text-[10px] text-zinc-500 leading-relaxed">AI executes autonomously. Audited post-factum. Deployed for standard routing and report sweeps.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
@@ -339,32 +682,77 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       </div>
 
       <div class="order-1 md:order-2">
-        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">About me</p>
-        <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">A bit about<br>who I am</h2>
-        <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
-          I'm Damak Varshney, an AI Product Engineer and Strategy &amp; Ops leader. Currently at OSTTRA (a KKR portfolio company), I combine a strong background in finance and analytics (IBS PGPM, CGPA 9.0/10) with deep operational and agentic AI expertise to ship business-transforming software.
-        </p>
-        <p class="reveal d3 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
-          I specialize in building intelligent agents, RAG pipelines (Vertex AI, Chroma, Salesforce Service sidebar), and custom dashboard analytics. Known for driving 16+ FTE annual savings and establishing robust automation controls, I love scaling workflows from early-stage prompt design to secure enterprise environments.
-        </p>
-        <div class="reveal d4">
-          <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">Stack &amp; tools (Hover for truth)</p>
-          <div class="flex flex-wrap gap-2 mb-6" role="list" aria-label="Skills">
-            <template x-for="skill in Object.keys(skillTips)">
-              <span role="listitem" 
-                @mouseenter="hoveredSkill = skill" 
-                @mouseleave="hoveredSkill = null"
-                class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent hover:text-accent cursor-help transition-all" 
-                x-text="skill"></span>
+        <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Capabilities</p>
+        <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">Strategic Operator &amp;<br>Systems Architect</h2>
+        
+        <!-- 4-Step Impact Framework (No long paragraphs) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="reveal d2 flex gap-3">
+            <div class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-zinc-900/50 text-accent flex items-center justify-center font-bold text-xs shrink-0">01</div>
+            <div>
+              <h4 class="text-xs font-bold text-zinc-900 dark:text-white">Diagnose Operational Friction</h4>
+              <p class="text-[11px] text-zinc-500 mt-0.5">Auditing workflows to map bottlenecks and target automation leverage points.</p>
+            </div>
+          </div>
+          <div class="reveal d2 flex gap-3">
+            <div class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-zinc-900/50 text-accent flex items-center justify-center font-bold text-xs shrink-0">02</div>
+            <div>
+              <h4 class="text-xs font-bold text-zinc-900 dark:text-white">Redesign Decision Architecture</h4>
+              <p class="text-[11px] text-zinc-500 mt-0.5">Structuring agentic models, semantic search (RAG), and human-in-the-loop gates.</p>
+            </div>
+          </div>
+          <div class="reveal d3 flex gap-3">
+            <div class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-zinc-900/50 text-accent flex items-center justify-center font-bold text-xs shrink-0">03</div>
+            <div>
+              <h4 class="text-xs font-bold text-zinc-900 dark:text-white">Deploy AI &amp; Automation</h4>
+              <p class="text-[11px] text-zinc-500 mt-0.5">Integrating secure wrappers, APIs, and microservices into live CRM/ERP environments.</p>
+            </div>
+          </div>
+          <div class="reveal d3 flex gap-3">
+            <div class="w-8 h-8 rounded-lg bg-orange-50 dark:bg-zinc-900/50 text-accent flex items-center justify-center font-bold text-xs shrink-0">04</div>
+            <div>
+              <h4 class="text-xs font-bold text-zinc-900 dark:text-white">Measure &amp; Optimize ROI</h4>
+              <p class="text-[11px] text-zinc-500 mt-0.5">Logging annualized FTE savings, compliance audit trails, and model latency.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability Stack Layer Visual -->
+        <div x-data="{
+          activeLayer: 5,
+          layers: {
+            5: { name: 'Business Strategy', desc: 'AI readiness audit, ROI forecasting, target operating model design, and strategic roadmapping.', tools: 'KKR/OSTTRA Case Frameworks, Business Valuations' },
+            4: { name: 'Process Design', desc: 'Decision architecture modeling, Human-in-the-Loop gate setups, and Lean Six Sigma bottleneck elimination.', tools: 'SIPOC, Value Stream Mapping, Process Mining' },
+            3: { name: 'AI & Automation', desc: 'Agentic workflows, retrieval-augmented intelligence (RAG), model routing, and serverless automation wrappers.', tools: 'Vertex AI, Claude Code, Gemini API, Google Apps Script' },
+            2: { name: 'Data & Infrastructure', desc: 'Document ingestion pipelines, semantic parsing, database schemas, and structured data extraction.', tools: 'Python, SQL, Vector Embeddings, ChromaDB' },
+            1: { name: 'Optimization & Governance', desc: 'Model performance tuning, compliance auditing, system drift tracking, and cost governance dashboards.', tools: 'Looker Studio, Power BI, SOX Controls' }
+          }
+        }" class="mt-8">
+          <p class="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-4">Transformation Capability Stack</p>
+          
+          <div class="space-y-2">
+            <!-- Stack Layers -->
+            <template x-for="lvl in [5, 4, 3, 2, 1]">
+              <button 
+                @click="activeLayer = lvl"
+                @mouseenter="activeLayer = lvl"
+                :class="activeLayer === lvl ? 'bg-accent text-white scale-[1.01] shadow-md border-accent' : 'bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 text-zinc-800 dark:text-zinc-200 hover:bg-zinc-50 dark:hover:bg-zinc-800/50'"
+                class="w-full text-left px-5 py-2.5 rounded-xl transition-all duration-200 font-display font-bold text-xs flex justify-between items-center transform">
+                <span x-text="'Layer 0' + lvl + ' — ' + layers[lvl].name"></span>
+                <span class="text-[9px] opacity-70 uppercase tracking-wider">Level 0<span x-text="lvl"></span></span>
+              </button>
             </template>
           </div>
           
-          <div class="h-10">
-            <div x-show="hoveredSkill" x-cloak
-              x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
-              class="text-xs italic text-accent font-medium bg-accent/5 border border-accent/10 px-4 py-2 rounded-xl inline-block">
-              <span class="font-bold" x-text="hoveredSkill + ': '"></span>
-              <span x-text="skillTips[hoveredSkill]"></span>
+          <!-- Dynamic Layer Details Panel -->
+          <div class="mt-4 p-4 bg-zinc-50 dark:bg-zinc-950 border border-zinc-200/50 dark:border-zinc-800/50 rounded-2xl min-h-[110px] flex flex-col justify-between">
+            <div>
+              <span class="text-[9px] font-bold text-accent uppercase tracking-wider" x-text="layers[activeLayer].name"></span>
+              <p class="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1.5 leading-relaxed" x-text="layers[activeLayer].desc"></p>
+            </div>
+            <div class="mt-2 pt-2 border-t border-zinc-200/50 dark:border-zinc-800/50 flex flex-wrap gap-1.5 items-center">
+              <span class="text-[8px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest mr-1">Ecosystem:</span>
+              <span class="text-[9px] italic text-zinc-700 dark:text-zinc-300 font-medium" x-text="layers[activeLayer].tools"></span>
             </div>
           </div>
         </div>
@@ -1200,7 +1588,7 @@ function app() {
     updateSection() {
       const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 60;
       if (atBottom) { this.s = 'contact'; return; }
-      const ids = ['contact','referrals','blog','reviews','about','work','services','hero'];
+      const ids = ['contact','referrals','blog','reviews','about','frameworks','work','services','hero'];
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 130) { this.s = id; return; }
