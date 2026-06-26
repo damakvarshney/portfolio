@@ -246,7 +246,7 @@
           fetch(apiUrl)
             .then(res => res.json())
             .then(data => {
-              if (data.status === 'ok') {
+              if (data.status === 'ok' && data.items && data.items.length > 0) {
                 this.articles = data.items.map((item, idx) => {
                   // Categorize based on tags/categories returned by Medium
                   const tags = item.categories || [];
@@ -270,6 +270,7 @@
                   // Decode HTML entities
                   const txt = document.createElement('textarea');
                   txt.innerHTML = desc;
+                  txt.value = desc;
                   desc = txt.value;
                   // Truncate
                   desc = desc.substring(0, 140) + '...';
@@ -290,8 +291,12 @@
                   };
                 });
               } else {
-                console.error('Failed to load Medium RSS feed:', data.message);
-                // Fallback to offline placeholder articles if API fails
+                if (data.status !== 'ok') {
+                  console.error('Failed to load Medium RSS feed:', data.message);
+                } else {
+                  console.log('Medium RSS feed is empty. Using fallback article.');
+                }
+                // Fallback to offline placeholder articles if API fails or feed is empty
                 this.articles = [
                   {
                     id: 1,
