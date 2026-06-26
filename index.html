@@ -24,7 +24,12 @@ tailwind.config = {
   theme: {
     extend: {
       fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] },
-      colors: { accent: '#FF6B2B', 'accent-light': '#FF8F5C' }
+      colors: { 
+        accent: '#B45309', 
+        'accent-light': '#D97706',
+        'brand-light': '#F8F7F4',
+        'brand-dark': '#0B0F14'
+      }
     }
   }
 }
@@ -43,7 +48,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* scrollbar */
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:#FF6B2B;border-radius:99px}
+::-webkit-scrollbar-thumb{background:#B45309;border-radius:99px}
 
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
@@ -72,16 +77,42 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* skill tag */
 .stag{transition:border-color .18s}
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-reverse-slow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 25s linear infinite;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: -36;
+  }
+}
+.animate-dash {
+  animation: dash 3s linear infinite;
+}
+.animate-dash-reverse {
+  animation: dash 3s linear infinite reverse;
+}
+
 [x-cloak]{display:none!important}
 </style>
 </head>
 
-<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased">
+<body class="bg-[#F8F7F4] dark:bg-[#0B0F14] text-zinc-900 dark:text-zinc-100 antialiased transition-colors duration-300">
 <canvas id="pixel-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
 <!-- ═══ NAV ═══ -->
 <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
-  :class="sc?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':''">
+  :class="sc?'bg-[#F8F7F4]/80 dark:bg-[#0B0F14]/80 backdrop-blur-md border-b border-zinc-200/20 dark:border-zinc-800/10 shadow-sm':''">
   <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
 
     <a href="#hero" class="font-display font-bold text-xl tracking-tight relative z-10">
@@ -214,9 +245,9 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           <div class="flex-1 grid grid-cols-7 items-center relative">
             <div class="absolute inset-0 z-0">
               <svg class="w-full h-full" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 45 30 Q 80 30 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
-                <path d="M 45 60 L 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
-                <path d="M 45 90 Q 80 90 120 60" stroke="#FF6B2B" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 45 30 Q 80 30 120 60" stroke="#B45309" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 45 60 L 120 60" stroke="#B45309" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
+                <path d="M 45 90 Q 80 90 120 60" stroke="#B45309" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash" fill="none"/>
                 <path d="M 120 60 Q 160 30 195 30" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
                 <path d="M 120 60 L 195 60" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
                 <path d="M 120 60 Q 160 90 195 90" stroke="#22c55e" stroke-width="1" stroke-dasharray="3, 6" class="animate-dash-reverse" fill="none"/>
@@ -314,32 +345,32 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <section id="services" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
-      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">What I do</p>
-      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Services</h2>
+      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Strategic Areas</p>
+      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Strategic Approach</h2>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
 
-      <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+      <article class="reveal d1 card-h group bg-white/80 dark:bg-zinc-900/60 rounded-2xl p-8 border border-zinc-200/40 dark:border-zinc-800/20 shadow-sm hover:shadow-md transition-all">
+        <div class="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
           <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         </div>
-        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">AI & Agentic Automation</h3>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Integrating Gemini CLI, Vertex AI, and RAG frameworks to build intelligent agents that automate complex workflows and enhance team productivity.</p>
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">AI &amp; Agentic Automation</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Integrating custom LLM workflows, Vertex AI, and RAG frameworks to build autonomic agents that automate operational workflows and scale decision systems.</p>
       </article>
 
-      <article class="reveal d2 card-h group bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-800 hover:border-accent">
+      <article class="reveal d2 card-h group bg-zinc-900/90 dark:bg-zinc-950/80 rounded-2xl p-8 border border-zinc-800/30 hover:border-accent shadow-sm hover:shadow-md transition-all">
         <div class="w-12 h-12 flex items-center justify-center bg-zinc-800 dark:bg-zinc-700 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
           <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
         <h3 class="font-display font-bold text-xl text-white mb-3">Operational Excellence</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Driving continuous improvement through SOX compliance automation, Salesforce optimization, and Lean methodologies to deliver measurable FTE savings.</p>
+        <p class="text-sm text-zinc-400 leading-relaxed">Driving continuous improvement through SOX compliance controls automation, Salesforce optimization, and Lean methodologies to deliver measurable FTE savings.</p>
       </article>
 
-      <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+      <article class="reveal d3 card-h group bg-white/80 dark:bg-zinc-900/60 rounded-2xl p-8 border border-zinc-200/40 dark:border-zinc-800/20 shadow-sm hover:shadow-md transition-all">
+        <div class="w-12 h-12 flex items-center justify-center bg-accent/10 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
           <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
-        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Data Analytics & BI</h3>
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Data Analytics &amp; BI</h3>
         <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Developing real-time dashboards via Google Looker Studio and Power BI to provide operational visibility and data-driven insights for cross-functional teams.</p>
       </article>
 
@@ -546,15 +577,15 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
               <rect x="125" y="60" width="90" height="20" rx="4" fill="#e4e4e7" class="dark:fill-zinc-700" />
               <text x="170" y="73" fill="#71717a" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">2. AUTOMATED</text>
               
-              <rect x="235" y="40" width="90" height="20" rx="4" fill="#FF6B2B" fill-opacity="0.1" stroke="#FF6B2B" stroke-width="1.5" />
-              <text x="280" y="53" fill="#FF6B2B" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">3. AGENTIC</text>
+              <rect x="235" y="40" width="90" height="20" rx="4" fill="#B45309" fill-opacity="0.1" stroke="#B45309" stroke-width="1.5" />
+              <text x="280" y="53" fill="#B45309" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">3. AGENTIC</text>
               
               <rect x="345" y="20" width="90" height="20" rx="4" fill="#18181b" class="dark:fill-zinc-100" />
               <text x="390" y="33" fill="#ffffff" class="dark:fill-zinc-900" font-size="9" font-family="sans-serif" font-weight="bold" text-anchor="middle">4. AUTONOMIC</text>
               
-              <path d="M 105 90 L 125 70" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
-              <path d="M 215 70 L 235 50" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
-              <path d="M 325 50 L 345 30" stroke="#FF6B2B" stroke-width="1.5" stroke-dasharray="4, 4" />
+              <path d="M 105 90 L 125 70" stroke="#B45309" stroke-width="1.5" stroke-dasharray="4, 4" />
+              <path d="M 215 70 L 235 50" stroke="#B45309" stroke-width="1.5" stroke-dasharray="4, 4" />
+              <path d="M 325 50 L 345 30" stroke="#B45309" stroke-width="1.5" stroke-dasharray="4, 4" />
             </svg>
           </div>
           <div class="grid grid-cols-4 gap-4 text-[10px] text-zinc-400 dark:text-zinc-500">
@@ -601,9 +632,9 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
               <circle cx="140" cy="55" r="4" fill="#22c55e" />
               <text x="140" y="75" fill="#22c55e" font-size="6" text-anchor="middle" font-weight="bold">Quick Wins (e.g. RAG, SOX)</text>
               
-              <rect x="25" y="25" width="70" height="70" fill="#FF6B2B" fill-opacity="0.05" rx="6" />
-              <circle cx="60" cy="50" r="4" fill="#FF6B2B" />
-              <text x="60" y="75" fill="#FF6B2B" font-size="6" text-anchor="middle" font-weight="bold">Strategic Bets (Agents)</text>
+              <rect x="25" y="25" width="70" height="70" fill="#B45309" fill-opacity="0.05" rx="6" />
+              <circle cx="60" cy="50" r="4" fill="#B45309" />
+              <text x="60" y="75" fill="#B45309" font-size="6" text-anchor="middle" font-weight="bold">Strategic Bets (Agents)</text>
               
               <circle cx="55" cy="140" r="4" fill="#ef4444" />
               <text x="55" y="155" fill="#ef4444" font-size="6" text-anchor="middle" font-weight="bold">Avoid (Manual audits)</text>
@@ -628,7 +659,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
               <circle cx="200" cy="15" r="14" fill="#18181b" class="dark:fill-zinc-100" />
               <text x="200" y="19" fill="#ffffff" class="dark:fill-zinc-900" font-size="8" font-family="sans-serif" font-weight="bold" text-anchor="middle">INGEST</text>
               
-              <circle cx="245" cy="60" r="14" fill="#FF6B2B" />
+              <circle cx="245" cy="60" r="14" fill="#B45309" />
               <text x="245" y="64" fill="#ffffff" font-size="7" font-family="sans-serif" font-weight="bold" text-anchor="middle">SYNTHESIS</text>
               
               <circle cx="200" cy="105" r="14" fill="#22c55e" />
@@ -1779,7 +1810,7 @@ function app() {
     draw() {
       // adapt color based on theme
       const isDark = document.documentElement.classList.contains('dark');
-      ctx.fillStyle = isDark ? 'rgba(255, 107, 43, 0.45)' : 'rgba(255, 107, 43, 0.3)';
+      ctx.fillStyle = isDark ? 'rgba(180, 83, 9, 0.45)' : 'rgba(180, 83, 9, 0.3)';
       ctx.fillRect(this.x, this.y, this.size, this.size);
     }
 

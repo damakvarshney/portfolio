@@ -19,7 +19,12 @@
       theme: {
         extend: {
           fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] },
-          colors: { accent: '#FF6B2B', 'accent-light': '#FF8F5C' }
+          colors: { 
+            accent: '#B45309', 
+            'accent-light': '#D97706',
+            'brand-light': '#F8F7F4',
+            'brand-dark': '#0B0F14'
+          }
         }
       }
     }
@@ -28,21 +33,22 @@
     *,*::before,*::after{box-sizing:border-box;}
     html{font-family:'DM Sans',sans-serif;}
     h1,h2,h3,h4,h5,h6{font-family:'PT Sans',sans-serif;}
-    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:#FF6B2B;border-radius:99px;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:#B45309;border-radius:99px;}
     body{transition:background-color .3s,color .3s;}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4;}
-    .nav-link{position:relative;}
-    .nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:currentColor;transition:width .25s cubic-bezier(.4,0,.2,1);}
-    .nav-link:hover::after{width:100%;}
-    .btn-primary{position:relative;overflow:hidden;}
-    .btn-primary::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,.18);transform:skewX(-20deg);transition:left .4s cubic-bezier(.4,0,.2,1);}
-    .btn-primary:hover::after{left:160%;}
+    .nl{position:relative;}
+    .nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:currentColor;transition:width .22s cubic-bezier(.4,0,.2,1);}
+    .nl:hover::after,.nl.on::after{width:100%;}
+    .nl.on{font-weight:500;}
+    .shimmer{position:relative;overflow:hidden;}
+    .shimmer::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,.18);transform:skewX(-20deg);transition:left .4s cubic-bezier(.4,0,.2,1);}
+    .shimmer:hover::after{left:160%;}
     [x-cloak]{display:none!important;}
     .photo-frame{position:relative;overflow:hidden;background:#e4e4e7;}
     .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
 
     /* Reading progress */
-    .progress-bar{position:fixed;top:0;left:0;height:3px;background:#FF6B2B;z-index:100;transition:width .1s linear;}
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:#B45309;z-index:100;transition:width .1s linear;}
 
     /* Reveal */
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .55s cubic-bezier(.4,0,.2,1),transform .55s cubic-bezier(.4,0,.2,1);}
@@ -51,53 +57,56 @@
 
     /* Case study prose */
     .prose-cs h2{font-family:'PT Sans',sans-serif;font-size:1.55rem;font-weight:700;margin:2.75rem 0 1rem;line-height:1.25;}
-    .prose-cs h3{font-family:'PT Sans',sans-serif;font-size:1.15rem;font-weight:700;margin:2rem 0 .6rem;line-height:1.3;color:#FF6B2B;}
+    .prose-cs h3{font-family:'PT Sans',sans-serif;font-size:1.15rem;font-weight:700;margin:2rem 0 .6rem;line-height:1.3;color:#B45309;}
     .prose-cs p{margin:0 0 1.4rem;line-height:1.82;color:#52525b;}
     .dark .prose-cs p{color:#a1a1aa;}
     .prose-cs ul{margin:0 0 1.4rem 1.5rem;list-style:disc;}
     .prose-cs li{margin-bottom:.45rem;line-height:1.7;color:#52525b;}
     .dark .prose-cs li{color:#a1a1aa;}
-    .prose-cs blockquote{border-left:3px solid #FF6B2B;padding:.75rem 1.25rem;margin:0 0 1.8rem;background:#fff7f4;border-radius:0 8px 8px 0;}
-    .dark .prose-cs blockquote{background:#27272a;}
+    .prose-cs blockquote{border-left:3px solid #B45309;padding:.75rem 1.25rem;margin:0 0 1.8rem;background:rgba(180, 83, 9, 0.04);border-radius:0 8px 8px 0;}
+    .dark .prose-cs blockquote{background:rgba(180, 83, 9, 0.06);}
     .prose-cs blockquote p{color:#52525b;font-style:italic;margin:0;}
     .dark .prose-cs blockquote p{color:#a1a1aa;}
     .prose-cs hr{border:none;border-top:1px solid #e4e4e7;margin:2.5rem 0;}
     .dark .prose-cs hr{border-top-color:#27272a;}
-    .prose-cs a{color:#FF6B2B;text-decoration:underline;text-underline-offset:3px;}
+    .prose-cs a{color:#B45309;text-decoration:underline;text-underline-offset:3px;}
 
     /* Stat card */
-    .stat-card{border-left:3px solid #FF6B2B;}
+    .stat-card{border-left:3px solid #B45309;}
 
     /* Image caption */
     .img-caption{font-size:.8rem;color:#a1a1aa;text-align:center;margin-top:.6rem;}
 
     /* Step badge */
-    .step-badge{width:2rem;height:2rem;min-width:2rem;border-radius:50%;background:#FF6B2B;color:#fff;font-family:'PT Sans',sans-serif;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;}
+    .step-badge{width:2rem;height:2rem;min-width:2rem;border-radius:50%;background:#B45309;color:#fff;font-family:'PT Sans',sans-serif;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center;}
 
     /* card hover */
     .card-h{transition:transform .28s cubic-bezier(.4,0,.2,1),border-color .18s;}
     .card-h:hover{transform:translateY(-4px);}
   </style>
 </head>
-<body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-body antialiased">
+<body class="bg-[#F8F7F4] dark:bg-[#0B0F14] text-zinc-900 dark:text-zinc-100 font-body antialiased transition-colors duration-300">
 <canvas id="pixel-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
   <!-- Reading progress bar -->
   <div class="progress-bar" :style="`width:${progress}%`" role="progressbar" :aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
 
   <!-- ═══ NAV ═══ -->
-  <header class="fixed top-0.5 left-0 right-0 z-50 transition-all duration-300"
-    :class="scrolled ? 'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5' : 'bg-transparent'">
+  <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    :class="scrolled?'bg-[#F8F7F4]/80 dark:bg-[#0B0F14]/80 backdrop-blur-md border-b border-zinc-200/20 dark:border-zinc-800/10 shadow-sm':''">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
       <a href="index.html" class="font-display font-bold text-xl tracking-tight z-10">
         <span class="text-zinc-900 dark:text-white">damak</span><span class="text-accent">varshney</span>
       </a>
-      <ul class="hidden md:flex items-center gap-8 text-sm font-medium" role="list">
-        <li><a href="index.html#services" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Approach</a></li>
-        <li><a href="projects.html" class="nav-link text-accent font-medium">Case Studies</a></li>
-        <li><a href="index.html#about" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Capabilities</a></li>
-        <li><a href="blog.html" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Journey</a></li>
-        <li><a href="index.html#contact" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Engage</a></li>
+      <ul class="hidden lg:flex items-center gap-6 text-xs" role="list">
+        <li><a href="index.html#services" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Approach</a></li>
+        <li><a href="projects.html" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors on !text-zinc-900 dark:!text-white">Case Studies</a></li>
+        <li><a href="index.html#frameworks" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Frameworks</a></li>
+        <li><a href="index.html#about" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Capabilities</a></li>
+        <li><a href="index.html#reviews" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Results</a></li>
+        <li><a href="blog.html" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Journey</a></li>
+        <li><a href="index.html#referrals" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Referrals</a></li>
+        <li><a href="index.html#contact" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Engage</a></li>
       </ul>
       <div class="flex items-center gap-3">
         <button @click="dark=!dark"
@@ -106,8 +115,8 @@
           <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
           <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
         </button>
-        <a href="index.html#contact" class="hidden md:inline-flex items-center gap-2 btn-primary bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">Hire me →</a>
-        <button @click="mobileMenu=!mobileMenu" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800" aria-label="Toggle menu">
+        <a href="index.html#contact" class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">Hire me <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+        <button @click="mobileMenu=!mobileMenu" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800" aria-label="Toggle menu">
           <svg x-show="!mobileMenu" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg x-show="mobileMenu" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -116,13 +125,19 @@
     <div x-show="mobileMenu" x-cloak
       x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
       x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2"
-      class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
-      <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium" role="list">
-        <li><a href="index.html#services" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Services</a></li>
-        <li><a href="projects.html" @click="mobileMenu=false" class="block text-accent font-medium">Work</a></li>
-        <li><a href="index.html#about" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">About</a></li>
-        <li><a href="blog.html" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Blog</a></li>
-        <li><a href="index.html#contact" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300">Contact</a></li>
+      class="lg:hidden bg-[#F8F7F4] dark:bg-[#0B0F14] border-t border-zinc-200/20 dark:border-zinc-800/10">
+      <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
+        <li><a href="index.html#services" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Approach</a></li>
+        <li><a href="projects.html" @click="mobileMenu=false" class="block text-accent transition-colors">Case Studies</a></li>
+        <li><a href="index.html#frameworks" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Frameworks</a></li>
+        <li><a href="index.html#about" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Capabilities</a></li>
+        <li><a href="index.html#reviews" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Results</a></li>
+        <li><a href="blog.html" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Journey</a></li>
+        <li><a href="index.html#referrals" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Referrals</a></li>
+        <li><a href="index.html#contact" @click="mobileMenu=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Engage</a></li>
+        <li class="pt-2 border-t border-zinc-200/20 dark:border-zinc-800/10">
+          <a href="index.html#contact" @click="mobileMenu=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Engage →</a>
+        </li>
       </ul>
     </div>
   </header>
@@ -141,9 +156,9 @@
 
         <!-- Tags + date -->
         <div class="flex flex-wrap items-center gap-3 mb-6">
-          <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full" x-text="p.categoryLabel"></span>
+          <span class="text-xs bg-amber-50 dark:bg-zinc-800/60 text-accent border border-amber-200/40 dark:border-zinc-700/50 px-2.5 py-1 rounded-full font-medium" x-text="p.categoryLabel"></span>
           <template x-for="tag in p.tags" :key="tag">
-            <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full" x-text="tag"></span>
+            <span class="text-xs bg-zinc-100 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400 border border-transparent px-2.5 py-1 rounded-full" x-text="tag"></span>
           </template>
           <span class="text-xs text-zinc-400 ml-1" x-text="p.timeline"></span>
         </div>
@@ -184,8 +199,8 @@
       <div class="max-w-4xl mx-auto px-6 mb-16">
         <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4">
           <template x-for="(stat, idx) in p.metrics" :key="idx">
-            <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
-              <p class="font-display font-bold text-3xl" :class="idx === 1 ? 'text-accent' : 'text-zinc-900 dark:text-white'" x-text="stat.value"></p>
+            <div class="stat-card bg-white dark:bg-[#0B0F14]/40 border border-zinc-200/50 dark:border-zinc-800/50 shadow-sm rounded-2xl p-5 pl-6">
+              <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white" :class="idx === 1 ? '!text-accent' : ''" x-text="stat.value"></p>
               <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug" x-text="stat.label"></p>
             </div>
           </template>
@@ -205,18 +220,18 @@
         </div>
         <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
           <template x-for="proj in relatedProjects" :key="proj.key">
-            <article class="reveal card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+            <article class="reveal card-h group bg-white dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800/50 hover:border-accent transition-all duration-300 shadow-sm hover:shadow-md rounded-2xl overflow-hidden">
               <a :href="proj.url" class="photo-frame w-full h-44 block">
                 <img :src="proj.img" :alt="proj.title" loading="lazy"/>
               </a>
               <div class="p-5">
                 <div class="flex gap-2 mb-2">
-                  <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full" x-text="proj.categoryLabel"></span>
+                  <span class="text-xs bg-amber-50 dark:bg-zinc-800/60 text-accent border border-amber-200/40 dark:border-zinc-700/50 px-2.5 py-1 rounded-full font-medium" x-text="proj.categoryLabel"></span>
                 </div>
                 <a :href="proj.url">
                   <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors" x-text="proj.title"></h3>
                 </a>
-                <a :href="proj.url" class="text-sm font-medium text-accent nav-link">View project →</a>
+                <a :href="proj.url" class="text-sm font-medium text-accent nl">View project →</a>
               </div>
             </article>
           </template>
@@ -230,15 +245,15 @@
     <!-- ═══ CTA ═══ -->
     <section class="relative z-10 py-24">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+        <div class="bg-zinc-900 dark:bg-zinc-900/40 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden border border-zinc-200/10 dark:border-zinc-800/30">
           <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
           <div class="absolute bottom-0 left-0 w-40 h-40 bg-accent/10 rounded-full blur-2xl pointer-events-none" aria-hidden="true"></div>
           <div class="relative z-10">
             <p class="text-xs font-medium text-accent tracking-widest uppercase mb-4">Ready to start?</p>
             <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Got a similar project?</h2>
             <p class="text-zinc-400 max-w-md mx-auto mb-8">I'm available for new projects. Tell me about what you're building and let's see if we're a good fit.</p>
-            <a href="index.html#contact" class="inline-flex items-center gap-2 btn-primary bg-accent text-white font-medium px-8 py-3.5 rounded-full hover:bg-accent-light transition-colors">
-              Start a project →
+            <a href="index.html#contact" class="inline-flex items-center gap-2 shimmer bg-accent text-white font-medium px-8 py-3.5 rounded-full hover:bg-accent-light transition-colors">
+              Start a project <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </a>
           </div>
         </div>
@@ -661,7 +676,7 @@
 
     draw() {
       const isDark = document.documentElement.classList.contains('dark');
-      ctx.fillStyle = isDark ? 'rgba(255, 107, 43, 0.45)' : 'rgba(255, 107, 43, 0.3)';
+      ctx.fillStyle = isDark ? 'rgba(180, 83, 9, 0.45)' : 'rgba(180, 83, 9, 0.3)';
       ctx.fillRect(this.x, this.y, this.size, this.size);
     }
 
