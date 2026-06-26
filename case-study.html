@@ -339,14 +339,14 @@
             `
           },
           'salesforce-bot': {
-            title: 'Salesforce RAG AI Bot ("Dot")',
+            title: 'Salesforce RAG AI Bot ("Dot & ODA")',
             categoryLabel: 'AI & RAG',
-            tags: ['AI / RAG', 'Python', 'Salesforce'],
-            timeline: '2024 · 10 weeks',
+            tags: ['AI / RAG', 'Python', 'Salesforce', 'Vertex AI'],
+            timeline: '2025 · 10 weeks',
             client: 'Customer Success & Ops',
-            role: 'AI Ops Architect',
-            timelineLabel: 'Sep – Nov 2024',
-            deliverables: 'Python, Chroma Vector DB, Salesforce Sidebar integration',
+            role: 'Associate - AI Strategy & Ops',
+            timelineLabel: 'Sep – Nov 2025',
+            deliverables: 'Python, Chroma Vector DB, Salesforce Sidebar integration, Vertex AI APIs',
             img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=1400&q=80',
             metrics: [
               { value: '−70%', label: 'Case resolution time' },
@@ -357,7 +357,7 @@
             content: `
               <h2>The brief</h2>
               <p>In modern customer operations, speed and accuracy are everything. Yet, support agents spend up to 60% of their time navigating siloed information: browsing internal wikis, searching PDF manuals, and asking senior developers for advice. As a result, customers experience long wait times, and operations teams suffer from high escalation rates.</p>
-              <p>Our mandate was to build a helper bot named "Dot" that retrieves the right facts instantly to help support agents answer customer questions directly within the Salesforce Service Cloud sidebar interface.</p>
+              <p>Our mandate was to build helper bots named "Dot" and "ODA" that retrieve the right facts instantly to help support agents answer customer questions directly within the Salesforce Service Cloud sidebar interface.</p>
 
               <blockquote>
                 <p>"RAG turns your scattered documentation into an active assistant, retrieving the right facts instantly to help support agents answer customer questions."</p>
@@ -369,7 +369,7 @@
               
               <h2>Design & implementation</h2>
               <h3>RAG architecture pipeline</h3>
-              <p>We built a retrieval-augmented generation pipeline using Python and OpenAI/Gemini APIs. All support manuals and wikis were indexed into a local Chroma vector database.</p>
+              <p>We built a retrieval-augmented generation pipeline using Python and Vertex AI APIs. All support manuals and wikis were indexed into a local Chroma vector database.</p>
               
               <h3>Step 1: Semantic Chunks</h3>
               <p>Internal documentation, SOPs, FAQs, and product manuals are broken down into small paragraphs (chunks). These chunks are converted into mathematical vectors (embeddings) and stored in a vector database like Chroma.</p>
@@ -382,7 +382,7 @@
 
               <h2>Key design decisions</h2>
               <h3>Source Citations</h3>
-              <p>Every response from "Dot" must cite the exact source document and section, enabling easy verification.</p>
+              <p>Every response from "Dot & ODA" must cite the exact source document and section, enabling easy verification.</p>
 
               <h3>Hybrid Search</h3>
               <p>Combining semantic embeddings search with keyword search for technical terms (e.g. error codes) to ensure exact troubleshooting guides are loaded.</p>
@@ -391,7 +391,7 @@
               <p>Let agents review and edit the generated response before sending it to the client, guaranteeing tone and safety compliance.</p>
 
               <h2>Results</h2>
-              <p>Implementing the RAG-based AI assistant "Dot" yielded remarkable operational efficiency gains:</p>
+              <p>Implementing the RAG-based AI assistants "Dot" and "ODA" yielded remarkable operational efficiency gains:</p>
               <ul>
                 <li><strong>Support Triage Time:</strong> Slashed by 70% as agents no longer spent minutes hunting for answers.</li>
                 <li><strong>Information Requests:</strong> The percentage of tickets asking simple "how-to" questions dropped from 16% to 3%.</li>
@@ -407,7 +407,7 @@
             client: 'Global Resourcing & Operations',
             role: 'Associate - AI Strategy & Ops',
             timelineLabel: 'Apr – Jun 2025',
-            deliverables: 'Python Prediction Engine, Global Heatmaps Dashboard, 3-tier RBAC system',
+            deliverables: 'Consolidated Headcount Database, Looker Heatmap Dashboards, Python Predictive Forecast Engine, 3-Tier RBAC',
             img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=1400&q=80',
             metrics: [
               { value: '80%+', label: 'User adoption rate' },
@@ -498,14 +498,14 @@
             `
           },
           'kyc': {
-            title: 'Digital Onboarding & KYC Digitization',
+            title: 'Institutional Client Onboarding & KYC Digitization',
             categoryLabel: 'Automation',
-            tags: ['Automation', 'KYC/AML', 'AI Assisted'],
+            tags: ['Automation', 'KYC/AML', 'AI Screen', 'Reference APIs'],
             timeline: '2025 · 7 weeks',
             client: 'Client Onboarding & Compliance',
             role: 'Associate - AI Strategy & Ops',
             timelineLabel: 'Oct – Nov 2025',
-            deliverables: 'Form Validation Engine, Checklist Auto-gatherer, Entity screening enrichment',
+            deliverables: 'Form Validation Engine, AI-Assisted Checklist Gathering, Reference Screening APIs',
             img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=80',
             metrics: [
               { value: '−55%', label: 'KYC setup cycle time' },
