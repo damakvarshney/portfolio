@@ -1,24 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{
-  dark: localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches),
-  scrolled: false,
-  mobileMenu: false,
-  progress: 0
-}" :class="{'dark':dark}" x-init="
-  $watch('dark', v => localStorage.setItem('theme', v ? 'dark' : 'light'));
-  window.addEventListener('scroll', () => {
-    scrolled = window.scrollY > 20;
-    progress = Math.min(100, Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100));
-  }, { passive: true });
-" class="scroll-smooth">
+<html lang="en" x-data="caseStudy()" :class="{'dark':dark}" x-init="init()" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Novu — SaaS Dashboard redesign case study by Eliott. How a full UX overhaul reduced cognitive load by 40% and improved trial-to-paid conversion."/>
-  <meta name="author" content="Eliott"/>
-  <meta property="og:title" content="Novu — SaaS Dashboard · Case Study by Eliott"/>
+  <meta name="description" content="Case studies on continuous improvement, automation, and AI integration — Damak Kumar Varshney"/>
+  <meta name="author" content="Damak Kumar Varshney"/>
+  <meta property="og:title" content="Case Study — Damak Kumar Varshney"/>
   <meta property="og:type" content="article"/>
-  <title>Novu — SaaS Dashboard · Case Study — Eliott</title>
+  <title x-text="p ? p.title + ' · Case Study — Damak Kumar Varshney' : 'Case Study — Damak Kumar Varshney'">Case Study — Damak Kumar Varshney</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -91,6 +80,7 @@
   </style>
 </head>
 <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 font-body antialiased">
+<canvas id="pixel-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
   <!-- Reading progress bar -->
   <div class="progress-bar" :style="`width:${progress}%`" role="progressbar" :aria-valuenow="progress" aria-valuemin="0" aria-valuemax="100" aria-label="Reading progress"></div>
@@ -100,7 +90,7 @@
     :class="scrolled ? 'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5' : 'bg-transparent'">
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
       <a href="index.html" class="font-display font-bold text-xl tracking-tight z-10">
-        <span class="text-zinc-900 dark:text-white">eli</span><span class="text-accent">ott</span>
+        <span class="text-zinc-900 dark:text-white">damak</span><span class="text-accent">varshney</span>
       </a>
       <ul class="hidden md:flex items-center gap-8 text-sm font-medium" role="list">
         <li><a href="index.html#services" class="nav-link text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Services</a></li>
@@ -137,10 +127,10 @@
     </div>
   </header>
 
-  <main>
+  <main x-show="p" x-cloak>
 
     <!-- ═══ CASE STUDY HEADER ═══ -->
-    <article>
+    <article class="relative z-10">
       <header class="pt-32 pb-10 max-w-4xl mx-auto px-6">
 
         <!-- Back link -->
@@ -151,37 +141,34 @@
 
         <!-- Tags + date -->
         <div class="flex flex-wrap items-center gap-3 mb-6">
-          <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">SaaS</span>
-          <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">Figma</span>
-          <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">Tailwind</span>
-          <span class="text-xs text-zinc-400 ml-1">2025 · 6 weeks</span>
+          <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full" x-text="p.categoryLabel"></span>
+          <template x-for="tag in p.tags" :key="tag">
+            <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full" x-text="tag"></span>
+          </template>
+          <span class="text-xs text-zinc-400 ml-1" x-text="p.timeline"></span>
         </div>
 
-        <h1 class="reveal font-display font-bold text-4xl md:text-5xl lg:text-6xl text-zinc-900 dark:text-white leading-tight mb-6">
-          Novu — SaaS Dashboard Redesign
-        </h1>
+        <h1 class="reveal font-display font-bold text-4xl md:text-5xl lg:text-6xl text-zinc-900 dark:text-white leading-tight mb-6" x-text="p.title"></h1>
 
-        <p class="reveal d1 text-xl text-zinc-500 dark:text-zinc-400 leading-relaxed mb-10 max-w-2xl">
-          A complete UX and UI overhaul of a B2B notification management platform — reducing cognitive load, streamlining the core workflow, and converting more trial users into paying customers.
-        </p>
+        <p class="reveal d1 text-xl text-zinc-500 dark:text-zinc-400 leading-relaxed mb-10 max-w-2xl" x-text="p.desc"></p>
 
         <!-- Meta row -->
         <div class="reveal d2 grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-t border-b border-zinc-100 dark:border-zinc-900">
           <div>
             <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Client</p>
-            <p class="font-medium text-zinc-900 dark:text-white text-sm">Novu Inc.</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm" x-text="p.client"></p>
           </div>
           <div>
             <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Role</p>
-            <p class="font-medium text-zinc-900 dark:text-white text-sm">Lead UI/UX Designer</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm" x-text="p.role"></p>
           </div>
           <div>
             <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Timeline</p>
-            <p class="font-medium text-zinc-900 dark:text-white text-sm">Jan – Feb 2025</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm" x-text="p.timelineLabel"></p>
           </div>
           <div>
             <p class="text-xs text-zinc-400 uppercase tracking-widest mb-1">Deliverables</p>
-            <p class="font-medium text-zinc-900 dark:text-white text-sm">Figma, HTML/CSS</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm" x-text="p.deliverables"></p>
           </div>
         </div>
       </header>
@@ -189,267 +176,50 @@
       <!-- ═══ HERO IMAGE ═══ -->
       <div class="max-w-6xl mx-auto px-6 mb-16">
         <div class="reveal photo-frame w-full h-72 md:h-[480px] rounded-3xl">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1400&q=80" alt="Novu — SaaS Dashboard redesign hero" loading="eager"/>
+          <img :src="p.img" :alt="p.title" loading="eager"/>
         </div>
       </div>
 
       <!-- ═══ RESULTS BANNER ═══ -->
       <div class="max-w-4xl mx-auto px-6 mb-16">
         <div class="reveal grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
-            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">−40%</p>
-            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Cognitive load (SUS score)</p>
-          </div>
-          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
-            <p class="font-display font-bold text-3xl text-accent">+27%</p>
-            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Trial-to-paid conversion</p>
-          </div>
-          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
-            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">−35%</p>
-            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Support tickets (onboarding)</p>
-          </div>
-          <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
-            <p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">4.8/5</p>
-            <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug">Post-launch NPS</p>
-          </div>
+          <template x-for="(stat, idx) in p.metrics" :key="idx">
+            <div class="stat-card bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-5 pl-6">
+              <p class="font-display font-bold text-3xl" :class="idx === 1 ? 'text-accent' : 'text-zinc-900 dark:text-white'" x-text="stat.value"></p>
+              <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-snug" x-text="stat.label"></p>
+            </div>
+          </template>
         </div>
       </div>
 
       <!-- ═══ ARTICLE BODY ═══ -->
-      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs">
-
-        <h2>The brief</h2>
-        <p>Novu is a B2B notification infrastructure platform — it lets developers route, manage, and monitor notifications across email, SMS, push, and in-app channels. The product was technically solid, but the dashboard had grown organically over two years without a coherent design strategy. By early 2025, the team were seeing high churn in the 14-day trial window and receiving consistent feedback that the platform was "powerful but overwhelming."</p>
-        <p>My mandate was simple: fix the first-hour experience without rebuilding the product from scratch. The budget was fixed and the engineering team had six weeks to ship.</p>
-
-        <blockquote>
-          <p>"We're losing users in the first 20 minutes. They sign up, see the dashboard, and just bounce. The product does exactly what they need — they just can't find it."</p>
-        </blockquote>
-
-        <h2>Discovery & research</h2>
-        <h3>User interviews</h3>
-        <p>I ran 9 user interviews with a mix of current paying customers and recently churned trial users. The sessions were 45-minute moderated usability tests combined with post-task interviews. Key findings:</p>
-        <ul>
-          <li>7 of 9 users couldn't locate the "Workflows" section without help during their first session</li>
-          <li>The notification log and the analytics panel were confused for one another by 5 users</li>
-          <li>The sidebar had 14 top-level navigation items — users reported feeling "unsure where to start"</li>
-          <li>Trial users specifically wanted a "get your first notification live" path, not a feature overview</li>
-        </ul>
-
-        <h3>Heuristic audit</h3>
-        <p>I ran a full Nielsen heuristic evaluation of the existing interface and identified 23 violations across 6 categories. The most critical were around visibility of system status, recognition over recall, and error prevention in the workflow builder.</p>
-
-      </div>
-
-      <!-- Full-width image -->
-      <div class="max-w-5xl mx-auto px-6 mb-4">
-        <div class="reveal photo-frame w-full h-56 md:h-80 rounded-2xl">
-          <img src="https://images.unsplash.com/photo-1581472723648-909f4851d4ae?w=1200&q=80" alt="Existing dashboard audit — heuristic violations mapped" loading="lazy"/>
-        </div>
-        <p class="img-caption">Existing dashboard with heuristic violations annotated during the audit phase.</p>
-      </div>
-
-      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs">
-
-        <h2>Design strategy</h2>
-        <p>Based on the research, I built the redesign around three principles:</p>
-
-      </div>
-
-      <!-- 3-column principles -->
-      <div class="max-w-5xl mx-auto px-6 mb-12">
-        <div class="reveal grid md:grid-cols-3 gap-5">
-          <div class="bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800">
-            <div class="w-10 h-10 bg-orange-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <h3 class="font-display font-bold text-zinc-900 dark:text-white mb-2" style="font-size:1rem;margin:0 0 .5rem;color:inherit;">Progressive disclosure</h3>
-            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed" style="margin:0;color:inherit;">Show only what's needed for the current task. Advanced features revealed on demand, not upfront.</p>
-          </div>
-          <div class="bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800">
-            <div class="w-10 h-10 bg-orange-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-            </div>
-            <h3 class="font-display font-bold text-zinc-900 dark:text-white mb-2" style="font-size:1rem;margin:0 0 .5rem;color:inherit;">Opinionated navigation</h3>
-            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed" style="margin:0;color:inherit;">Reduce the sidebar to 6 core items. Group secondary actions in context panels rather than global nav.</p>
-          </div>
-          <div class="bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-7 border border-zinc-100 dark:border-zinc-800">
-            <div class="w-10 h-10 bg-orange-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-4">
-              <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-            </div>
-            <h3 class="font-display font-bold text-zinc-900 dark:text-white mb-2" style="font-size:1rem;margin:0 0 .5rem;color:inherit;">Goal-first onboarding</h3>
-            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed" style="margin:0;color:inherit;">Replace the feature tour with a 3-step "send your first notification" flow that delivers an aha-moment in under 5 minutes.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs">
-
-        <h2>Process</h2>
-        <h3>Week 1–2 · Information architecture</h3>
-        <p>I ran a card sorting exercise with 12 participants to rebuild the navigation taxonomy from scratch. The 14-item sidebar collapsed to 6 primary destinations. I then produced low-fidelity wireframes in Figma for the 8 most-visited screens, running rapid async reviews with the product team using Loom walkthroughs.</p>
-
-      </div>
-
-      <!-- Process steps -->
-      <div class="max-w-4xl mx-auto px-6 mb-12">
-        <div class="reveal space-y-4">
-          <!-- Step -->
-          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-            <div class="step-badge shrink-0 mt-0.5">1</div>
-            <div>
-              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Card sorting + IA rebuild</p>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Remote card sort with 12 participants via Optimal Workshop. 14 nav items → 6 clear destinations with zero ambiguous groupings.</p>
-            </div>
-          </div>
-          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-            <div class="step-badge shrink-0 mt-0.5">2</div>
-            <div>
-              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Lo-fi wireframes & async review</p>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">8 key screens sketched in Figma wireframe mode. Async review via Loom with the product team — 3 iteration rounds over 4 days.</p>
-            </div>
-          </div>
-          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-            <div class="step-badge shrink-0 mt-0.5">3</div>
-            <div>
-              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Hi-fi design & component library</p>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Full Figma component library built on Auto Layout. 40+ components covering all states (empty, loading, error). Dark mode tokens included.</p>
-            </div>
-          </div>
-          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-            <div class="step-badge shrink-0 mt-0.5">4</div>
-            <div>
-              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Usability testing & iteration</p>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">5 moderated sessions on the hi-fi prototype. 2 significant UX issues surfaced and resolved before handoff. SUS score improved from 54 → 82.</p>
-            </div>
-          </div>
-          <div class="flex gap-5 bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800">
-            <div class="step-badge shrink-0 mt-0.5">5</div>
-            <div>
-              <p class="font-display font-bold text-zinc-900 dark:text-white mb-1">Handoff & front-end support</p>
-              <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Zeroheight design doc + Tailwind CSS implementation of the new design tokens. Present during sprint to support the engineering team on edge cases.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Second full-width image -->
-      <div class="max-w-5xl mx-auto px-6 mb-4">
-        <div class="reveal photo-frame w-full h-56 md:h-80 rounded-2xl">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="High-fidelity Figma screens — new dashboard layout" loading="lazy"/>
-        </div>
-        <p class="img-caption">Final hi-fi screens showing the redesigned sidebar, dashboard home, and notification workflow builder.</p>
-      </div>
-
-      <!-- Before / After split -->
-      <div class="max-w-5xl mx-auto px-6 mb-12">
-        <div class="reveal grid md:grid-cols-2 gap-4">
-          <div>
-            <div class="photo-frame w-full h-52 rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=700&q=80" alt="Before — original dashboard" loading="lazy"/>
-            </div>
-            <p class="img-caption mt-2">Before — 14-item sidebar, no clear entry point</p>
-          </div>
-          <div>
-            <div class="photo-frame w-full h-52 rounded-2xl">
-              <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=700&q=80" alt="After — redesigned dashboard" loading="lazy"/>
-            </div>
-            <p class="img-caption mt-2">After — 6-item sidebar, goal-first onboarding checklist</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="max-w-3xl mx-auto px-6 pb-16 prose-cs">
-
-        <h2>Key design decisions</h2>
-        <h3>Collapsing the sidebar</h3>
-        <p>The original sidebar mixed primary destinations with contextual actions and account settings indiscriminately. I applied a strict three-tier hierarchy: primary navigation (6 items, always visible), contextual actions (appear in a right panel when relevant), and account/settings (collapsed under an avatar menu). This alone reduced the cognitive entry cost significantly — users knew where they were and where they could go.</p>
-
-        <h3>The onboarding checklist</h3>
-        <p>Rather than a product tour, I designed a persistent but dismissible checklist embedded in the dashboard home. Three steps: connect a channel, create a workflow, send a test notification. Each step launches an inline mini-wizard that completes within the dashboard without breaking context. In the first month post-launch, 68% of trial users completed all three steps vs 21% previously.</p>
-
-        <h3>Empty states as teachers</h3>
-        <p>Every empty state in the old design was a blank panel. In the redesign, each empty state includes a one-sentence explanation of what the section does, a primary CTA, and a secondary link to documentation. This reduced support tickets specifically about feature discovery by 35%.</p>
-
-        <h2>Results</h2>
-        <p>The redesign shipped in week 6, exactly on schedule. Metrics were tracked over the following 6 weeks post-launch compared to the same prior period.</p>
-        <ul>
-          <li><strong>SUS (System Usability Scale) score:</strong> 54 → 82 (+28 points)</li>
-          <li><strong>Trial-to-paid conversion rate:</strong> +27%</li>
-          <li><strong>Onboarding completion (3-step flow):</strong> 21% → 68%</li>
-          <li><strong>Support tickets (onboarding-related):</strong> −35%</li>
-          <li><strong>Average time to first workflow created:</strong> 18 min → 4 min</li>
-          <li><strong>Post-launch NPS:</strong> 4.8/5</li>
-        </ul>
-
-        <blockquote>
-          <p>"Eliott completely changed how we think about our onboarding. The checklist alone added 6 figures to our ARR in the first quarter. Exceptionally thorough process and a pleasure to work with."</p>
-        </blockquote>
-
-        <h2>Reflections</h2>
-        <p>The biggest lesson from this project: most SaaS UX problems aren't about aesthetics, they're about information architecture. The product was capable — users just couldn't find the value fast enough. A focused IA overhaul delivered more measurable ROI than a visual rebrand ever could have.</p>
-        <p>If I were to do it again, I'd push harder for a longer discovery phase. Six weeks is tight for a full dashboard redesign, and we had to make some navigation decisions based on incomplete card-sort data. The results held up, but another round of testing before hi-fi would have given me more confidence on a few borderline calls.</p>
-
-        <hr/>
-        <p><em>Interested in a similar engagement? <a href="index.html#contact">Get in touch</a> — I'm available for new projects from Q2 2025.</em></p>
-
-      </div>
+      <div class="max-w-3xl mx-auto px-6 pb-4 prose-cs" x-html="p.content"></div>
     </article>
 
     <!-- ═══ MORE PROJECTS ═══ -->
-    <section class="bg-zinc-50 dark:bg-zinc-900/50 py-16">
+    <section class="relative z-10 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px] py-16">
       <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between mb-8">
           <h2 class="font-display font-bold text-2xl text-zinc-900 dark:text-white">More projects</h2>
           <a href="projects.html" class="text-sm font-medium text-accent nav-link hidden md:block">View all →</a>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-
-          <article class="reveal card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
-            <div class="photo-frame w-full h-44">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Finlo — Fintech App" loading="lazy"/>
-            </div>
-            <div class="p-5">
-              <div class="flex gap-2 mb-2">
-                <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Landing page</span>
-              </div>
-              <a href="#">
-                <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Finlo — Fintech App</h3>
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
+          <template x-for="proj in relatedProjects" :key="proj.key">
+            <article class="reveal card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
+              <a :href="proj.url" class="photo-frame w-full h-44 block">
+                <img :src="proj.img" :alt="proj.title" loading="lazy"/>
               </a>
-              <a href="#" class="text-sm font-medium text-accent nav-link">View project →</a>
-            </div>
-          </article>
-
-          <article class="reveal card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
-            <div class="photo-frame w-full h-44">
-              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=700&q=80" alt="Orea — Creative Agency" loading="lazy"/>
-            </div>
-            <div class="p-5">
-              <div class="flex gap-2 mb-2">
-                <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">Agency</span>
+              <div class="p-5">
+                <div class="flex gap-2 mb-2">
+                  <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full" x-text="proj.categoryLabel"></span>
+                </div>
+                <a :href="proj.url">
+                  <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors" x-text="proj.title"></h3>
+                </a>
+                <a :href="proj.url" class="text-sm font-medium text-accent nav-link">View project →</a>
               </div>
-              <a href="#">
-                <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Orea — Creative Agency</h3>
-              </a>
-              <a href="#" class="text-sm font-medium text-accent nav-link">View project →</a>
-            </div>
-          </article>
-
-          <article class="reveal card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent transition-colors">
-            <div class="photo-frame w-full h-44">
-              <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=700&q=80" alt="Bloom — E-commerce" loading="lazy"/>
-            </div>
-            <div class="p-5">
-              <div class="flex gap-2 mb-2">
-                <span class="text-xs bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-2.5 py-1 rounded-full">E-commerce</span>
-              </div>
-              <a href="#">
-                <h3 class="font-display font-bold text-base text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Bloom — E-commerce</h3>
-              </a>
-              <a href="#" class="text-sm font-medium text-accent nav-link">View project →</a>
-            </div>
-          </article>
-
+            </article>
+          </template>
         </div>
         <div class="text-center mt-8 md:hidden">
           <a href="projects.html" class="text-sm font-medium text-accent">View all projects →</a>
@@ -458,7 +228,7 @@
     </section>
 
     <!-- ═══ CTA ═══ -->
-    <section class="py-24">
+    <section class="relative z-10 py-24">
       <div class="max-w-6xl mx-auto px-6">
         <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
           <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
@@ -479,22 +249,496 @@
 
   <footer class="border-t border-zinc-100 dark:border-zinc-900">
     <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-zinc-400">© <span id="yr"></span> Eliott. All rights reserved. <br> Developed by <a href="https://lbegey78.gumroad.com/" target="_blank" class="font-bold">Laurent Begey</a> • Distributed by <a href="https://themewagon.com/" target="_blank" class="font-bold">ThemeWagon</a></p>
+      <p class="text-sm text-zinc-400">© <span id="year"></span> Damak Kumar Varshney. All rights reserved.</p>
       <p class="text-xs text-zinc-500">Built with <a href="https://tailwindcss.com" class="hover:text-zinc-900 dark:hover:text-white transition-colors" rel="noopener noreferrer" target="_blank">Tailwind CSS</a> &amp; <a href="https://alpinejs.dev" class="hover:text-zinc-900 dark:hover:text-white transition-colors" rel="noopener noreferrer" target="_blank">Alpine.js</a></p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    function caseStudy() {
+      return {
+        dark: false,
+        scrolled: false,
+        mobileMenu: false,
+        progress: 0,
+        activeProject: 'sox',
+        
+        projects: {
+          'sox': {
+            title: 'SOX Compliance Automation Engine',
+            categoryLabel: 'Automation',
+            tags: ['Automation', 'Apps Script', 'Salesforce'],
+            timeline: '2025 · 6 weeks',
+            client: 'Internal Finance & Compliance',
+            role: 'Associate - AI Strategy & Ops',
+            timelineLabel: 'Jan – Feb 2025',
+            deliverables: 'Google Apps Script, Salesforce API, Automation Logs',
+            img: 'https://images.unsplash.com/photo-1551288049-bbda4833effb?w=1400&q=80',
+            metrics: [
+              { value: '−95%', label: 'Manual audit time' },
+              { value: '100%', label: 'Automated trace coverage' },
+              { value: '−50%', label: 'Compliance bottlenecks' },
+              { value: '0', label: 'Unlogged configuration changes' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>Quarterly SOX (Sarbanes-Oxley) IT General Controls audits are historically tedious. In many companies, the internal operations and finance compliance teams manually audit profile setups, system modifications, and active users in Salesforce. This manual process is time-consuming, prone to human error, and creates severe reporting backlogs.</p>
+              <p>Every audit cycle, team members must pull configuration reports, diff profile permissions, and log modification history manually. High-priority policy violations could go undetected for weeks, waiting for the next audit sweep.</p>
 
-    // Reveal on scroll
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+              <blockquote>
+                <p>"Security controls and compliance shouldn't be a snapshot task performed every quarter. They must be continuous, verified daily, and automated."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>Process bottleneck analysis</h3>
+              <p>We analyzed the existing compliance workflow and identified critical failure points: 70% of audit preparation time was spent exporting spreadsheets, sorting rows, and manually diffing values. High-priority configuration updates (e.g. system permission changes) were only audited once a quarter, posing a significant security threat.</p>
+              
+              <h2>Design & implementation</h2>
+              <h3>Serverless automation pipeline</h3>
+              <p>To eliminate manual audits and ensure continuous compliance, we built a serverless automation pipeline using Google Apps Script scheduled via hourly/daily triggers. The script securely queries Salesforce Tooling and REST APIs to fetch current configuration states, diffs them against baseline rules, and updates a secure, read-only audit log in Google Sheets.</p>
+              
+              <h3>Step 1: Establishing Secure OAuth Connection</h3>
+              <p>First, we configure a Connected App in Salesforce to enable JWT Bearer flow or server-to-server OAuth. This allows Google Apps Script to authenticate without storing user passwords. API keys and service certificates are stored securely using Apps Script PropertiesService.</p>
+              
+              <h3>Step 2: Querying the Configuration State</h3>
+              <p>Using the Salesforce Tooling API, the script queries security-critical metadata and object permissions dynamically. The output is filtered and parsed in real-time.</p>
+
+              <h2>Key design decisions</h2>
+              <h3>OAuth 2.0 Integration</h3>
+              <p>Secure system-to-system integration without user credentials, preventing account lockout issues during credentials rotation.</p>
+
+              <h3>Slack Alerting</h3>
+              <p>Instant alert channels for high-priority policy violations (such as administrative permissions assigned to non-standard profiles).</p>
+
+              <h3>Google Sheets Database</h3>
+              <p>A lightweight, accessible, yet read-only log archive for internal compliance stakeholders, making it easy to share reports with auditors.</p>
+
+              <h2>Results</h2>
+              <p>The implementation of this automated compliance pipeline completely transformed the audit process:</p>
+              <ul>
+                <li><strong>Manual Audit Overhead:</strong> Slashed by over 95%. Compliance checks that previously took 40 hours now run automatically in seconds.</li>
+                <li><strong>Audit Coverage:</strong> Coverage went from a quarterly snapshot to continuous daily logging, ensuring no gaps in tracking.</li>
+                <li><strong>Anomaly Detection:</strong> High-risk security configuration changes now trigger instant Slack alerts, allowing the security team to review them immediately.</li>
+                <li><strong>Log Integrity:</strong> Fully automated, un-editable compliance logs saved to a locked Google Sheet, which is shared directly with external auditors.</li>
+              </ul>
+            `
+          },
+          'salesforce-bot': {
+            title: 'Salesforce RAG AI Bot ("Dot")',
+            categoryLabel: 'AI & RAG',
+            tags: ['AI / RAG', 'Python', 'Salesforce'],
+            timeline: '2024 · 10 weeks',
+            client: 'Customer Success & Ops',
+            role: 'AI Ops Architect',
+            timelineLabel: 'Sep – Nov 2024',
+            deliverables: 'Python, Chroma Vector DB, Salesforce Sidebar integration',
+            img: 'https://images.unsplash.com/photo-1531746790731-6c087fecd05a?w=1400&q=80',
+            metrics: [
+              { value: '−70%', label: 'Case resolution time' },
+              { value: '−13%', label: 'Info request case share (16% to 3%)' },
+              { value: '4.7/5', label: 'Agent satisfaction score' },
+              { value: '85%', label: 'First-contact resolution rate' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>In modern customer operations, speed and accuracy are everything. Yet, support agents spend up to 60% of their time navigating siloed information: browsing internal wikis, searching PDF manuals, and asking senior developers for advice. As a result, customers experience long wait times, and operations teams suffer from high escalation rates.</p>
+              <p>Our mandate was to build a helper bot named "Dot" that retrieves the right facts instantly to help support agents answer customer questions directly within the Salesforce Service Cloud sidebar interface.</p>
+
+              <blockquote>
+                <p>"RAG turns your scattered documentation into an active assistant, retrieving the right facts instantly to help support agents answer customer questions."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>Agent time audit</h3>
+              <p>We tracked support agents and discovered that finding the correct documentation took an average of 12 minutes per customer ticket. Agents frequently copied outdated troubleshooting guides, leading to repeat ticket openings and customer frustration.</p>
+              
+              <h2>Design & implementation</h2>
+              <h3>RAG architecture pipeline</h3>
+              <p>We built a retrieval-augmented generation pipeline using Python and OpenAI/Gemini APIs. All support manuals and wikis were indexed into a local Chroma vector database.</p>
+              
+              <h3>Step 1: Semantic Chunks</h3>
+              <p>Internal documentation, SOPs, FAQs, and product manuals are broken down into small paragraphs (chunks). These chunks are converted into mathematical vectors (embeddings) and stored in a vector database like Chroma.</p>
+
+              <h3>Step 2: Intelligent Retrieval</h3>
+              <p>When an agent inputs a customer query, the system converts the query into a vector and searches the database for the most semantically similar documentation chunks, bypassing keyword limitations.</p>
+
+              <h3>Step 3: Context-Aware Synthesis</h3>
+              <p>The system passes the retrieved segments and the user's question to the LLM. The model synthesizes a clear, direct answer based *only* on the provided context, preventing hallucinations.</p>
+
+              <h2>Key design decisions</h2>
+              <h3>Source Citations</h3>
+              <p>Every response from "Dot" must cite the exact source document and section, enabling easy verification.</p>
+
+              <h3>Hybrid Search</h3>
+              <p>Combining semantic embeddings search with keyword search for technical terms (e.g. error codes) to ensure exact troubleshooting guides are loaded.</p>
+
+              <h3>Agent-in-the-Loop</h3>
+              <p>Let agents review and edit the generated response before sending it to the client, guaranteeing tone and safety compliance.</p>
+
+              <h2>Results</h2>
+              <p>Implementing the RAG-based AI assistant "Dot" yielded remarkable operational efficiency gains:</p>
+              <ul>
+                <li><strong>Support Triage Time:</strong> Slashed by 70% as agents no longer spent minutes hunting for answers.</li>
+                <li><strong>Information Requests:</strong> The percentage of tickets asking simple "how-to" questions dropped from 16% to 3%.</li>
+                <li><strong>Accuracy & Trust:</strong> Since every response includes inline citations linking back to the source documents, agents could verify answers instantly.</li>
+              </ul>
+            `
+          },
+          'nexus': {
+            title: 'NEXUS: Global Resourcing & Capacity Platform',
+            categoryLabel: 'Data & BI',
+            tags: ['Data & BI', 'Python', 'Looker'],
+            timeline: '2025 · 8 weeks',
+            client: 'Global Resourcing & Operations',
+            role: 'Associate - AI Strategy & Ops',
+            timelineLabel: 'Apr – Jun 2025',
+            deliverables: 'Python Prediction Engine, Global Heatmaps Dashboard, 3-tier RBAC system',
+            img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=1400&q=80',
+            metrics: [
+              { value: '80%+', label: 'User adoption rate' },
+              { value: '1,500+', label: 'Active corporate users' },
+              { value: '0', label: 'Spreadsheets left manual' },
+              { value: '100%', label: 'Visibility on allocation' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>OSTTRA's capacity tracking and resourcing planning was fragmented across 150+ regional spreadsheets. This created data silos, delayed staffing allocations, and gave resource managers zero real-time visibility into Client Services allocation across global centers.</p>
+              <p>We needed a single source of truth to track global headcount, coordinate cross-training, plan capacities, and model resource allocations dynamically.</p>
+
+              <blockquote>
+                <p>"Spreadsheet silos are the biggest bottleneck in operational capacity planning. Moving to a centralized engine eliminates blind spots and aligns teams instantly."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>Data flow mapping</h3>
+              <p>We audited all 150+ regional spreadsheets and mapped out inconsistent tracking methodologies. We identified that capacity and resourcing logs were updated manually, leading to an average delay of 5 days in resource planning cycles. This caused under-utilization in some regions while others faced extreme bottlenecks.</p>
+
+              <h2>Design & implementation</h2>
+              <h3>Centralized workforce modeling</h3>
+              <p>We architected a unified SQL/Python data schema to store headcount, regions, capabilities, and availability records. We built Looker Studio dashboards displaying live heatmaps and financial run-rates, backed by a predictive workforce modeling engine written in Python.</p>
+
+              <h3>Key design decisions</h3>
+              <h3>3-Tier Role-Based Access Control (RBAC)</h3>
+              <p>Implemented strict security filters to protect sensitive salary, performance, and regional employee data while enabling global planning.</p>
+
+              <h3>Python Predictive Engine</h3>
+              <p>Leveraged historical data trends to predict staffing shortages, driving hiring choices and cross-training programs proactively.</p>
+
+              <h2>Results</h2>
+              <p>The roll-out of the NEXUS platform solved key resource planning inefficiencies:</p>
+              <ul>
+                <li><strong>Manual Spreadsheets:</strong> Completely replaced 150+ offline files with a single live web database.</li>
+                <li><strong>User Adoption:</strong> Achieved 80%+ adoption (1,500+ active users) across global operational teams.</li>
+                <li><strong>Resource Coordination:</strong> Planning meetings that took hours of debate now rely on real-time data, reducing resource planning cycles by 45%.</li>
+              </ul>
+            `
+          },
+          'alfred': {
+            title: 'Project Alfred: LLM-Ready Doc Pipeline',
+            categoryLabel: 'AI & RAG',
+            tags: ['AI / RAG', 'Vertex AI', 'Confluence'],
+            timeline: '2025 · 6 weeks',
+            client: 'AI Ingestion & Core Knowledge',
+            role: 'Associate - AI Strategy & Ops',
+            timelineLabel: 'Jul – Aug 2025',
+            deliverables: 'Vertex AI Pipeline, Metadata Tagging API, Verification UI',
+            img: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1400&q=80',
+            metrics: [
+              { value: '5,000+', label: 'Pages ingested' },
+              { value: '−13%', label: 'Support case reduction' },
+              { value: '2', label: 'Downstream AI products' },
+              { value: '100%', label: 'Metadata tag accuracy' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>Following historical mergers, operational guidelines and market data workflows were scattered across 50+ legacy Confluence spaces. Unstructured documents, out-of-date FAQs, and complex LSEG Pricing manuals made it impossible for downstream AI chatbots to index and retrieve accurate information.</p>
+              <p>Our task was to design an intelligent ingestion pipeline to index, clean, and enrich legacy documentation, establishing a solid foundation for enterprise-grade LLM applications.</p>
+
+              <blockquote>
+                <p>"Garbage in, garbage out. A RAG chatbot is only as good as the metadata and structure of the document source files feeding it."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>Document analysis</h3>
+              <p>We audited legacy wikis and discovered that 40% of page content contained redundant tables, duplicate guidelines, or outdated process instructions. Standard keywords failed to map complex OTC pricing workflows correctly, necessitating semantic metadata enrichment.</p>
+
+              <h2>Design & implementation</h2>
+              <h3>AI Metadata Ingestion Pipeline</h3>
+              <p>We built a serverless documentation pipeline using Vertex AI to read, chunk, and classify text records. The pipeline dynamically extracts entities, maps financial categories, and tags process relevance. To guarantee quality, we coded a gamified human-in-the-loop review console where ops experts audit and correct auto-generated metadata tags.</p>
+
+              <h3>Key design decisions</h3>
+              <h3>Vertex AI Entity Extraction</h3>
+              <p>Extracted specific financial codes, reference tickers, and regulatory terms to support accurate downstream keyword/semantic hybrid search.</p>
+
+              <h3>Human-in-the-Loop Validation</h3>
+              <p>Ensured 100% database accuracy by having human reviewers verify edge-case classification tags before final indexing.</p>
+
+              <h2>Results</h2>
+              <p>Project Alfred created a solid knowledge foundation for our digital operations:</p>
+              <ul>
+                <li><strong>Ingestion Volume:</strong> Successfully processed and structured 5,000+ documentation pages.</li>
+                <li><strong>Downstream Support:</strong> Powers both 'Dot' and 'ODA' Salesforce assistants, ensuring accurate retrievals and cutting support volume by 13%+.</li>
+                <li><strong>Metadata Integrity:</strong> Achieved 100% validated tagging accuracy, resolving search ambiguities.</li>
+              </ul>
+            `
+          },
+          'kyc': {
+            title: 'Digital Onboarding & KYC Digitization',
+            categoryLabel: 'Automation',
+            tags: ['Automation', 'KYC/AML', 'AI Assisted'],
+            timeline: '2025 · 7 weeks',
+            client: 'Client Onboarding & Compliance',
+            role: 'Associate - AI Strategy & Ops',
+            timelineLabel: 'Oct – Nov 2025',
+            deliverables: 'Form Validation Engine, Checklist Auto-gatherer, Entity screening enrichment',
+            img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1400&q=80',
+            metrics: [
+              { value: '−55%', label: 'KYC setup cycle time' },
+              { value: '18→8', label: 'Onboarding days' },
+              { value: '100%', label: 'Compliance screening' },
+              { value: '0', label: 'Manual database skips' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>OSTTRA client onboarding was historically delayed by a manual 18-day KYC (Know Your Customer) validation flow. Verifying regulatory checklists, matching entities against reference databases, and screening certifications created extreme sales backlog bottlenecks.</p>
+              <p>We aimed to build an automated KYC validation engine that accelerates client acquisition without compromising regulatory screening rigor.</p>
+
+              <blockquote>
+                <p>"Process speed and regulatory compliance are not mutually exclusive. Automation bridges the gap, allowing rapid setup while securing full audit tracks."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>Workflow audits</h3>
+              <p>We mapped the manual onboarding journey and found that compliance officers spent 60% of their time copying values between regulatory portals and manually screening entity reference data. Manual spreadsheet checklists frequently had key fields left incomplete.</p>
+
+              <h2>Design & implementation</h2>
+              <h3>KYC Digitization Engine</h3>
+              <p>We developed a digital onboarding portal utilizing form validation rules, AI-assisted checklist extraction from uploaded regulatory filings, and direct entity screening against API reference data. Compliance officers are alerted only when anomalies are detected, streamlining manual reviews.</p>
+
+              <h3>Key design decisions</h3>
+              <h3>Reference API Screenings</h3>
+              <p>Integrates verification steps directly into external entity registries via APIs, removing the need for manual copy-paste checks.</p>
+
+              <h3>AI-Assisted Checklist Ingestion</h3>
+              <p>Automatically scans regulatory PDFs to build compliance task check-lists, highlighting outstanding documents instantly.</p>
+
+              <h2>Results</h2>
+              <p>The digitization engine drastically accelerated OSTTRA onboarding cycles:</p>
+              <ul>
+                <li><strong>Onboarding Setup Speed:</strong> Slashed cycle time by 55%, reducing process duration from 18 to 8 days.</li>
+                <li><strong>Compliance Security:</strong> Automated screening ensures 100% compliance checks are completed and logged, with zero manual bypasses.</li>
+                <li><strong>Customer Experience:</strong> Client onboarding bottlenecks were eliminated, improving overall sales velocity.</li>
+              </ul>
+            `
+          },
+          'portfolio': {
+            title: 'AI Portfolio & Referral Exchange',
+            categoryLabel: 'Automation',
+            tags: ['AI / Web', 'Claude Code', 'Apps Script'],
+            timeline: '2026 · 4 weeks',
+            client: 'Personal Project / Tooling',
+            role: 'Strategy & Ops Developer',
+            timelineLabel: 'May – Jun 2026',
+            deliverables: 'Serverless Web App, Alpine.js Client, Apps Script API, UTR verification logs',
+            img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80',
+            metrics: [
+              { value: '80%', label: 'Prototyping speedup' },
+              { value: '$0', label: 'Hosting overhead costs' },
+              { value: '100%', label: 'UPI transaction verification' },
+              { value: '24/7', label: 'Automated database syncing' }
+            ],
+            content: `
+              <h2>The brief</h2>
+              <p>Web servers, cloud databases, and API integrations can quickly become expensive and complicated to maintain for portfolio projects. To demonstrate rapid prototyping and process improvement, we aimed to build a fully functional, serverless developer portfolio and peer-to-peer referral exchange platform with $0 hosting overhead.</p>
+
+              <blockquote>
+                <p>"Agentic AI allows developers to build complex, serverless platforms in days rather than months, validating products at zero initial cost."</p>
+              </blockquote>
+
+              <h2>Discovery & research</h2>
+              <h3>DMAIC project framework</h3>
+              <p>Using Lean Six Sigma DMAIC principles, we mapped the desired customer journey: Seekers search matched roles, pay a transaction verification fee, and get connected with verified company referrers. We analyzed how to query databases and handle payments securely without a traditional server backend.</p>
+
+              <h2>Design & implementation</h2>
+              <h3>Serverless stack</h3>
+              <p>We designed a lightweight frontend using Alpine.js and Tailwind CSS. The entire backend is serverless, running on Google Apps Script and utilizing Google Sheets as a database. Payments are mapped using direct UPI transaction verification (UTR codes) tracked in real-time inside secure database spreadsheets.</p>
+
+              <h3>Key design decisions</h3>
+              <h3>Zero-Cost Database</h3>
+              <p>Leveraged Google Sheets as a relational database, accessing sheets via lightweight JSON REST endpoints in Apps Script.</p>
+
+              <h3>CLASP CLI Workflows</h3>
+              <p>Developed code locally inside VS Code, managing version history through Git and pushing scripts directly to Apps Script using CLASP CLI.</p>
+
+              <h2>Results</h2>
+              <p>The platform successfully proved that zero-cost serverless architectures are viable for rapid prototyping:</p>
+              <ul>
+                <li><strong>Prototyping speed:</strong> Agentic AI pair programming (Claude Code) reduced engineering cycles by 80%.</li>
+                <li><strong>Running costs:</strong> Set up hostings, databases, APIs, and transaction sweeps with $0 monthly bills.</li>
+                <li><strong>Transaction Integrity:</strong> Integrated direct UTR verification, mapping payment codes to user records with 100% verification accuracy.</li>
+              </ul>
+            `
+          }
+        },
+        
+        get projectKeys() {
+          return Object.keys(this.projects);
+        },
+        
+        get relatedProjects() {
+          const keys = this.projectKeys.filter(k => k !== this.activeProject);
+          return keys.map(k => {
+            return {
+              key: k,
+              title: this.projects[k].title,
+              categoryLabel: this.projects[k].categoryLabel,
+              img: this.projects[k].img,
+              url: 'case-study.html?project=' + k
+            };
+          });
+        },
+        
+        get p() {
+          return this.projects[this.activeProject] || this.projects['sox'];
+        },
+        
+        init() {
+          this.dark = localStorage.getItem('theme') === 'dark'
+            || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+          this.$watch('dark', v => localStorage.setItem('theme', v ? 'dark' : 'light'));
+
+          window.addEventListener('scroll', () => {
+            this.scrolled = window.scrollY > 20;
+            this.progress = Math.min(100, Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100));
+          }, { passive: true });
+
+          // Load active project from URL param
+          const urlParams = new URLSearchParams(window.location.search);
+          const proj = urlParams.get('project');
+          if (proj && this.projects[proj]) {
+            this.activeProject = proj;
+          }
+          
+          this.$nextTick(() => {
+            const obs = new IntersectionObserver(entries => {
+              entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+              });
+            }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+          });
+        }
+      }
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+<script>
+(function() {
+  const canvas = document.getElementById('pixel-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  let particles = [];
+  const spacing = 40; // pixel spacing between points
+  const mouse = { x: null, y: null, radius: 100 }; // mouse radius of influence
+
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.baseX = x;
+      this.baseY = y;
+      this.vx = 0;
+      this.vy = 0;
+      this.size = 2; // small square pixel size
+      this.density = (Math.random() * 20) + 15; // random density for varying spring speeds
+    }
+
+    draw() {
+      const isDark = document.documentElement.classList.contains('dark');
+      ctx.fillStyle = isDark ? 'rgba(255, 107, 43, 0.45)' : 'rgba(255, 107, 43, 0.3)';
+      ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+
+    update() {
+      let dx = this.baseX - this.x;
+      let dy = this.baseY - this.y;
+      
+      let forceX = dx * 0.08;
+      let forceY = dy * 0.08;
+
+      if (mouse.x !== null && mouse.y !== null) {
+        let mdx = mouse.x - this.x;
+        let mdy = mouse.y - this.y;
+        let dist = Math.sqrt(mdx * mdx + mdy * mdy);
+        
+        if (dist < mouse.radius) {
+          let pushForce = (mouse.radius - dist) / mouse.radius;
+          let angle = Math.atan2(mdy, mdx);
+          forceX -= Math.cos(angle) * pushForce * this.density;
+          forceY -= Math.sin(angle) * pushForce * this.density;
+        }
+      }
+
+      this.vx = (this.vx + forceX) * 0.82;
+      this.vy = (this.vy + forceY) * 0.82;
+
+      this.x += this.vx;
+      this.y += this.vy;
+    }
+  }
+
+  function init() {
+    particles = [];
+    const cols = Math.floor(width / spacing);
+    const rows = Math.floor(height / spacing);
+    
+    const offsetX = (width - (cols * spacing)) / 2;
+    const offsetY = (height - (rows * spacing)) / 2;
+
+    for (let i = 0; i <= cols; i++) {
+      for (let j = 0; j <= rows; j++) {
+        let x = offsetX + (i * spacing);
+        let y = offsetY + (j * spacing);
+        particles.push(new Particle(x, y));
+      }
+    }
+  }
+
+  window.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', function() {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  window.addEventListener('resize', function() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    init();
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+})();
+</script>
 
 </body>
 </html>

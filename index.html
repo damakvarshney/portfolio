@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Damak Kumar Varshney — Associate - AI Strategy & Ops Excellence. Specializing in continuous improvement, automation, and AI integration.">
-<meta name="keywords" content="AI Strategy, Operational Excellence, Automation, FinTech, Project Management, Python, Google Apps Script">
-<meta name="author" content="Damak Kumar Varshney">
-<meta property="og:title" content="Damak Kumar Varshney — AI Strategy & Ops Excellence">
-<meta property="og:description" content="Project manager specializing in continuous improvement, automation, and AI integration.">
+<meta name="description" content="Damak Varshney — AI Product Engineer | AI Strategy & Ops Leader. Specializing in RAG & Agentic AI solutions in fintech, scaling enterprise adoption, and delivering quantifiable FTE savings.">
+<meta name="keywords" content="AI Product Engineer, AI Strategy, Vertex AI, RAG, Agentic AI, Fintech, Operational Excellence, Automation, Python, Google Apps Script">
+<meta name="author" content="Damak Varshney">
+<meta property="og:title" content="Damak Varshney — AI Product Engineer | AI Strategy & Ops Leader">
+<meta property="og:description" content="AI Product Engineer specializing in RAG, Agentic AI, operational automation, and fintech solutions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://damak.dev">
-<title>Damak Kumar Varshney — AI Strategy & Ops Excellence</title>
+<title>Damak Varshney — AI Product Engineer | AI Strategy & Ops</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -77,6 +77,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </head>
 
 <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 antialiased">
+<canvas id="pixel-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
 <!-- ═══ NAV ═══ -->
 <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
@@ -162,10 +163,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
             </div>
           </div>
           <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6">
-            Hi, I'm <span class="text-accent">Damak</span>
+            Hi, I'm <span class="text-accent">Damak Varshney</span>
           </h1>
           <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-            Associate — <strong class="font-medium text-zinc-700 dark:text-zinc-300">AI Strategy &amp; Ops Excellence</strong>. I build functional, automated ecosystems that eliminate manual busywork and enable strategic business outcomes.
+            <strong class="font-medium text-zinc-700 dark:text-zinc-300">AI Product Engineer | AI Strategy &amp; Ops Leader</strong>. Rare combo: Product Engineer + OTC Markets Expert + Agentic AI Developer. I design and scale RAG &amp; agentic solutions that drive business transformation.
           </p>
         </div>
 
@@ -200,16 +201,16 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           </button>
         </div>
         <div class="reveal d4 flex gap-8 mt-14 pt-8 border-t border-zinc-100 dark:border-zinc-900">
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">19.5+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">FTE Savings</p></div>
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">60+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Ideas Launched</p></div>
-          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">6y</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">Experience</p></div>
+          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">16+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">FTE Savings</p></div>
+          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">5+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">AI Products</p></div>
+          <div><p class="font-display font-bold text-3xl text-zinc-900 dark:text-white">80%+</p><p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">User Adoption</p></div>
         </div>
       </div>
 
       <div class="reveal d2 flex justify-center md:justify-end">
         <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
           <div class="pf w-full h-full rounded-3xl">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Eliott — Freelance UI/UX Designer" loading="eager">
+            <img src="data/DamakPhoto.png" alt="Damak Varshney — AI Product Engineer | AI Strategy & Ops" loading="eager">
           </div>
           <div class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Open to projects</div>
         </div>
@@ -220,7 +221,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ SERVICES ═══ -->
-<section id="services" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+<section id="services" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
       <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">What I do</p>
@@ -257,7 +258,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ WORK ═══ -->
-<section id="work" class="py-24">
+<section id="work" class="relative z-10 py-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
       <div>
@@ -279,11 +280,11 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
             <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Apps Script</span>
             <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Salesforce</span>
           </div>
-          <a href="#">
+          <a href="case-study.html?project=sox">
             <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">SOX Compliance Automation Engine</h3>
           </a>
           <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">Manual audit sweeps created data silos and delayed reporting. I coded a high-speed script wrapper triggering instant platform health sweeps, compiling risk logs automatically.<br><br><strong class="text-zinc-700 dark:text-zinc-300">Impact:</strong> Saved 4.1 FTEs instantly. Achieved 100% audit standard compliance transparency across departments. Recognized with the Trendsetter Innovator Award.</p>
-          <a href="#" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="case-study.html?project=sox" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
         </div>
       </article>
 
@@ -296,28 +297,29 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
             <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">AI / RAG</span>
             <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
           </div>
-          <a href="#">
+          <a href="case-study.html?project=salesforce-bot">
             <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Salesforce RAG AI Bot ("Dot")</h3>
           </a>
           <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Slashed case resolution times by 70% and reduced information request cases from 16% to 3% using retrieval-augmented generation.</p>
-          <a href="#" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
+          <a href="case-study.html?project=salesforce-bot" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
         </div>
       </article>
 
       <article class="card-h reveal d3 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
         <div class="pf w-full h-48">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800&q=80" alt="Gemini CLI Capacity Management Interface" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800&q=80" alt="NEXUS Global Resourcing & Capacity Platform" loading="lazy">
         </div>
         <div class="p-6">
           <div class="flex flex-wrap gap-2 mb-3">
-            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Vibe Coding</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Gemini CLI</span>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-3 py-1 rounded-full">Data &amp; BI</span>
+            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
+            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Looker</span>
           </div>
-          <a href="#">
-            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">Gemini CLI Capacity Interface</h3>
+          <a href="case-study.html?project=nexus">
+            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-1.5">NEXUS: Global Resourcing Platform</h3>
           </a>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Developed a real-time skill matrix and regional capacity management tool using bleeding-edge "vibe coding" capabilities with LLMs.</p>
-          <a href="#" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Eliminated 150+ spreadsheets. Developed a predictive workforce engine, global heatmaps, and role-based access capacity matrix with 80%+ adoption (1,500+ users).</p>
+          <a href="case-study.html?project=nexus" class="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-white nl">View case study →</a>
         </div>
       </article>
 
@@ -326,13 +328,13 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ ABOUT ═══ -->
-<section id="about" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+<section id="about" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
   <div class="max-w-6xl mx-auto px-6">
     <div class="grid md:grid-cols-2 gap-16 items-center">
 
       <div class="reveal order-2 md:order-1">
         <div class="pf w-full aspect-square max-w-sm mx-auto rounded-3xl">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Eliott" loading="lazy">
+          <img src="data/DamakPhoto.png" alt="Damak Kumar Varshney" loading="lazy">
         </div>
       </div>
 
@@ -340,10 +342,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">About me</p>
         <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white leading-tight mb-6">A bit about<br>who I am</h2>
         <p class="reveal d2 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
-          I'm Damak, a project manager specializing in continuous improvement, automation, and AI integration. Currently at OSTTRA, I combine an educational foundation in Finance and Analytics with robust technical expertise to eliminate organizational bottlenecks.
+          I'm Damak Varshney, an AI Product Engineer and Strategy &amp; Ops leader. Currently at OSTTRA (a KKR portfolio company), I combine a strong background in finance and analytics (IBS PGPM, CGPA 9.0/10) with deep operational and agentic AI expertise to ship business-transforming software.
         </p>
         <p class="reveal d3 text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
-          I believe in building automated ecosystems that allow teams to pivot from manual busywork to strategic, high-value objectives. Known for delivering measurable efficiency gains, I thrive at the intersection of process optimization and bleeding-edge AI frameworks.
+          I specialize in building intelligent agents, RAG pipelines (Vertex AI, Chroma, Salesforce Service sidebar), and custom dashboard analytics. Known for driving 16+ FTE annual savings and establishing robust automation controls, I love scaling workflows from early-stage prompt design to secure enterprise environments.
         </p>
         <div class="reveal d4">
           <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">Stack &amp; tools (Hover for truth)</p>
@@ -373,7 +375,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ TESTIMONIALS ═══ -->
-<section id="reviews" class="py-24">
+<section id="reviews" class="relative z-10 py-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
       <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Recognition</p>
@@ -426,7 +428,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ BLOG ═══ -->
-<section id="blog" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+<section id="blog" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
   <div class="max-w-6xl mx-auto px-6">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
       <div>
@@ -441,10 +443,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <div class="p-6">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">AI Strategy</span>
-            <span class="text-xs text-zinc-400">2026 - Present</span>
+            <span class="text-xs text-zinc-400">April 2025 - Present</span>
           </div>
-          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Associate - AI Strategy & Ops</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">OSTTRA (KKR Portfolio). Revolutionizing client services through the DigiOps Program and real-time skill matrix tools via Gemini CLI.</p>
+          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Associate, AI Strategy &amp; Ops</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">OSTTRA (KKR Portfolio). Shipped 5+ AI products (NEXUS, Dot/ODA, Project Alfred) delivering 16+ FTE savings. Scaled adoption to 80%+ across 1,500+ users.</p>
         </div>
       </article>
 
@@ -452,21 +454,21 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <div class="p-6">
           <div class="flex items-center gap-3 mb-3">
             <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Automation</span>
-            <span class="text-xs text-zinc-400">2024 - 2026</span>
+            <span class="text-xs text-zinc-400">Feb 2024 - Dec 2024</span>
           </div>
-          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Sr. Analyst - Process AI</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">OSTTRA. Automated SOX Compliance workflows saving 4.1 FTEs and implemented 25+ Salesforce enhancements saving 8+ FTEs yearly.</p>
+          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Senior OpEx Analyst</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">OSTTRA. Delivered 10-12 continuous improvement projects. Automated SOX Compliance user access reviews, saving 4.1 FTEs per audit cycle.</p>
         </div>
       </article>
 
       <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-100 dark:border-zinc-800 hover:border-accent">
         <div class="p-6">
           <div class="flex items-center gap-3 mb-3">
-            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Finance</span>
-            <span class="text-xs text-zinc-400">2023</span>
+            <span class="text-xs bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700 px-2.5 py-1 rounded-full">Mobile Development</span>
+            <span class="text-xs text-zinc-400">2020 - 2022</span>
           </div>
-          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">Credit Analyst Intern</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">Kotak Mahindra Bank. Evaluated MSME working capital limits and performed critical ratio assessments for underwriting.</p>
+          <h3 class="font-display font-bold text-lg text-zinc-900 dark:text-white mb-2 group-hover:text-accent transition-colors">React Native Developer</h3>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">RPQ IT Services &amp; Markup Design. Shipped 5+ production mobile applications. Designed UI/UX wireframes in Figma and Adobe XD.</p>
         </div>
       </article>
 
@@ -475,7 +477,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ DIGITAL GARDEN ═══ -->
-<section id="garden" class="py-24 overflow-hidden">
+<section id="garden" class="relative z-10 py-24 overflow-hidden">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
       <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Authenticity</p>
@@ -524,78 +526,158 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ REFERRALS ═══ -->
-<section id="referrals" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
+<section id="referrals" class="relative z-10 py-24 bg-zinc-50/70 dark:bg-zinc-950/20 backdrop-blur-[2px]">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14 text-center md:text-left">
       <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Networking</p>
-      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Referral Exchange</h2>
+      <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Referral &amp; Hiring Exchange</h2>
+      <p class="text-zinc-500 dark:text-zinc-400 text-sm mt-3 max-w-xl">
+        Access peer-to-peer referral directories or explore the premium **Sure Shot Hiring** program to secure active, guaranteed job placements directly with hiring managers.
+      </p>
     </div>
 
     <div class="grid lg:grid-cols-12 gap-12">
-      <!-- system info -->
+      <!-- system info / left context -->
       <div class="lg:col-span-5 space-y-8">
-        <div class="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
-          <h3 class="font-display font-bold text-xl mb-4">How it works</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">A vetted marketplace for referrals. Earn coins by referring others, or use them to request referrals from top enterprise organizations.</p>
-          <div class="space-y-4">
-            <div class="flex gap-4">
-              <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">1</div>
-              <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Request a referral or list your availability to refer others.</p>
+        
+        <!-- Tab context: Seeker / Giver -->
+        <div x-show="refTab === 'seeker' || refTab === 'giver'" class="space-y-8">
+          <div class="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <h3 class="font-display font-bold text-xl mb-4 text-zinc-900 dark:text-white">How it works</h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">A vetted marketplace for referrals. Earn coins by referring others, or use them to request referrals from top enterprise organizations.</p>
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">1</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Request a referral or list your availability to refer others.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">2</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Verify your professional profile or pay the vetting fee.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">3</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Get direct developer connections once verified.</p>
+              </div>
             </div>
-            <div class="flex gap-4">
-              <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">2</div>
-              <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Verify your professional profile or pay the vetting fee.</p>
+          </div>
+
+          <!-- upi mock -->
+          <div class="bg-zinc-900 dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-800 text-white space-y-6">
+            <div class="text-center">
+              <p class="text-[10px] font-bold text-accent uppercase tracking-widest mb-1">Direct Settlement</p>
+              <h4 class="font-display font-bold text-lg">Verification Portal</h4>
             </div>
-            <div class="flex gap-4">
-              <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">3</div>
-              <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1">Get direct developer connections once verified.</p>
+            <div class="bg-white rounded-2xl p-4 flex flex-col items-center justify-center space-y-4">
+              <div class="w-32 h-32 border-2 border-zinc-100 rounded-xl flex items-center justify-center relative overflow-hidden">
+                 <div class="grid grid-cols-4 gap-1 w-full h-full opacity-5">
+                   <template x-for="i in 16">
+                      <div class="bg-zinc-900"></div>
+                   </template>
+                 </div>
+                 <p class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-accent uppercase tracking-widest text-center px-2">Mock UPI QR</p>
+              </div>
+              <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">damak.varshney@okaxis</p>
+            </div>
+            <form @submit.prevent="verifyPayment()" class="space-y-4">
+              <input type="text" x-model="newUtr" maxlength="12" placeholder="12-digit UTR reference" required
+                class="w-full bg-zinc-800 border border-zinc-700 text-white text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors">
+              <button type="submit" class="w-full bg-accent text-white py-3 rounded-xl text-xs font-bold hover:bg-accent-light transition-colors">Verify Transaction</button>
+            </form>
+            <p x-show="refPaid" x-cloak class="text-center text-[10px] text-emerald-400">✓ Transaction verified. Directory unlocked.</p>
+          </div>
+        </div>
+
+        <!-- Tab context: Sure Shot Jobs -->
+        <div x-show="refTab === 'sureshot'" x-cloak class="space-y-8">
+          <div class="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <div class="inline-flex items-center gap-2 bg-accent/10 text-accent font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+              🛡️ Escrow Guarantee
+            </div>
+            <h3 class="font-display font-bold text-xl mb-4 text-zinc-900 dark:text-white">Sure Shot Program</h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">
+              Hiring managers set custom placement fees and guarantee direct interviews or placements for qualified applicants. Payments are secured in our platform escrow.
+            </p>
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">✓</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Not Scraped:</strong> Postings are directly listed by managers actively looking to hire.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">✓</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Guaranteed Evaluation:</strong> Eligible candidates get evaluating feedback or direct interview loops within 5 days.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 font-bold text-xs">✓</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Escrow Safe:</strong> If the manager doesn't run the interview or you are ineligible, get a 100% refund.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900 dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-800 text-white text-center space-y-4">
+            <p class="text-[10px] font-bold text-accent uppercase tracking-widest">Platform Integrity</p>
+            <h4 class="font-display font-bold text-lg">Vetting Success Rate</h4>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="bg-zinc-800/80 p-4 rounded-2xl border border-zinc-700/50">
+                <p class="text-2xl font-bold text-accent">98.4%</p>
+                <p class="text-[9px] text-zinc-400 uppercase tracking-widest mt-1">Review SLA Met</p>
+              </div>
+              <div class="bg-zinc-800/80 p-4 rounded-2xl border border-zinc-700/50">
+                <p class="text-2xl font-bold text-white">0%</p>
+                <p class="text-[9px] text-zinc-400 uppercase tracking-widest mt-1">Fee Scams / Losses</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- upi mock -->
-        <div class="bg-zinc-900 dark:bg-zinc-800 p-8 rounded-3xl border border-zinc-800 text-white space-y-6">
-          <div class="text-center">
-            <p class="text-[10px] font-bold text-accent uppercase tracking-widest mb-1">Direct Settlement</p>
-            <h4 class="font-display font-bold text-lg">Verification Portal</h4>
-          </div>
-          <div class="bg-white rounded-2xl p-4 flex flex-col items-center justify-center space-y-4">
-            <div class="w-32 h-32 border-2 border-zinc-100 rounded-xl flex items-center justify-center relative overflow-hidden">
-               <div class="grid grid-cols-4 gap-1 w-full h-full opacity-5">
-                 <template x-for="i in 16">
-                    <div class="bg-zinc-900"></div>
-                 </template>
-               </div>
-               <p class="absolute inset-0 flex items-center justify-center text-[10px] font-black text-accent uppercase tracking-widest">Mock UPI QR</p>
+        <!-- Tab context: HM Portal -->
+        <div x-show="refTab === 'hmportal'" x-cloak class="space-y-8">
+          <div class="bg-white dark:bg-zinc-900 p-8 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+              💼 Employer Authority
             </div>
-            <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">damak.varshney@okaxis</p>
+            <h3 class="font-display font-bold text-xl mb-4 text-zinc-900 dark:text-white">Hiring Portal</h3>
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-6">
+              Create a profile to find applicants who strictly match your criteria. You have full pricing freedom: set the application fee to match vetting efforts and filters.
+            </p>
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0 font-bold text-xs">1</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Register Profile:</strong> Supply your corporate domain verified email and LinkedIn details.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0 font-bold text-xs">2</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Post Job &amp; Set Fee:</strong> Define specific eligibility parameters and charge a custom screening fee.</p>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 shrink-0 font-bold text-xs">3</div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 pt-1"><strong>Claim Escrow Payouts:</strong> Vetting fees are credited to you once you run the promised evaluation.</p>
+              </div>
+            </div>
           </div>
-          <form @submit.prevent="verifyPayment()" class="space-y-4">
-            <input type="text" x-model="newUtr" maxlength="12" placeholder="12-digit UTR reference" required
-              class="w-full bg-zinc-800 border border-zinc-700 text-white text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors">
-            <button type="submit" class="w-full bg-accent text-white py-3 rounded-xl text-xs font-bold hover:bg-accent-light transition-colors">Verify Transaction</button>
-          </form>
-          <p x-show="refPaid" x-cloak class="text-center text-[10px] text-emerald-400">✓ Transaction verified. Directory unlocked.</p>
         </div>
+
       </div>
 
-      <!-- directory -->
+      <!-- directory card / right context -->
       <div class="lg:col-span-7">
-        <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-sm h-full">
-          <div class="p-8 border-b border-zinc-100 dark:border-zinc-800 flex justify-between items-center">
-            <h3 class="font-display font-bold text-xl">Referral Directory</h3>
-            <div class="flex p-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
-              <button @click="refTab = 'seeker'" :class="refTab === 'seeker' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white' : 'text-zinc-500'" class="px-4 py-1.5 text-xs font-bold rounded-md transition-all">Seekers</button>
-              <button @click="refTab = 'giver'" :class="refTab === 'giver' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white' : 'text-zinc-500'" class="px-4 py-1.5 text-xs font-bold rounded-md transition-all">Givers</button>
+        <div class="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-3xl overflow-hidden shadow-sm h-full flex flex-col">
+          <div class="p-8 border-b border-zinc-100 dark:border-zinc-800 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+            <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white" x-text="refTab === 'hmportal' ? 'Manager Console' : (refTab === 'sureshot' ? 'Sure Shot Directory' : 'Referral Directory')"></h3>
+            <div class="flex p-1 bg-zinc-100 dark:bg-zinc-800 rounded-lg overflow-x-auto max-w-full whitespace-nowrap">
+              <button @click="refTab = 'seeker'" :class="refTab === 'seeker' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="px-3 py-1.5 text-xs font-bold rounded-md transition-all">Seekers</button>
+              <button @click="refTab = 'giver'" :class="refTab === 'giver' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="px-3 py-1.5 text-xs font-bold rounded-md transition-all">Givers</button>
+              <button @click="refTab = 'sureshot'" :class="refTab === 'sureshot' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="px-3 py-1.5 text-xs font-bold rounded-md transition-all">🎯 Sure Shot Jobs</button>
+              <button @click="refTab = 'hmportal'" :class="refTab === 'hmportal' ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white'" class="px-3 py-1.5 text-xs font-bold rounded-md transition-all">💼 HM Portal</button>
             </div>
           </div>
           
-          <div class="relative">
+          <!-- View: Seeker / Giver Directory -->
+          <div x-show="refTab === 'seeker' || refTab === 'giver'" class="relative flex-grow">
             <div :class="!refPaid ? 'blur-md pointer-events-none opacity-50' : ''" class="transition-all duration-700">
                <table class="w-full text-left text-xs">
                  <thead class="bg-zinc-50 dark:bg-zinc-800/50 text-zinc-400 font-bold border-b border-zinc-100 dark:border-zinc-800 uppercase tracking-widest">
                    <tr>
-                     <th class="px-8 py-5">Company</th>
+                     <th class="px-8 py-5" x-text="refTab === 'seeker' ? 'Target Company' : 'Referrer Company'"></th>
                      <th class="px-8 py-5">Status</th>
                      <th class="px-8 py-5 text-right">Action</th>
                    </tr>
@@ -603,13 +685,13 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
                  <tbody class="divide-y divide-zinc-100 dark:divide-zinc-800">
                    <template x-for="ref in referrals">
                      <tr class="hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
-                       <td class="px-8 py-6 font-bold" x-text="ref.company"></td>
+                       <td class="px-8 py-6 font-bold text-zinc-900 dark:text-white" x-text="ref.company"></td>
                        <td class="px-8 py-6">
                          <span :class="ref.status === 'Active' ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-600'" 
                            class="px-2 py-1 rounded-md font-bold text-[10px] uppercase tracking-wider" x-text="ref.status"></span>
                        </td>
                        <td class="px-8 py-6 text-right">
-                         <button class="text-accent font-bold hover:underline">Request</button>
+                         <button class="text-accent font-bold hover:underline" x-text="refTab === 'seeker' ? 'Submit Credentials' : 'Request Referral'"></button>
                        </td>
                      </tr>
                    </template>
@@ -621,11 +703,163 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
                 <div class="w-12 h-12 bg-accent/10 text-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                 </div>
-                <h4 class="font-display font-bold text-lg">Directory Locked</h4>
+                <h4 class="font-display font-bold text-lg text-zinc-900 dark:text-white">Directory Locked</h4>
                 <p class="text-sm text-zinc-500 max-w-xs mx-auto">Verify your UTR reference to unlock the active matching directory and connect with referrers.</p>
               </div>
             </div>
           </div>
+
+          <!-- View: Sure Shot Jobs premium grid -->
+          <div x-show="refTab === 'sureshot'" x-cloak class="flex-grow p-6 overflow-y-auto max-h-[550px] space-y-6">
+            <template x-for="job in sureShotJobs" :key="job.id">
+              <div class="bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 hover:border-accent transition-all relative group">
+                <div class="absolute top-6 right-6 text-xs text-zinc-400" x-text="job.date"></div>
+                
+                <div class="flex items-center gap-2 mb-3">
+                  <span class="text-xs bg-accent/10 text-accent border border-accent/20 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider" x-text="job.company"></span>
+                  <span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-2 py-0.5 rounded flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a.75.75 0 00-.708.523L4.545 7.15c-.244.733-.902 1.258-1.678 1.34L.55 8.7a.75.75 0 00-.416 1.28l1.644 1.6c.557.543.81 1.32.68 2.09l-.39 2.27a.75.75 0 001.09.79l2.025-1.066a.75.75 0 01.698 0l2.025 1.066a.75.75 0 001.09-.79l-.39-2.27c-.13-.77.123-1.547.68-2.09l1.644-1.6a.75.75 0 00-.416-1.28l-2.317-.21a1.25 1.25 0 01-.977-.777l-1.014-3.172z" clip-rule="evenodd"></path></svg>
+                    Verified Post
+                  </span>
+                </div>
+
+                <h4 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-2" x-text="job.title"></h4>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 mb-4" x-text="job.description"></p>
+
+                <!-- Criteria & Guarantee -->
+                <div class="grid sm:grid-cols-2 gap-4 mb-5">
+                  <div class="bg-white dark:bg-zinc-800/40 p-4 rounded-xl border border-zinc-150 dark:border-zinc-800/60">
+                    <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-1.5">🎓 Eligibility Checklist</p>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed" x-text="job.criteria"></p>
+                  </div>
+                  <div class="bg-white dark:bg-zinc-800/40 p-4 rounded-xl border border-zinc-150 dark:border-zinc-800/60">
+                    <p class="text-[10px] font-bold text-accent uppercase tracking-widest mb-1.5">🎯 Sure Shot Guarantee</p>
+                    <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed" x-text="job.guarantee"></p>
+                  </div>
+                </div>
+
+                <!-- Footer with Price and Apply -->
+                <div class="flex justify-between items-center border-t border-zinc-100 dark:border-zinc-800 pt-4">
+                  <div>
+                    <span class="text-[10px] text-zinc-400 uppercase block">Application Vetting Fee</span>
+                    <span class="text-lg font-display font-bold text-accent" x-text="job.fee"></span>
+                  </div>
+                  <button @click="openSureShotApply(job)" 
+                    class="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white hover:text-white px-5 py-2.5 rounded-xl text-xs font-bold transition-colors">
+                    Apply with Guarantee
+                  </button>
+                </div>
+              </div>
+            </template>
+          </div>
+
+          <!-- View: Hiring Manager Portal console -->
+          <div x-show="refTab === 'hmportal'" x-cloak class="flex-grow p-8">
+            
+            <!-- Registration Form -->
+            <div x-show="!hmRegistered" class="space-y-6">
+              <div>
+                <h4 class="font-display font-bold text-lg text-zinc-900 dark:text-white">Hiring Manager Verification</h4>
+                <p class="text-xs text-zinc-500">Provide details to register your recruiter/employer profile. Work email domains are cross-referenced with your company profile.</p>
+              </div>
+
+              <form @submit.prevent="registerHM()" class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="hm-name" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Full Name *</label>
+                    <input type="text" id="hm-name" x-model="newHMName" required placeholder="Marcus Wright"
+                      class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                  </div>
+                  <div>
+                    <label for="hm-email" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Corporate Email *</label>
+                    <input type="email" id="hm-email" x-model="newHMEmail" required placeholder="mwright@salesforce.com"
+                      class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                  </div>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="hm-company" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Company Name *</label>
+                    <input type="text" id="hm-company" x-model="newHMCompany" required placeholder="Salesforce"
+                      class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                  </div>
+                  <div>
+                    <label for="hm-linkedin" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">LinkedIn Profile Link</label>
+                    <input type="url" id="hm-linkedin" x-model="newHMLinkedin" placeholder="https://linkedin.com/in/username"
+                      class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                  </div>
+                </div>
+
+                <button type="submit" class="w-full bg-accent text-white font-bold py-3.5 rounded-xl text-xs hover:bg-accent-light transition-colors">
+                  Verify Domain &amp; Create Profile
+                </button>
+              </form>
+            </div>
+
+            <!-- Active HM Dashboard -->
+            <div x-show="hmRegistered" class="space-y-6">
+              <div class="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-4">
+                <div>
+                  <h4 class="font-display font-bold text-lg text-zinc-900 dark:text-white flex items-center gap-2">
+                    Console: <span x-text="registeredHM.name"></span>
+                    <span class="text-[10px] text-emerald-500 font-bold bg-emerald-500/10 px-2 py-0.5 rounded">Verified Admin</span>
+                  </h4>
+                  <p class="text-xs text-zinc-500 mt-1" x-text="'Posting on behalf of ' + registeredHM.company + ' (' + registeredHM.email + ')'"></p>
+                </div>
+                <button @click="hmRegistered = false" class="text-xs text-red-500 hover:underline">Log Out</button>
+              </div>
+
+              <!-- Post Job Form -->
+              <div>
+                <h5 class="font-bold text-sm text-zinc-900 dark:text-white mb-4">Post a New Sure Shot Opening</h5>
+                <form @submit.prevent="postSureShotJob()" class="space-y-4">
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="job-title" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Job Title *</label>
+                      <input type="text" id="job-title" x-model="newJobTitle" required placeholder="Staff DevOps Architect"
+                        class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                    </div>
+                    <div>
+                      <label for="job-fee" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Application Vetting Fee *</label>
+                      <select id="job-fee" x-model="newJobFee" class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white">
+                        <option value="$50 USD">$50 USD</option>
+                        <option value="$100 USD">$100 USD (Standard)</option>
+                        <option value="$250 USD">$250 USD (Premium Vetting)</option>
+                        <option value="300 Coins">300 Platform Coins</option>
+                        <option value="500 Coins">500 Platform Coins</option>
+                        <option value="Free">Free / Invite Only</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="job-description" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Job Scope &amp; Team Details *</label>
+                    <textarea id="job-description" x-model="newJobDescription" required rows="3" placeholder="Brief details about team scope, target deliverables, etc."
+                      class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white resize-none"></textarea>
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label for="job-criteria" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Eligibility Criteria Checklist *</label>
+                      <textarea id="job-criteria" x-model="newJobCriteria" required rows="3" placeholder="e.g. 3+ years AWS, experience with Jenkins and Kubernetes. Must pass basic HackerRank."
+                        class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white resize-none"></textarea>
+                    </div>
+                    <div>
+                      <label for="job-guarantee" class="block text-xs font-semibold text-zinc-400 uppercase mb-1.5">Guaranteed Placement/Interview Terms *</label>
+                      <textarea id="job-guarantee" x-model="newJobGuarantee" required rows="3" placeholder="e.g. Guarantee 45-min Zoom technical screen within 4 business days or full escrow fee refund."
+                        class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs rounded-xl px-4 py-3 focus:outline-none focus:border-accent text-zinc-900 dark:text-white resize-none"></textarea>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl text-xs transition-colors">
+                    Publish Sure Shot Job Listing &amp; Setup Escrow
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -633,7 +867,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 </section>
 
 <!-- ═══ CONTACT ═══ -->
-<section id="contact" class="py-24">
+<section id="contact" class="relative z-10 py-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-16 relative overflow-hidden">
       <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
@@ -661,11 +895,11 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           </div>
 
           <div class="reveal d3 flex flex-col gap-4">
-            <a href="mailto:damak.varshney@example.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+            <a href="mailto:damak.varshney@email.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
               <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </span>
-              <span class="text-sm">damak.varshney@example.com</span>
+              <span class="text-sm">damak.varshney@email.com</span>
             </a>
             <a href="https://linkedin.com/in/damak-varshney" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
               <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
@@ -774,6 +1008,58 @@ function app() {
       { id: 1, company: 'OSTTRA', status: 'Active', seeker: 'Anonymous' },
       { id: 2, company: 'J.P. Morgan', status: 'Pending', seeker: 'Anonymous' }
     ],
+    
+    // Sure Shot Hiring State
+    sureShotJobs: [
+      {
+        id: 1,
+        title: 'Lead AI Ops Engineer',
+        company: 'Stripe',
+        managerName: 'Sarah Connor',
+        managerEmail: 'sconnor@stripe.com',
+        description: 'Building and scaling LLM-driven agentic pipelines for checkout compliance.',
+        criteria: 'Solid experience with LangChain/LangGraph, Python automation, and SQL.',
+        fee: '$150 USD',
+        guarantee: 'Direct technical interview loop within 72 hours, or a 100% refund of the vetting fee.',
+        date: 'June 20, 2026'
+      },
+      {
+        id: 2,
+        title: 'Senior Product Manager (Ops Excellence)',
+        company: 'Salesforce',
+        managerName: 'Marcus Wright',
+        managerEmail: 'mwright@salesforce.com',
+        description: 'Streamlining internal audit and compliance workflows using custom AI integrations.',
+        criteria: '5+ years PM experience, Salesforce Admin cert, Lean Six Sigma Green/Black Belt.',
+        fee: '400 Coins',
+        guarantee: 'Direct call with Director of Ops Excellence. 100% refund if not scheduled within 5 business days.',
+        date: 'June 18, 2026'
+      }
+    ],
+    hiringManagers: [],
+    hmRegistered: false,
+    registeredHM: { name: '', company: '', email: '', linkedin: '' },
+    
+    // HM Profile Form
+    newHMName: '',
+    newHMCompany: '',
+    newHMEmail: '',
+    newHMLinkedin: '',
+
+    // Job Posting Form
+    newJobTitle: '',
+    newJobFee: '$100 USD',
+    newJobCriteria: '',
+    newJobGuarantee: '',
+    newJobDescription: '',
+
+    // Seeker Application Modal
+    showSureShotModal: false,
+    selectedSureShotJob: null,
+    seekerResumeUrl: '',
+    seekerPortfolioUrl: '',
+    sureShotApplied: false,
+
     vibeIndex: 0,
     vibes: [
       { icon: '🎧', label: 'Listening', text: 'Lo-Fi Beats & Deep Focus' },
@@ -782,14 +1068,14 @@ function app() {
     ],
     hoveredSkill: null,
     skillTips: {
-      'Gemini CLI': 'Vibe coding my way out of manual labor.',
-      'Python': 'My Swiss army knife for everything automation.',
-      'Google Apps Script': 'The "hidden" engine behind the SOX automation.',
-      'Vertex AI': 'Scaling intelligence without the overhead.',
-      'Looker Studio': 'Making numbers look pretty (and actionable).',
-      'Salesforce': 'I\'ve stared into the abyss, and it asked for a custom object.',
-      'Jira / Confluence': 'Consolidating 150+ projects into one source of truth.',
-      'React Native': 'Built internationally recognized apps with this bad boy.'
+      'Vertex AI & RAG': 'Scaling retrieval-augmented intelligence, semantic search, and vector embeddings in enterprise workflows.',
+      'Python & SQL': 'Building predictive workforce models, data ingestion pipelines, and database logic.',
+      'Google Apps Script': 'Architecting zero-cost serverless automation engines (e.g., SOX user access reviews).',
+      'Salesforce Automation': 'Designing auto-triaging improvements, entity screening, and custom AI sidebar assistants.',
+      'OTC Markets & LSEG': 'OTC financial market domain, reference data structures, and pricing data integrations.',
+      'React Native': 'Developing production cross-platform mobile apps for iOS and Android with Figma wireframes.',
+      'Claude Code & Gemini': 'Developing agentic workflows and rapid prototyping to ship products in weeks.',
+      'Lean Six Sigma': 'Driving operational efficiency, process optimization, and quantifiable FTE savings.'
     },
     hackerMode: false,
     terminalLines: [
@@ -806,12 +1092,82 @@ function app() {
     contactMessage: '',
     contactStatus: '',
 
+    // Sure Shot Methods
+    registerHM() {
+      if (!this.newHMName || !this.newHMCompany || !this.newHMEmail) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+      if (!this.newHMEmail.includes('@')) {
+        alert('Please enter a valid corporate email address.');
+        return;
+      }
+      this.registeredHM = {
+        name: this.newHMName,
+        company: this.newHMCompany,
+        email: this.newHMEmail,
+        linkedin: this.newHMLinkedin
+      };
+      this.hiringManagers.push(this.registeredHM);
+      this.hmRegistered = true;
+      this.newJobGuarantee = 'Guaranteed technical review and feedback within 48 hours or full escrow refund.';
+    },
+
+    postSureShotJob() {
+      if (!this.newJobTitle || !this.newJobDescription || !this.newJobCriteria) {
+        alert('Please fill in the job title, description, and eligibility criteria.');
+        return;
+      }
+      const newJob = {
+        id: Date.now(),
+        title: this.newJobTitle,
+        company: this.registeredHM.company,
+        managerName: this.registeredHM.name,
+        managerEmail: this.registeredHM.email,
+        description: this.newJobDescription,
+        criteria: this.newJobCriteria,
+        fee: this.newJobFee,
+        guarantee: this.newJobGuarantee || 'Direct response or full refund within 5 days.',
+        date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+      };
+      this.sureShotJobs.unshift(newJob);
+      
+      // Reset form
+      this.newJobTitle = '';
+      this.newJobDescription = '';
+      this.newJobCriteria = '';
+      this.newJobFee = '$100 USD';
+      
+      alert('Your Sure Shot Job opening has been published successfully!');
+    },
+
+    openSureShotApply(job) {
+      this.selectedSureShotJob = job;
+      this.seekerResumeUrl = '';
+      this.seekerPortfolioUrl = '';
+      this.sureShotApplied = false;
+      this.showSureShotModal = true;
+    },
+
+    submitSureShotApplication() {
+      if (!this.seekerResumeUrl) {
+        alert('Please provide your resume URL.');
+        return;
+      }
+      this.sureShotApplied = true;
+      setTimeout(() => {
+        this.showSureShotModal = false;
+        alert(`Application fee of ${this.selectedSureShotJob.fee} deposited in escrow.\n\nYour application for "${this.selectedSureShotJob.title}" at ${this.selectedSureShotJob.company} has been sent directly to the Hiring Manager!`);
+        this.selectedSureShotJob = null;
+      }, 1500);
+    },
+
     init() {
       // visit count & greeting
       let count = parseInt(localStorage.getItem('visit_count') || '0') + 1;
       localStorage.setItem('visit_count', count.toString());
       
-      const counts = ["un", "dos", "tres", "cuatro"];
+      const counts = ["uno", "dos", "tres", "cuatro"];
       const adjectives = ["Explorer", "Builder", "Architect", "Thinker"];
       let countWord = count > 4 ? count.toString() : counts[count - 1];
       let adj = count > 4 ? "Professional" : adjectives[count - 1];
@@ -853,6 +1209,10 @@ function app() {
 
     async subscribe() {
       if(!this.newsEmail) return;
+      if (SCRIPT_URL.includes('YOUR_GOOGLE_WEB_APP_URL_HERE')) {
+        this.newsStatus = 'error';
+        return;
+      }
       this.newsStatus = 'loading';
       try {
         await fetch(SCRIPT_URL, {
@@ -870,6 +1230,13 @@ function app() {
 
     async verifyPayment() {
       if(this.newUtr.length !== 12) return;
+      if (SCRIPT_URL.includes('YOUR_GOOGLE_WEB_APP_URL_HERE')) {
+        alert('Payment verification server is currently in demo mode. Transaction verified and directory unlocked.');
+        this.refPaid = true;
+        this.payments.push({ id: Date.now(), utr: this.newUtr, status: 'Verified' });
+        this.newUtr = '';
+        return;
+      }
       try {
         await fetch(SCRIPT_URL, {
           method: 'POST',
@@ -887,6 +1254,10 @@ function app() {
 
     async submitContact() {
       if(!this.contactEmail || !this.contactMessage) return;
+      if (SCRIPT_URL.includes('YOUR_GOOGLE_WEB_APP_URL_HERE')) {
+        this.contactStatus = 'error';
+        return;
+      }
       this.contactStatus = 'loading';
       try {
         await fetch(SCRIPT_URL, {
@@ -911,6 +1282,78 @@ function app() {
 }
 </script>
 
+<!-- ═══ SURE SHOT APPLICATION MODAL ═══ -->
+<div x-show="showSureShotModal" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto" role="dialog" aria-modal="true">
+  <!-- backdrop -->
+  <div class="fixed inset-0 bg-zinc-955/70 backdrop-blur-sm transition-opacity" @click="showSureShotModal = false"></div>
+
+  <!-- modal container -->
+  <div class="relative bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-205 dark:border-zinc-800 w-full max-w-lg p-8 shadow-2xl overflow-hidden z-10"
+    x-transition:enter="transition ease-out duration-305" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100">
+    
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <span class="text-[10px] bg-accent/10 text-accent font-bold px-2 py-1 rounded-full uppercase tracking-wider">Direct Seeker Escrow Application</span>
+        <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mt-2" x-text="selectedSureShotJob?.title"></h3>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-1" x-text="'Company: ' + selectedSureShotJob?.company + ' | Managed by ' + selectedSureShotJob?.managerName"></p>
+      </div>
+      <button @click="showSureShotModal = false" class="text-zinc-400 hover:text-zinc-600 dark:hover:text-white transition-colors" aria-label="Close modal">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Application Form -->
+    <form @submit.prevent="submitSureShotApplication()" class="space-y-5">
+      <div>
+        <label for="apply-resume" class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Resume / Profile Link *</label>
+        <input type="url" id="apply-resume" x-model="seekerResumeUrl" required placeholder="https://linkedin.com/in/username or google drive link"
+          class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-zinc-900 dark:text-white">
+      </div>
+      
+      <div>
+        <label for="apply-portfolio" class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-2">Portfolio / GitHub / Proof of Skill Link</label>
+        <input type="url" id="apply-portfolio" x-model="seekerPortfolioUrl" placeholder="https://github.com/username or portfolio link"
+          class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-sm rounded-xl px-4 py-3 focus:outline-none focus:border-accent transition-colors text-zinc-900 dark:text-white">
+      </div>
+
+      <div class="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 p-4 rounded-2xl text-xs space-y-3">
+        <p class="font-bold text-zinc-900 dark:text-white flex items-center gap-1.5">
+          <span>🛡️</span> Escrow Vetting Fee: <span class="text-accent" x-text="selectedSureShotJob?.fee"></span>
+        </p>
+        <p class="text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Your payment is held securely in the platform's escrow sheet. The fee is only released once the Hiring Manager initiates your direct interview. If you do not meet the criteria or if no response is received within 5 days, you receive a full refund.
+        </p>
+      </div>
+
+      <!-- Payment details mock -->
+      <div class="border-t border-zinc-100 dark:border-zinc-800 pt-5 space-y-3">
+        <h4 class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Escrow Settlement Details</h4>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div>
+            <label for="mock-card" class="block text-zinc-500 mb-1">Mock Account/Card</label>
+            <input type="text" id="mock-card" placeholder="4111 2222 3333 4444" required
+              class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-zinc-900 dark:text-white text-xs">
+          </div>
+          <div>
+            <label for="mock-expiry" class="block text-zinc-500 mb-1">Expiry / CVV</label>
+            <input type="text" id="mock-expiry" placeholder="12/29 | 123" required
+              class="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-xl px-3 py-2 text-zinc-900 dark:text-white text-xs">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full bg-accent text-white font-bold py-3.5 rounded-xl text-sm hover:bg-accent-light transition-colors flex items-center justify-center gap-2"
+        :disabled="sureShotApplied">
+        <span x-show="!sureShotApplied" x-text="'Process Vetting Fee (' + selectedSureShotJob?.fee + ')'"></span>
+        <span x-show="sureShotApplied" class="flex items-center gap-2">
+          <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+          Depositing Escrow...
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+
 <!-- greeting toast -->
 <div x-show="showGreeting" x-cloak
   x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
@@ -919,6 +1362,118 @@ function app() {
   <div class="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
   <p class="text-sm font-medium" x-text="greetingMsg"></p>
 </div>
+
+<script>
+(function() {
+  const canvas = document.getElementById('pixel-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  let particles = [];
+  const spacing = 40; // pixel spacing between points
+  const mouse = { x: null, y: null, radius: 100 }; // mouse radius of influence
+
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.baseX = x;
+      this.baseY = y;
+      this.vx = 0;
+      this.vy = 0;
+      this.size = 2; // small square pixel size
+      this.density = (Math.random() * 20) + 15; // random density for varying spring speeds
+    }
+
+    draw() {
+      // adapt color based on theme
+      const isDark = document.documentElement.classList.contains('dark');
+      ctx.fillStyle = isDark ? 'rgba(255, 107, 43, 0.45)' : 'rgba(255, 107, 43, 0.3)';
+      ctx.fillRect(this.x, this.y, this.size, this.size);
+    }
+
+    update() {
+      // spring force returning to original grid position
+      let dx = this.baseX - this.x;
+      let dy = this.baseY - this.y;
+      
+      // Hooke's law: F = -k * x
+      let forceX = dx * 0.08;
+      let forceY = dy * 0.08;
+
+      // mouse interaction
+      if (mouse.x !== null && mouse.y !== null) {
+        let mdx = mouse.x - this.x;
+        let mdy = mouse.y - this.y;
+        let dist = Math.sqrt(mdx * mdx + mdy * mdy);
+        
+        if (dist < mouse.radius) {
+          let pushForce = (mouse.radius - dist) / mouse.radius; // 0 to 1
+          let angle = Math.atan2(mdy, mdx);
+          forceX -= Math.cos(angle) * pushForce * this.density;
+          forceY -= Math.sin(angle) * pushForce * this.density;
+        }
+      }
+
+      // velocity with damping
+      this.vx = (this.vx + forceX) * 0.82;
+      this.vy = (this.vy + forceY) * 0.82;
+
+      this.x += this.vx;
+      this.y += this.vy;
+    }
+  }
+
+  function init() {
+    particles = [];
+    const cols = Math.floor(width / spacing);
+    const rows = Math.floor(height / spacing);
+    
+    const offsetX = (width - (cols * spacing)) / 2;
+    const offsetY = (height - (rows * spacing)) / 2;
+
+    for (let i = 0; i <= cols; i++) {
+      for (let j = 0; j <= rows; j++) {
+        let x = offsetX + (i * spacing);
+        let y = offsetY + (j * spacing);
+        particles.push(new Particle(x, y));
+      }
+    }
+  }
+
+  // track mouse events globally
+  window.addEventListener('mousemove', function(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', function() {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  window.addEventListener('resize', function() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+    init();
+  });
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  init();
+  animate();
+})();
+</script>
 
 </body>
 </html>
