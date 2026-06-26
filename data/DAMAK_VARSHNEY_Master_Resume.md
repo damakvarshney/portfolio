@@ -74,29 +74,29 @@ Built 5+ AI-powered products delivering 16+ FTE savings at OSTTRA (KKR portfolio
 **AI-Driven Portfolio & Operational Exchange Platform (Personal Project)**
 - **Bootstrapped & Architected**: Serverless web application using Agentic AI systems (Claude Code, LLM pair-programming) for rapid prototyping and iterative development
 - **Backend**: Zero-cost backend database engine in Google Apps Script (GAS) integrated with Google Sheets, deployed via CLASP CLI
-- **Frontend**: Dynamic client-side interface using Alpine.js and Tailwind CSS, automatic article sync via Medium RSS feeds, asynchronous LinkedIn post updates
+- **Product Layer**: Dynamic portfolio interface with automatic article sync via Medium RSS feeds and asynchronous LinkedIn post updates
 - **Admin Layer**: Real-time transaction tracking console, database moderation CRUD operations
 - **Impact**: Demonstrated 80% reduction in end-to-end prototyping cycle time, validated agentic AI workflows for rapid shipping, created developer portfolio showcasing full-stack capabilities
-- **Tech Stack**: Claude Code, Gemini, Google Apps Script, Alpine.js, Tailwind CSS, Medium API, LinkedIn API, Serverless Architecture
+- **Stack Focus**: Agentic AI development, Google Apps Script, Medium API, LinkedIn API, serverless architecture
 
 ---
 
-### Senior React Native Developer
+### Senior Mobile Product Engineer
 **RPQ IT SERVICES | Bangalore (Remote) | May 2021 – May 2022**
 
-- **Designed & developed** end-to-end mobile applications for iOS and Android platforms
-- **UI/UX Leadership**: Created comprehensive wireframes and interactive prototypes in Adobe XD and Figma, translated design requirements into production-quality React Native code
-- **Cross-Platform Excellence**: Ensured seamless functionality, performance optimization, and native-like user experience across Android and iOS
-- **Impact**: Delivered 3+ production mobile applications, achieved 95%+ code review approval rate, mentored junior developers on React Native best practices
+- **Designed & delivered** end-to-end mobile product experiences for consumer and business use cases
+- **Product Execution**: Converted ambiguous client requirements into structured flows, launch-ready builds, and stakeholder-approved releases
+- **Delivery Excellence**: Improved performance, reliability, and usability across production deployments
+- **Impact**: Delivered 3+ production applications, achieved 95%+ code review approval rate, and mentored junior team members on product delivery standards
 
 ---
 
-### React Native Developer
+### Mobile Product Engineer
 **MARKUP DESIGN | Delhi NCR | November 2020 – April 2021**
 
-- **Built & shipped** cross-platform mobile applications using React Native, ensuring seamless functionality and user experience across Android and iOS
-- **Full-cycle development**: Requirements gathering, architecture design, implementation, testing, and deployment
-- **Technical Excellence**: Optimized app performance, implemented offline-first architecture, integrated third-party APIs and payment gateways
+- **Built & shipped** production mobile applications with seamless functionality and customer-ready user experience
+- **Full-cycle delivery**: Requirements gathering, architecture design, implementation, testing, and deployment
+- **Technical Excellence**: Optimized app performance, implemented resilient application behavior, integrated third-party APIs and payment gateways
 - **Impact**: Delivered 2+ production apps, achieved 4.5+ star ratings on app stores, users across India and Southeast Asia
 
 ---
@@ -130,24 +130,19 @@ Birla Institute of Technology, Mesra | 2017 – 2020 | **CGPA: 7.52/10**
 ## SKILLS & EXPERTISE
 
 ### AI & LLM Stack
-Vertex AI (RAG, embeddings, vector search), Prompt Engineering, Google Gemini, Claude Code, Agentic AI workflows, LLM-powered automation, AI/ML product design, Rapid prototyping via generative AI
+Vertex AI, Gemini API, enterprise RAG architecture, vector embeddings, prompt systems, agentic AI workflows, LLM-powered automation, AI product strategy
 
-### Financial Domain Expertise
-OTC Markets (reference data, market data workflows), LSEG Pricing data, KYC/AML processes, SOX Compliance, Financial regulations, Trading operations, Settlement processes, Credit analysis
-
-### Core Development
-- **Backend/Automation**: Python, SQL, Google Apps Script (GAS), REST APIs, Google Cloud Platform (GCP), Serverless architecture (CLASP, Cloud Functions)
-- **Frontend/Mobile**: JavaScript, React Native, Alpine.js, Tailwind CSS, HTML5, CSS3
-- **Database/Data**: SQL, Google Sheets API, BigQuery, Data engineering fundamentals
-
-### Design & UX
-Figma, Adobe XD, Wireframing, Prototyping, User-centered design, Design systems, UI/UX best practices
+### Cloud & Data
+Python, SQL, BigQuery, ChromaDB, Google Cloud Platform, serverless architecture, Google Apps Script automation, REST API integrations, data pipeline design
 
 ### Product & Operations
-Salesforce Administration, Google AppSheet, Jira, Confluence, Google Data Studio, Power BI, Looker, Product thinking, Cross-functional leadership, Agile/Scrum, Lean Six Sigma
+Salesforce Administration, Looker, Power BI, product strategy, operating model design, adoption strategy, cross-functional leadership, enterprise rollout planning
 
-### Methodologies & Practices
-Agentic Development (Claude Code, Gemini CLI), Rapid Prototyping, Zero-Cost Serverless Architectures, RAG Implementation, Continuous Improvement (Lean, Six Sigma), Product thinking
+### Methodologies
+Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, continuous improvement, DMAIC, process mapping, control design, change management
+
+### Financial Domain
+OTC markets, reference data, market data workflows, LSEG Pricing, KYC/AML processes, SOX compliance, trading operations, settlement processes, credit analysis
 
 ---
 
@@ -188,8 +183,6 @@ Led 100+ student cohort with 100% institutional deadline compliance; organized w
 | **SOX Compliance Achievement** | 100% with zero audit findings |
 | **Self-Service Adoption (AI Solutions)** | 70%+ |
 | **Audit Cycle Improvement** | 90% faster (45→5 days) |
-| **Mobile Apps Delivered** | 5+ cross-platform applications |
-| **Mobile App Ratings** | 4.5+ stars on app stores |
 | **Credit Underwriting Accuracy** | 95%+ |
 
 ---
