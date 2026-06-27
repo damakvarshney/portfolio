@@ -190,20 +190,25 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <!-- download dropdown -->
       <div x-data="{ open: false }" class="relative hidden md:inline-block text-left" @click.outside="open = false">
         <button @click="open = !open" class="inline-flex items-center gap-2 bg-[var(--accent)] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[var(--accent-hover)] transition-colors">
-          Download PDF
+          Downloads
           <svg class="w-3.5 h-3.5 transition-transform" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
         <div x-show="open" x-cloak class="absolute right-0 mt-2 w-56 rounded-xl bg-[var(--surface)] border border-[var(--border)] shadow-lg z-50 py-2">
           <a href="output/pdf/damak-varshney-executive-brief.pdf" download class="block px-4 py-2 text-xs text-[var(--text-primary)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] transition-colors">
-            <div class="font-bold">Executive Brief</div>
+            <div class="font-bold">Executive Brief (PDF)</div>
             <div class="text-[9px] text-[var(--text-secondary)]">Visual summary for recruiters</div>
           </a>
           <div class="h-[1px] bg-[var(--border)]/30 my-1"></div>
           <a href="output/pdf/damak-kumar-varshney-resume.pdf" download class="block px-4 py-2 text-xs text-[var(--text-primary)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] transition-colors">
-            <div class="font-bold">Resume (ATS)</div>
-            <div class="text-[9px] text-[var(--text-secondary)]">ATS-optimized for applications</div>
+            <div class="font-bold">Resume (PDF)</div>
+            <div class="text-[9px] text-[var(--text-secondary)]">ATS-optimized for online applications</div>
+          </a>
+          <div class="h-[1px] bg-[var(--border)]/30 my-1"></div>
+          <a href="output/pdf/damak-kumar-varshney-resume.docx" download class="block px-4 py-2 text-xs text-[var(--text-primary)] hover:bg-[var(--accent)]/10 hover:text-[var(--accent)] transition-colors">
+            <div class="font-bold">Resume (DOCX)</div>
+            <div class="text-[9px] text-[var(--text-secondary)]">Editable Word format for ATS</div>
           </a>
         </div>
       </div>
@@ -231,10 +236,13 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <span class="text-[10px] font-bold uppercase tracking-widest text-[var(--text-secondary)] block mb-2">Downloads</span>
         <div class="space-y-3 pl-2">
           <a href="output/pdf/damak-varshney-executive-brief.pdf" download @click="mm=false" class="block text-sm text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
-            📄 Executive Brief <span class="text-[9px] text-[var(--text-secondary)] block font-light">Visual summary for recruiters</span>
+            📄 Executive Brief (PDF) <span class="text-[9px] text-[var(--text-secondary)] block font-light">Visual summary for recruiters</span>
           </a>
           <a href="output/pdf/damak-kumar-varshney-resume.pdf" download @click="mm=false" class="block text-sm text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
-            📄 Resume (ATS) <span class="text-[9px] text-[var(--text-secondary)] block font-light">ATS-optimized for applications</span>
+            📄 Resume (PDF) <span class="text-[9px] text-[var(--text-secondary)] block font-light">ATS-optimized for online applications</span>
+          </a>
+          <a href="output/pdf/damak-kumar-varshney-resume.docx" download @click="mm=false" class="block text-sm text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
+            📄 Resume (DOCX) <span class="text-[9px] text-[var(--text-secondary)] block font-light">Editable Word format for ATS</span>
           </a>
         </div>
       </li>
@@ -314,10 +322,18 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
           <div class="flex flex-col gap-1.5 min-w-[200px]">
             <a href="output/pdf/damak-kumar-varshney-resume.pdf" download class="inline-flex items-center justify-center gap-2 bg-[var(--surface)] border border-[var(--border)] text-[var(--text-primary)] font-medium px-6 py-3 rounded-full hover:bg-[var(--surface)]/80 hover:border-[var(--accent)] transition-all text-sm">
-              Download Resume (ATS)
+              Download Resume (PDF)
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
             </a>
-            <span class="text-[10px] text-[var(--text-secondary)] text-center font-light">ATS-optimized for applications</span>
+            <span class="text-[10px] text-[var(--text-secondary)] text-center font-light">ATS-optimized for online applications</span>
+          </div>
+
+          <div class="flex flex-col gap-1.5 min-w-[200px]">
+            <a href="output/pdf/damak-kumar-varshney-resume.docx" download class="inline-flex items-center justify-center gap-2 bg-[var(--surface)] border border-[var(--border)] text-[var(--text-primary)] font-medium px-6 py-3 rounded-full hover:bg-[var(--surface)]/80 hover:border-[var(--accent)] transition-all text-sm">
+              Download Resume (DOCX)
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            </a>
+            <span class="text-[10px] text-[var(--text-secondary)] text-center font-light">Editable Word format for ATS</span>
           </div>
         </div>
       </div>
@@ -1485,7 +1501,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </span>
               <div class="flex flex-col">
-                <span class="text-sm">Download Executive Brief</span>
+                <span class="text-sm">Download Executive Brief (PDF)</span>
                 <span class="text-[9px] text-zinc-500">Visual summary for recruiters</span>
               </div>
             </a>
@@ -1494,8 +1510,17 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               </span>
               <div class="flex flex-col">
-                <span class="text-sm">Download Resume (ATS)</span>
-                <span class="text-[9px] text-zinc-500">ATS-optimized for job boards</span>
+                <span class="text-sm">Download Resume (PDF)</span>
+                <span class="text-[9px] text-zinc-500">ATS-optimized for online applications</span>
+              </div>
+            </a>
+            <a href="output/pdf/damak-kumar-varshney-resume.docx" download class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+              <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </span>
+              <div class="flex flex-col">
+                <span class="text-sm">Download Resume (DOCX)</span>
+                <span class="text-[9px] text-zinc-500">Editable Word format for ATS</span>
               </div>
             </a>
           </div>

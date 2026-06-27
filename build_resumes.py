@@ -670,13 +670,13 @@ ats_html_content = """<!DOCTYPE html>
       linkedin.com/in/damak-varshney &nbsp;|&nbsp; damak-varshney.vercel.app
     </div>
     <div class="headline">
-      AI Product Manager | Business Transformation | Enterprise AI Strategy
+      AI PRODUCT MANAGER &nbsp;|&nbsp; BUSINESS TRANSFORMATION &nbsp;|&nbsp; ENTERPRISE AI STRATEGY
     </div>
   </div>
 
   <div class="section-title">SUMMARY</div>
   <div class="summary-text">
-    Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ users at OSTTRA (KKR Portfolio) by architecting AI systems and contributing to enterprise products that process 200,000+ monthly cases with &gt;99% routing accuracy. Combines technical build depth, financial-services expertise, and enterprise adoption discipline. Outcomes include 55% faster client onboarding, 16% to 3% case-volume cut, and fully automated SOX and KYC compliance.
+    AI Product Manager with 2+ years driving enterprise AI automation at OSTTRA, a KKR portfolio company. Architected and contributed to AI systems processing 200,000+ monthly cases with &gt;99% routing accuracy. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users. Expertise spans Vertex AI, RAG pipelines, predictive sentiment analytics, financial services automation, and process reengineering. Combines technical build depth, financial-services domain expertise, and enterprise adoption discipline.
   </div>
 
   <div class="section-title">WORK EXPERIENCE</div>
@@ -690,12 +690,12 @@ ats_html_content = """<!DOCTYPE html>
       <span>OSTTRA (KKR Portfolio Company) | Gurugram, India</span>
     </div>
     <ul>
-      <li>Architected NEXUS global capacity intelligence platform consolidating 150+ spreadsheets with Python predictive modeling and Looker; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%.</li>
-      <li>Spearheaded Auto-Triaging ecosystem processing 200,000+ monthly cases with &gt;99% routing accuracy; reclaimed 4.9 FTEs by eliminating manual triage and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs.</li>
-      <li>Led intelligent KYC and onboarding automation executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.</li>
+      <li>Architected NEXUS global capacity intelligence platform consolidating 150+ spreadsheets using Python predictive modeling, Business Intelligence dashboards via Looker, and Data Analytics pipelines; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%.</li>
+      <li>Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with &gt;99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs.</li>
+      <li>Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.</li>
       <li>Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention.</li>
-      <li>Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.</li>
-      <li>Part of the team that delivered AI-powered case management with predictive sentiment analysis across 20,000+ client emails on MarkitWire and TriResolve; supported deployment of live call transcription and Salesforce summary glances accelerating resolution 40%.</li>
+      <li>Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.</li>
+      <li>Part of the team that delivered AI-powered case management with predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; supported deployment of live call transcription and Salesforce summary glances accelerating resolution 40%.</li>
     </ul>
   </div>
 
@@ -746,11 +746,11 @@ ats_html_content = """<!DOCTYPE html>
   <div class="education-line"><strong>Bachelor of Computer Applications</strong> &mdash; Birla Institute of Technology, Mesra | 2017 &ndash; 2020 | CGPA: 7.52/10</div>
 
   <div class="section-title">SKILLS</div>
-  <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI | Google Gemini | RAG Pipelines | Vector Embeddings | Prompt Engineering | Agentic Workflows | LLM-Powered Automation</div>
-  <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python | SQL | Google BigQuery | ChromaDB | Google Cloud Platform | Looker Studio | Power BI</div>
-  <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce | Jira | Confluence | Google AppSheet | Google Apps Script | REST APIs</div>
-  <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma | Agile/Scrum | LUMA Design Thinking | Process Reengineering | Change Management</div>
-  <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets | Reference Data | KYC/AML | SOX Compliance | Financial Services Infrastructure</div>
+  <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI, Google Gemini, Generative AI (GenAI), RAG Pipelines, Vector Embeddings, Prompt Engineering, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT</div>
+  <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering</div>
+  <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration</div>
+  <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement</div>
+  <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets, Reference Data, KYC/AML, SOX Compliance, Trade Failure Management, Financial Services Infrastructure, Credit Analysis</div>
 
   <div class="section-title">CERTIFICATIONS</div>
   <div class="cert-line">Google Data Analytics Professional Certificate, Google (2022)</div>
@@ -780,8 +780,6 @@ with open(ats_html_path, "w", encoding="utf-8") as f:
 print(f"Written {ats_html_path}")
 
 # Compile HTML to PDF using headless Chrome
-# Page layout configurations:
-# --no-margins is NOT used, standard page formats are defined by CSS
 print("Compiling Executive Brief to PDF...")
 brief_cmd = [
     chrome_path,
@@ -803,3 +801,267 @@ ats_cmd = [
 ]
 subprocess.run(ats_cmd, check=True)
 print(f"Successfully generated {ats_pdf_path}")
+
+# Generate DOCX Version
+def build_docx(output_path):
+    import docx
+    from docx import Document
+    from docx.shared import Inches, Pt
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+
+    doc = Document()
+    
+    # 0.75 margin all sides
+    for section in doc.sections:
+        section.top_margin = Inches(0.75)
+        section.bottom_margin = Inches(0.75)
+        section.left_margin = Inches(0.75)
+        section.right_margin = Inches(0.75)
+
+    # Base style
+    style = doc.styles['Normal']
+    font = style.font
+    font.name = 'Calibri'
+    font.size = Pt(10.5)
+    
+    def format_spacing(p, space_before=0, space_after=2, line_spacing=1.1):
+        p_format = p.paragraph_format
+        p_format.space_before = Pt(space_before)
+        p_format.space_after = Pt(space_after)
+        p_format.line_spacing = line_spacing
+
+    def add_bottom_border(paragraph):
+        pPr = paragraph._p.get_or_add_pPr()
+        pbdr = OxmlElement('w:pBdr')
+        bottom = OxmlElement('w:bottom')
+        bottom.set(qn('w:val'), 'single')
+        bottom.set(qn('w:sz'), '6')
+        bottom.set(qn('w:space'), '1')
+        bottom.set(qn('w:color'), '000000')
+        pbdr.append(bottom)
+        pPr.append(pbdr)
+
+    # Header
+    p_name = doc.add_paragraph()
+    format_spacing(p_name, 0, 1)
+    p_name.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run_name = p_name.add_run("DAMAK KUMAR VARSHNEY")
+    run_name.font.size = Pt(15)
+    run_name.bold = True
+
+    p_contact1 = doc.add_paragraph()
+    format_spacing(p_contact1, 0, 1)
+    p_contact1.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run_c1 = p_contact1.add_run("Gurugram, India  |  +91-8077293920  |  damakvarshney@gmail.com")
+    run_c1.font.size = Pt(9.5)
+
+    p_contact2 = doc.add_paragraph()
+    format_spacing(p_contact2, 0, 2)
+    p_contact2.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run_c2 = p_contact2.add_run("linkedin.com/in/damak-varshney  |  damak-varshney.vercel.app")
+    run_c2.font.size = Pt(9.5)
+
+    p_headline = doc.add_paragraph()
+    format_spacing(p_headline, 2, 6)
+    p_headline.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run_hl = p_headline.add_run("AI PRODUCT MANAGER  |  BUSINESS TRANSFORMATION  |  ENTERPRISE AI STRATEGY")
+    run_hl.font.size = Pt(10)
+    run_hl.bold = True
+    add_bottom_border(p_headline)
+
+    # Helper for sections
+    def add_section(title):
+        p_title = doc.add_paragraph()
+        format_spacing(p_title, 8, 4)
+        run_title = p_title.add_run(title)
+        run_title.font.size = Pt(10.5)
+        run_title.bold = True
+        add_bottom_border(p_title)
+        return p_title
+
+    # Summary
+    add_section("SUMMARY")
+    p_sum = doc.add_paragraph()
+    format_spacing(p_sum, 0, 4)
+    run_sum = p_sum.add_run(
+        "AI Product Manager with 2+ years driving enterprise AI automation at OSTTRA, a KKR portfolio company. "
+        "Architected and contributed to AI systems processing 200,000+ monthly cases with >99% routing accuracy. "
+        "Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users. Expertise "
+        "spans Vertex AI, RAG pipelines, predictive sentiment analytics, financial services automation, and "
+        "process reengineering. Combines technical build depth, financial-services domain expertise, and enterprise adoption discipline."
+    )
+    run_sum.font.size = Pt(9.5)
+
+    # Work Experience
+    add_section("WORK EXPERIENCE")
+
+    # Job 1
+    p_job1 = doc.add_paragraph()
+    format_spacing(p_job1, 2, 1)
+    p_job1.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j1 = p_job1.add_run("Associate, AI Strategy & Ops Excellence (DigiOps Programme)")
+    run_j1.bold = True
+    p_job1.add_run("\t")
+    run_j1_date = p_job1.add_run("Apr 2025 – Present")
+    run_j1_date.bold = True
+    
+    p_job1_meta = doc.add_paragraph()
+    format_spacing(p_job1_meta, 0, 2)
+    run_j1m = p_job1_meta.add_run("OSTTRA (KKR Portfolio Company) | Gurugram, India")
+    run_j1m.italic = True
+
+    bullets_job1 = [
+        "Architected NEXUS global capacity intelligence platform consolidating 150+ spreadsheets using Python predictive modeling, Business Intelligence dashboards via Looker, and Data Analytics pipelines; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%",
+        "Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with >99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs",
+        "Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability",
+        "Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention",
+        "Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives",
+        "Part of the team that delivered AI-powered case management with predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; supported deployment of live call transcription and Salesforce summary glances accelerating resolution 40%"
+    ]
+    for b in bullets_job1:
+        pb = doc.add_paragraph(style='List Bullet')
+        format_spacing(pb, 0, 1)
+        run_b = pb.add_run(b)
+        run_b.font.size = Pt(9.5)
+
+    # Job 2
+    p_job2 = doc.add_paragraph()
+    format_spacing(p_job2, 3, 1)
+    p_job2.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j2 = p_job2.add_run("Senior Operational Excellence Analyst")
+    run_j2.bold = True
+    p_job2.add_run("\t")
+    run_j2_date = p_job2.add_run("Feb 2024 – Dec 2024")
+    run_j2_date.bold = True
+    
+    p_job2_meta = doc.add_paragraph()
+    format_spacing(p_job2_meta, 0, 2)
+    run_j2m = p_job2_meta.add_run("OSTTRA | Gurugram, India")
+    run_j2m.italic = True
+
+    bullets_job2 = [
+        "Engineered SOX Compliance automation using Google Apps Script; eliminated 4.1 FTEs of manual audit work, achieved 100% compliance, and compressed audit cycle from 45 to 5 days",
+        "Delivered 10+ continuous improvement initiatives applying Lean Six Sigma and Agile across client services and trading operations; unlocked 2+ FTE in quantitative savings",
+        "Directed Microsoft to Google Workspace migration during Tel Aviv-to-India transition; removed VDI dependency, cut access latency 40%, and freed 0.4 FTEs"
+    ]
+    for b in bullets_job2:
+        pb = doc.add_paragraph(style='List Bullet')
+        format_spacing(pb, 0, 1)
+        run_b = pb.add_run(b)
+        run_b.font.size = Pt(9.5)
+
+    # Job 3
+    p_job3 = doc.add_paragraph()
+    format_spacing(p_job3, 3, 1)
+    p_job3.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j3 = p_job3.add_run("Credit Analyst Intern")
+    run_j3.bold = True
+    p_job3.add_run("\t")
+    run_j3_date = p_job3.add_run("Feb 2023 – Apr 2023")
+    run_j3_date.bold = True
+    
+    p_job3_meta = doc.add_paragraph()
+    format_spacing(p_job3_meta, 0, 2)
+    run_j3m = p_job3_meta.add_run("Kotak Mahindra Bank | Delhi NCR, India")
+    run_j3m.italic = True
+
+    pb3 = doc.add_paragraph(style='List Bullet')
+    format_spacing(pb3, 0, 1)
+    run_b3 = pb3.add_run("Evaluated 20+ MSME credit applications analyzing financial statements and working capital dynamics; delivered recommendations with 95%+ accuracy contributing to $3M+ underwriting decisions")
+    run_b3.font.size = Pt(9.5)
+
+    # Job 4
+    p_job4 = doc.add_paragraph()
+    format_spacing(p_job4, 3, 1)
+    p_job4.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j4 = p_job4.add_run("React Native Developer")
+    run_j4.bold = True
+    p_job4.add_run("\t")
+    run_j4_date = p_job4.add_run("Apr 2021 – May 2022")
+    run_j4_date.bold = True
+    
+    p_job4_meta = doc.add_paragraph()
+    format_spacing(p_job4_meta, 0, 2)
+    run_j4m = p_job4_meta.add_run("RPQ IT Services | Remote, India")
+    run_j4m.italic = True
+
+    pb4 = doc.add_paragraph(style='List Bullet')
+    format_spacing(pb4, 0, 1)
+    run_b4 = pb4.add_run("Developed 5+ production mobile applications using React Native; designed UI/UX wireframes in Figma and shipped cross-platform iOS and Android builds")
+    run_b4.font.size = Pt(9.5)
+
+    # Education
+    add_section("EDUCATION")
+    edu_lines = [
+        "Post Graduate Programme, Finance & Analytics — ICFAI Business School, Gurgaon  |  2022 – Apr 2024  |  CGPA: 9.0/10",
+        "MBA, Finance & Analytics (Online, concurrent with OSTTRA role) — IFHE Hyderabad  |  2022 – Jul 2024  |  CGPA: 8.75/10",
+        "Bachelor of Computer Applications — Birla Institute of Technology, Mesra  |  2017 – 2020  |  CGPA: 7.52/10"
+    ]
+    for el in edu_lines:
+        pe = doc.add_paragraph(style='List Bullet')
+        format_spacing(pe, 0, 1)
+        parts = el.split('—')
+        if len(parts) > 1:
+            run_b = pe.add_run(parts[0])
+            run_b.bold = True
+            run_b.font.size = Pt(9.5)
+            run_n = pe.add_run("—" + parts[1])
+            run_n.font.size = Pt(9.5)
+        else:
+            run_n = pe.add_run(el)
+            run_n.font.size = Pt(9.5)
+
+    # Skills
+    add_section("SKILLS")
+    skills = [
+        ("AI and LLM Stack: ", "Vertex AI, Google Gemini, Generative AI (GenAI), RAG Pipelines, Vector Embeddings, Prompt Engineering, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT"),
+        ("Cloud and Data: ", "Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering"),
+        ("Product and Tools: ", "Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration"),
+        ("Methodologies: ", "Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement"),
+        ("Financial Domain: ", "OTC Markets, Reference Data, KYC/AML, SOX Compliance, Trade Failure Management, Financial Services Infrastructure, Credit Analysis")
+    ]
+    for lbl, val in skills:
+        ps = doc.add_paragraph()
+        format_spacing(ps, 0, 1)
+        run_lbl = ps.add_run(lbl)
+        run_lbl.bold = True
+        run_lbl.font.size = Pt(9.5)
+        run_val = ps.add_run(val)
+        run_val.font.size = Pt(9.5)
+
+    # Certifications
+    add_section("CERTIFICATIONS")
+    certs = [
+        "Google Data Analytics Professional Certificate, Google (2022)",
+        "Certified Data Scientist, Henry Harvin Education (2022)",
+        "SQL Certification, DataCamp (2022)"
+    ]
+    for c in certs:
+        pc = doc.add_paragraph(style='List Bullet')
+        format_spacing(pc, 0, 1)
+        run_c = pc.add_run(c)
+        run_c.font.size = Pt(9.5)
+
+    # Recognition
+    add_section("RECOGNITION")
+    recogs = [
+        "Featured in Times of India, InspireTech 2025 — Enterprise AI and Automation Systems",
+        "Highflyer Award, OSTTRA Q1 2026 — Looker analytics and Salesforce auto-triaging impact",
+        "Trendsetter Award, OSTTRA Q1 2025 — SOX Compliance automation",
+        "1st Prize, LUMA Design Thinking Challenge, Protiviti 2023",
+        "Multiple Quarterly Spot Awards, OSTTRA 2024 – 2026"
+    ]
+    for r in recogs:
+        pr = doc.add_paragraph(style='List Bullet')
+        format_spacing(pr, 0, 1)
+        run_r = pr.add_run(r)
+        run_r.font.size = Pt(9.5)
+
+    doc.save(output_path)
+    print(f"Successfully generated DOCX to {output_path}")
+
+ats_docx_path = os.path.join(output_dir, "damak-kumar-varshney-resume.docx")
+build_docx(ats_docx_path)
+
