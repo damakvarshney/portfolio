@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" x-data="app()" :class="{'dark':dark}" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Damak Varshney — AI Product Strategist & Business Transformation Leader. Designs and scales AI solutions in financial services that deliver measurable efficiency gains: 16+ FTE savings, 80%+ adoption, and 55% faster processes.">
-<meta name="keywords" content="AI Product Strategist, Business Transformation, Intelligent Operations, Financial Services AI, Process Optimization, RAG, Agentic Workflows, KKR, OSTTRA">
+<meta name="description" content="Damak Varshney - AI Product Manager, Business Transformation Consultant, Enterprise AI Strategy advisor, and AI Operations Leader for financial services teams.">
+<meta name="keywords" content="AI Product Manager, Business Transformation Consultant, Enterprise AI Strategy, AI Operations Leader Financial Services, Intelligent Operations, Financial Services AI, RAG, Agentic Workflows, KKR, OSTTRA">
 <meta name="author" content="Damak Varshney">
-<meta property="og:title" content="Damak Varshney — AI Product Strategist & Business Transformation Leader">
-<meta property="og:description" content="I design AI systems that transform how financial services teams operate. 5 products shipped, 16+ FTE saved, 1,500+ users.">
+<meta property="og:title" content="Damak Varshney - AI Product Manager &amp; Business Transformation Consultant">
+<meta property="og:description" content="Enterprise AI Strategy and AI Operations Leader in financial services. 5 products shipped, 16+ FTE saved, 1,500+ users, 80%+ adoption.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://damak-varshney.vercel.app">
-<title>Damak Varshney — AI Product Strategist & Business Transformation</title>
+<title>Damak Varshney - AI Product Manager | Business Transformation Consultant | Enterprise AI Strategy</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -86,7 +86,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
   to { transform: rotate(0deg); }
 }
 .animate-spin-slow {
-  animation: spin-slow 20s linear infinite;
+  animation: spin-slow 10s linear infinite;
 }
 .animate-spin-reverse-slow {
   animation: spin-reverse-slow 25s linear infinite;
@@ -125,6 +125,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <li><a href="#about"    class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='about'?'on !text-zinc-900 dark:!text-white':''">Capabilities</a></li>
       <li><a href="#reviews"  class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='reviews'?'on !text-zinc-900 dark:!text-white':''">Recognition</a></li>
       <li><a href="#blog"     class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='blog'?'on !text-zinc-900 dark:!text-white':''">Journey</a></li>
+      <li><a href="output/pdf/damak-varshney-executive-brief.pdf" download class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Executive Brief</a></li>
       <li><a href="#contact"  class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='contact'?'on !text-zinc-900 dark:!text-white':''">Contact</a></li>
     </ul>
 
@@ -139,8 +140,8 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <svg x-show="dark"  class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
       </button>
       <!-- hire me -->
-      <a href="#contact" class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">
-        Hire me <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      <a href="output/pdf/damak-varshney-executive-brief.pdf" download class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">
+        Download Brief <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
       </a>
       <!-- hamburger -->
       <button @click="mm=!mm" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800" :aria-expanded="mm" aria-label="Toggle menu">
@@ -161,9 +162,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <li><a href="#about"    @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Capabilities</a></li>
       <li><a href="#reviews"  @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Recognition</a></li>
       <li><a href="#blog"     @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Journey</a></li>
+      <li><a href="output/pdf/damak-varshney-executive-brief.pdf" download @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Executive Brief</a></li>
       <li><a href="#contact"  @click="mm=false" class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Contact</a></li>
       <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
-        <a href="#contact" @click="mm=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Contact →</a>
+        <a href="https://cal.com/damak-varshney/15min" rel="noopener noreferrer" target="_blank" @click="mm=false" class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">Book a 15-Min Call</a>
       </li>
     </ul>
   </div>
@@ -188,15 +190,15 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
               <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm shadow-lg shadow-accent/20 group-hover:scale-110 transition-transform" x-text="vibes[vibeIndex].icon"></div>
               <div class="flex flex-col">
                  <span class="text-[10px] font-black uppercase tracking-widest text-zinc-400 group-hover:text-accent transition-colors" x-text="vibes[vibeIndex].label"></span>
-                 <span class="text-xs font-bold text-zinc-900 dark:text-white" x-text="vibes[vibeIndex].text"></span>
+                 <span class="text-xs font-bold text-zinc-900 dark:text-white">AI-Driven Business Transformation Leader</span>
               </div>
             </div>
             
             <h1 class="reveal d1 font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-zinc-900 dark:text-white mb-6">
-              I design AI systems that <span class="text-accent">transform how financial services teams operate.</span>
+              AI-Driven <span class="text-accent">Business Transformation</span>
             </h1>
             <p class="reveal d2 text-sm md:text-base text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-2xl mb-10 font-light">
-              <strong class="font-semibold text-zinc-800 dark:text-zinc-200">AI Product Strategist</strong> specializing in intelligent operations and business transformation. At a KKR-backed financial infrastructure firm, I built and scaled 5 AI solutions that delivered <strong class="font-semibold text-accent">16+ FTE savings</strong>, <strong class="font-semibold text-zinc-800 dark:text-zinc-200">80%+ adoption across 1,500+ users</strong>, and accelerated critical processes by <strong class="font-semibold text-zinc-800 dark:text-zinc-200">up to 55%</strong>.
+              I architect intelligent systems that eliminate operational friction across financial services - delivering <strong class="font-semibold text-accent">16+ FTE savings</strong>, <strong class="font-semibold text-zinc-800 dark:text-zinc-200">80%+ adoption</strong>, and measurable enterprise impact at a <strong class="font-semibold text-zinc-800 dark:text-zinc-200">KKR-backed financial infrastructure firm</strong>.
             </p>
             
             <!-- POV Statement -->
@@ -230,8 +232,12 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
             See Case Studies
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </a>
-          <a href="#contact" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-sm">
-            Let's Talk
+          <a href="output/pdf/damak-varshney-executive-brief.pdf" download class="inline-flex items-center gap-2 bg-accent text-white font-medium px-7 py-3.5 rounded-full hover:bg-accent-light transition-colors text-sm">
+            Download Executive Brief
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          </a>
+          <a href="https://cal.com/damak-varshney/15min" rel="noopener noreferrer" target="_blank" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-sm">
+            Book a 15-Min Call
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
         </div>
@@ -592,7 +598,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
     <!-- Visual 3-Chapter Career Arc (Priority 1) -->
     <div class="reveal d3 mb-16 bg-white dark:bg-zinc-900/60 border border-zinc-200/50 dark:border-zinc-800/50 rounded-3xl p-8 shadow-sm">
-      <h3 class="text-xs font-bold text-accent uppercase tracking-widest mb-6">Career Arc Journey</h3>
+      <h3 class="text-xs font-bold text-accent uppercase tracking-widest mb-3">Career Arc Journey</h3>
+      <p class="max-w-3xl text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-8">
+        Most professionals bring either technical depth or business strategy. <span class="text-accent font-semibold">Rarely both.</span> Here is how I developed both - and why it matters for enterprise AI transformation.
+      </p>
       <div class="grid md:grid-cols-3 gap-8 relative">
         <!-- Connecting Line for Desktop -->
         <div class="hidden md:block absolute top-8 left-[15%] right-[15%] h-0.5 border-t-2 border-dashed border-zinc-200 dark:border-zinc-800 z-0"></div>
@@ -975,6 +984,12 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
           </div>
 
           <div class="reveal d3 flex flex-col gap-4">
+            <a href="https://cal.com/damak-varshney/15min" rel="noopener noreferrer" target="_blank" class="group flex items-center gap-3 text-white hover:text-white transition-colors bg-accent px-4 py-3 rounded-xl shadow-sm">
+              <span class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-lg transition-colors shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M5 11h14M7 21h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </span>
+              <span class="text-sm font-semibold">Book a 15-Min Call</span>
+            </a>
             <a href="mailto:damak.varshney@email.com" class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
               <span class="w-9 h-9 flex items-center justify-center bg-zinc-800 rounded-lg group-hover:bg-accent/20 transition-colors shrink-0">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -1302,3 +1317,5 @@ function app() {
 
 </body>
 </html>
+
+
