@@ -545,7 +545,7 @@ brief_html_content = """<!DOCTYPE html>
 """
 
 # ----------------- 2. ATS-Optimized Resume HTML & CSS -----------------
-# This strictly follows ATS: single column, system font (Calibri), black on white, standard headers, 1-inch margins, 1 page limit.
+# Fully revised: tighter margins, phone number, no arrows, varied verbs, semicolons, compact bullets, pipe-separated skills, correct section order.
 ats_html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -554,7 +554,7 @@ ats_html_content = """<!DOCTYPE html>
   <style>
     @page {
       size: letter;
-      margin: 0.85in 0.9in; /* Margins: 1 inch approx, slightly adjusted to guarantee 1-page fit */
+      margin: 0.6in 0.65in;
     }
     body {
       font-family: 'Calibri', 'Arial', sans-serif;
@@ -563,14 +563,14 @@ ats_html_content = """<!DOCTYPE html>
       margin: 0;
       padding: 0;
       font-size: 10pt;
-      line-height: 1.25;
+      line-height: 1.2;
     }
     .header-section {
       text-align: center;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .name {
-      font-size: 16pt;
+      font-size: 15pt;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 2px;
@@ -578,65 +578,84 @@ ats_html_content = """<!DOCTYPE html>
     }
     .contact-info {
       font-size: 9pt;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     .headline {
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 2px;
+      margin-top: 4px;
+      margin-bottom: 8px;
+    }
+    .section-title {
       font-size: 10.5pt;
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 1px solid #000000;
-      padding-bottom: 3px;
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-size: 11pt;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-bottom: 1px solid #000000;
-      margin-top: 14px;
-      margin-bottom: 6px;
+      margin-top: 9px;
+      margin-bottom: 4px;
       padding-bottom: 1px;
     }
     .summary-text {
-      font-size: 10pt;
-      margin-bottom: 10px;
+      font-size: 9.5pt;
+      margin-bottom: 0;
       text-align: justify;
+      line-height: 1.25;
     }
     .job-entry {
-      margin-bottom: 10px;
+      margin-bottom: 7px;
     }
     .job-header {
       font-weight: bold;
+      font-size: 10pt;
       display: flex;
       justify-content: space-between;
     }
     .job-meta {
       font-style: italic;
+      font-size: 9pt;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     ul {
-      margin: 0;
-      padding-left: 18px;
+      margin: 2px 0 0 0;
+      padding-left: 14px;
     }
     li {
-      margin-bottom: 3px;
+      margin-bottom: 2px;
       text-align: justify;
+      font-size: 9.5pt;
+      line-height: 1.2;
     }
-    .education-entry {
-      margin-bottom: 4px;
-    }
-    .education-header {
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
+    .education-line {
+      font-size: 9.5pt;
+      margin-bottom: 2px;
+      line-height: 1.2;
     }
     .skills-category {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
+      font-size: 9.5pt;
+      line-height: 1.2;
     }
     .skills-label {
       font-weight: bold;
+    }
+    .cert-line {
+      font-size: 9.5pt;
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+    .recog-list {
+      margin: 2px 0 0 0;
+      padding-left: 14px;
+    }
+    .recog-list li {
+      font-size: 9.5pt;
+      margin-bottom: 2px;
+      line-height: 1.2;
     }
   </style>
 </head>
@@ -645,7 +664,10 @@ ats_html_content = """<!DOCTYPE html>
   <div class="header-section">
     <div class="name">DAMAK KUMAR VARSHNEY</div>
     <div class="contact-info">
-      Gurugram, India | damakvarshney@gmail.com | linkedin.com/in/damak-varshney | damak-varshney.vercel.app
+      Gurugram, India &nbsp;|&nbsp; +91-8077293920 &nbsp;|&nbsp; damakvarshney@gmail.com
+    </div>
+    <div class="contact-info">
+      linkedin.com/in/damak-varshney &nbsp;|&nbsp; damak-varshney.vercel.app
     </div>
     <div class="headline">
       AI Product Manager | Business Transformation | Enterprise AI Strategy
@@ -654,7 +676,7 @@ ats_html_content = """<!DOCTYPE html>
 
   <div class="section-title">SUMMARY</div>
   <div class="summary-text">
-    Shipped 5 AI-powered products at OSTTRA (KKR Portfolio) delivering 16+ FTE savings and 80%+ adoption across 1,500+ users. Combines technical build depth, financial-domain expertise, and enterprise adoption discipline. Track record: 55% faster onboarding, 13%+ case volume reduction, 100% SOX compliance automation.
+    Shipped 5 AI products at OSTTRA (KKR Portfolio) generating 16+ FTE in savings and 80%+ adoption across 1,500+ users. Combines technical depth, financial-services expertise, and enterprise adoption discipline. Outcomes include 55% faster onboarding, 13% case-volume cut, and fully automated SOX compliance.
   </div>
 
   <div class="section-title">WORK EXPERIENCE</div>
@@ -662,112 +684,85 @@ ats_html_content = """<!DOCTYPE html>
   <div class="job-entry">
     <div class="job-header">
       <span>Associate, AI Strategy &amp; Ops Excellence</span>
-      <span>Apr 2025 – Present</span>
+      <span>Apr 2025 &ndash; Present</span>
     </div>
     <div class="job-meta">
       <span>OSTTRA (KKR Portfolio Company) | Gurugram, India</span>
     </div>
     <ul>
-      <li>Architected NEXUS global resourcing platform consolidating 150+ fragmented spreadsheets &rarr; Real-time capacity intelligence with Python predictive modeling and Looker heatmaps &rarr; Achieved 80%+ adoption across 1,500+ users; reduced planning cycles by 45%.</li>
-      <li>Built Dot and ODA RAG-based Salesforce AI assistants using Vertex AI &rarr; Routine client queries consumed 16% of case volume &rarr; Implemented hybrid retrieval pipeline with cited responses &rarr; Reduced info request cases from 16% to 3%; saved 4+ FTE annually.</li>
-      <li>Led Intelligent KYC and Onboarding Automation &rarr; 18-day manual vetting created sales bottlenecks &rarr; Designed AI checklist extractor with reference registry APIs &rarr; Reduced cycle time 55% (18 to 8 days); 100% automated audit trace coverage.</li>
-      <li>Implemented 25+ Salesforce auto-triaging improvements including AI categorization and entity screening &rarr; 6+ FTEs stuck in manual triage &rarr; Intelligent routing with AI summarization &rarr; Delivered 4+ FTE annual savings; 40%+ faster case resolution.</li>
+      <li>Architected NEXUS global capacity platform consolidating 150+ spreadsheets using Python predictive modeling and Looker; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%.</li>
+      <li>Designed Dot and ODA, RAG-based Salesforce assistants powered by Vertex AI; decreased routine client information cases from 16% to 3% and freed 4+ FTE annually for strategic work.</li>
+      <li>Led intelligent KYC and onboarding automation with AI checklist extraction and reference registry APIs; shortened cycle time 55% from 18 to 8 days with 100% audit traceability.</li>
+      <li>Rolled out 25+ Salesforce auto-triaging enhancements including AI categorization and entity screening; recovered 4+ FTE annually and accelerated case resolution by 40%.</li>
     </ul>
   </div>
 
   <div class="job-entry">
     <div class="job-header">
       <span>Senior Operational Excellence Analyst</span>
-      <span>Feb 2024 – Dec 2024</span>
+      <span>Feb 2024 &ndash; Dec 2024</span>
     </div>
     <div class="job-meta">
       <span>OSTTRA | Gurugram, India</span>
     </div>
     <ul>
-      <li>Automated SOX Compliance user access reviews using Google Apps Script &rarr; Manual audit checks required 4.1 FTEs per cycle &rarr; One-click validation engine &rarr; Saved 4.1 FTEs; 100% compliance; audit cycle reduced from 45 to 5 days.</li>
-      <li>Delivered 10+ continuous improvement initiatives applying Lean Six Sigma and Agile &rarr; Cross-functional operational inefficiencies &rarr; Workflow redesign across client services and trading ops &rarr; Achieved 2+ FTE quantitative savings; elevated operational maturity.</li>
-      <li>Directed Microsoft to Google Workspace data migration during Tel Aviv-to-India operations transition &rarr; Removed VDI dependency, reduced access latency 40%; saved 0.4 FTEs.</li>
+      <li>Engineered SOX Compliance automation using Google Apps Script; eliminated 4.1 FTEs of manual audit work, achieved 100% compliance, and compressed audit cycle from 45 to 5 days.</li>
+      <li>Delivered 10+ continuous improvement initiatives applying Lean Six Sigma and Agile across client services and trading operations; unlocked 2+ FTE in quantitative savings.</li>
+      <li>Directed Microsoft to Google Workspace migration during Tel Aviv-to-India transition; removed VDI dependency, cut access latency 40%, and freed 0.4 FTEs.</li>
     </ul>
   </div>
 
   <div class="job-entry">
     <div class="job-header">
       <span>Credit Analyst Intern</span>
-      <span>Feb 2023 – Apr 2023</span>
+      <span>Feb 2023 &ndash; Apr 2023</span>
     </div>
     <div class="job-meta">
       <span>Kotak Mahindra Bank | Delhi NCR, India</span>
     </div>
     <ul>
-      <li>Evaluated 20+ MSME credit applications analyzing financial statements and working capital dynamics &rarr; Delivered credit recommendations with 95%+ accuracy; contributed to $3M+ underwriting decisions.</li>
+      <li>Evaluated 20+ MSME credit applications analyzing financial statements and working capital dynamics; delivered recommendations with 95%+ accuracy contributing to $3M+ underwriting decisions.</li>
     </ul>
   </div>
 
   <div class="job-entry">
     <div class="job-header">
       <span>React Native Developer</span>
-      <span>Apr 2021 – May 2022</span>
+      <span>Apr 2021 &ndash; May 2022</span>
     </div>
     <div class="job-meta">
       <span>RPQ IT Services | Remote, India</span>
     </div>
     <ul>
-      <li>Developed 5+ production mobile applications using React Native; designed UI/UX wireframes in Figma; built clean cross-platform logic for iOS and Android deployment.</li>
+      <li>Developed 5+ production mobile applications using React Native; designed UI/UX wireframes in Figma and shipped cross-platform iOS and Android builds.</li>
     </ul>
   </div>
 
   <div class="section-title">EDUCATION</div>
-  
-  <div class="education-entry">
-    <div class="education-header">
-      <span>Post Graduate Programme, Finance &amp; Analytics</span>
-      <span>2022 – Apr 2024</span>
-    </div>
-    <div class="job-meta">
-      <span>ICFAI Business School | Gurgaon, India | CGPA: 9.0/10</span>
-    </div>
-  </div>
-
-  <div class="education-entry">
-    <div class="education-header">
-      <span>MBA, Finance &amp; Analytics (Online, concurrent with OSTTRA role)</span>
-      <span>2022 – Jul 2024</span>
-    </div>
-    <div class="job-meta">
-      <span>ICFAI Foundation for Higher Education | Hyderabad, India | CGPA: 8.75/10</span>
-    </div>
-  </div>
-
-  <div class="education-entry">
-    <div class="education-header">
-      <span>Bachelor of Computer Applications</span>
-      <span>2017 – 2020</span>
-    </div>
-    <div class="job-meta">
-      <span>Birla Institute of Technology | Mesra, India | CGPA: 7.52/10</span>
-    </div>
-  </div>
+  <div class="education-line"><strong>Post Graduate Programme, Finance &amp; Analytics</strong> &mdash; ICFAI Business School, Gurgaon | 2022 &ndash; Apr 2024 | CGPA: 9.0/10</div>
+  <div class="education-line"><strong>MBA, Finance &amp; Analytics</strong> (Online, concurrent with OSTTRA role) &mdash; IFHE Hyderabad | 2022 &ndash; Jul 2024 | CGPA: 8.75/10</div>
+  <div class="education-line"><strong>Bachelor of Computer Applications</strong> &mdash; Birla Institute of Technology, Mesra | 2017 &ndash; 2020 | CGPA: 7.52/10</div>
 
   <div class="section-title">SKILLS</div>
-  <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI, Google Gemini, RAG Pipelines, Vector Embeddings, Prompt Engineering, Agentic Workflows, LLM-Powered Automation</div>
-  <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI</div>
-  <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce Administration, Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs</div>
-  <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management</div>
-  <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets, Reference Data, KYC/AML, SOX Compliance, Financial Services Infrastructure</div>
+  <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI | Google Gemini | RAG Pipelines | Vector Embeddings | Prompt Engineering | Agentic Workflows | LLM-Powered Automation</div>
+  <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python | SQL | Google BigQuery | ChromaDB | Google Cloud Platform | Looker Studio | Power BI</div>
+  <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce | Jira | Confluence | Google AppSheet | Google Apps Script | REST APIs</div>
+  <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma | Agile/Scrum | LUMA Design Thinking | Process Reengineering | Change Management</div>
+  <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets | Reference Data | KYC/AML | SOX Compliance | Financial Services Infrastructure</div>
+
+  <div class="section-title">CERTIFICATIONS</div>
+  <div class="cert-line">Google Data Analytics Professional Certificate, Google (2022)</div>
+  <div class="cert-line">Certified Data Scientist, Henry Harvin Education (2022)</div>
+  <div class="cert-line">SQL Certification, DataCamp (2022)</div>
 
   <div class="section-title">RECOGNITION</div>
-  <ul>
+  <ul class="recog-list">
     <li>Featured in Times of India, InspireTech 2025 &mdash; Enterprise AI and Automation Systems</li>
     <li>Highflyer Award, OSTTRA Q1 2026 &mdash; Looker analytics and Salesforce auto-triaging impact</li>
-    <li>Trendsetter Award, OSTTRA Q1 2025 &mdash; SOX Compliance automation saving 4.1 FTEs</li>
+    <li>Trendsetter Award, OSTTRA Q1 2025 &mdash; SOX Compliance automation</li>
     <li>1st Prize, LUMA Design Thinking Challenge, Protiviti 2023</li>
     <li>Multiple Quarterly Spot Awards, OSTTRA 2024 &ndash; 2026</li>
   </ul>
-
-  <div class="section-title" style="margin-top: 10px;">CERTIFICATIONS</div>
-  <div class="summary-text" style="margin-bottom: 0;">
-    Google Data Analytics Professional Certificate, Google (2022) | Certified Data Scientist, Henry Harvin Education (2022) | SQL Certification, DataCamp (2022)
-  </div>
 
 </body>
 </html>
