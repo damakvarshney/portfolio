@@ -1,6 +1,6 @@
 # DAMAK VARSHNEY
 
-**Gurugram, Haryana** | **+91-8077293920** | **damak.varshney@email.com** | **[LinkedIn](#)** | **[Portfolio Website](#)**
+**Gurugram, Haryana** | **+91-8077293920** | **damakvarshney@gmail.com** | **[LinkedIn](#)** | **[Portfolio Website](#)**
 
 ---
 

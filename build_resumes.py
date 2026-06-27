@@ -310,7 +310,7 @@ brief_html_content = """<!DOCTYPE html>
       <div class="subtitle">AI Product Manager | Business Transformation | Enterprise AI Strategy</div>
       <div class="contacts">
         <span>📍 Gurugram, India</span>
-        <span>✉️ hello@damakvarshney.com</span>
+        <span>✉️ damakvarshney@gmail.com</span>
         <span>🔗 linkedin.com/in/damak-varshney</span>
         <span>🌐 damak-varshney.vercel.app</span>
       </div>
@@ -645,7 +645,7 @@ ats_html_content = """<!DOCTYPE html>
   <div class="header-section">
     <div class="name">DAMAK KUMAR VARSHNEY</div>
     <div class="contact-info">
-      Gurugram, India | hello@damakvarshney.com | linkedin.com/in/damak-varshney | damak-varshney.vercel.app
+      Gurugram, India | damakvarshney@gmail.com | linkedin.com/in/damak-varshney | damak-varshney.vercel.app
     </div>
     <div class="headline">
       AI Product Manager | Business Transformation | Enterprise AI Strategy
