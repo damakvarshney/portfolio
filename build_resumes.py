@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import subprocess
 
@@ -39,8 +40,8 @@ brief_html_content = """<!DOCTYPE html>
       margin: 0;
       padding: 0;
       -webkit-print-color-adjust: exact;
-      font-size: 8pt;
-      line-height: 1.25;
+      font-size: 7.8pt;
+      line-height: 1.2;
     }
     .page {
       width: 8.5in;
@@ -51,16 +52,16 @@ brief_html_content = """<!DOCTYPE html>
       overflow: hidden;
     }
     .p-padded {
-      padding: 0.25in 0.45in;
+      padding: 0.15in 0.4in;
     }
     .header-content {
       background-color: #080C10;
       color: #FFFFFF;
-      padding: 0.25in 0.45in;
+      padding: 0.15in 0.4in;
     }
     .header-content h1 {
       font-family: 'PT Sans', sans-serif;
-      font-size: 20pt;
+      font-size: 19pt;
       margin: 0 0 2px 0;
       font-weight: 700;
       letter-spacing: -0.5px;
@@ -69,17 +70,17 @@ brief_html_content = """<!DOCTYPE html>
     .header-content .subtitle {
       color: #2563EB;
       font-family: 'PT Sans', sans-serif;
-      font-size: 10pt;
+      font-size: 9.5pt;
       font-weight: 700;
-      margin: 0 0 6px 0;
+      margin: 0 0 5px 0;
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
     .header-content .contacts-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px 15px;
-      font-size: 7.5pt;
+      gap: 4px 12px;
+      font-size: 7.2pt;
       color: #94A3B8;
     }
     .header-content .contacts-grid span {
@@ -95,48 +96,48 @@ brief_html_content = """<!DOCTYPE html>
     /* Sections */
     .section-title {
       font-family: 'PT Sans', sans-serif;
-      font-size: 9.5pt;
+      font-size: 9pt;
       font-weight: 700;
       color: #2563EB;
       border-bottom: 1px solid #CBD5E1;
-      padding-bottom: 2px;
-      margin-top: 8px;
-      margin-bottom: 4px;
+      padding-bottom: 1px;
+      margin-top: 5px;
+      margin-bottom: 3px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     /* Positioning */
     .positioning-text {
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #334155;
-      line-height: 1.35;
-      margin-bottom: 6px;
+      line-height: 1.3;
+      margin-bottom: 4px;
     }
 
     /* Metrics Strip */
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 6px;
-      margin-bottom: 6px;
+      gap: 5px;
+      margin-bottom: 4px;
     }
     .metric-box {
       background-color: #F8FAFC;
       border: 1px solid #CBD5E1;
-      border-radius: 6px;
-      padding: 4px 2px;
+      border-radius: 5px;
+      padding: 3px 2px;
       text-align: center;
     }
     .metric-value {
-      font-size: 12pt;
+      font-size: 11.5pt;
       font-weight: 700;
       color: #2563EB;
       font-family: 'PT Sans', sans-serif;
-      line-height: 1.1;
+      line-height: 1.05;
     }
     .metric-label {
-      font-size: 5.5pt;
+      font-size: 5pt;
       font-weight: 700;
       color: #0F172A;
       margin-top: 1px;
@@ -149,17 +150,17 @@ brief_html_content = """<!DOCTYPE html>
     .scale-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 6px;
       background-color: #F8FAFC;
       border: 1px solid #E2E8F0;
-      border-radius: 6px;
-      padding: 6px 12px;
-      margin-bottom: 6px;
+      border-radius: 5px;
+      padding: 4px 10px;
+      margin-bottom: 4px;
     }
     .scale-col {
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #334155;
-      line-height: 1.3;
+      line-height: 1.25;
     }
     .scale-item {
       display: flex;
@@ -170,50 +171,77 @@ brief_html_content = """<!DOCTYPE html>
       color: #0F172A;
     }
 
+    /* Salesforce ERP Architecture Grid */
+    .erp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+    .erp-quad {
+      background-color: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 5px;
+      padding: 4px 6px;
+    }
+    .quad-title {
+      font-family: 'PT Sans', sans-serif;
+      font-weight: 700;
+      font-size: 7.2pt;
+      color: #2563EB;
+      margin-bottom: 2px;
+      text-transform: uppercase;
+    }
+    .quad-detail {
+      font-size: 6.8pt;
+      color: #475569;
+      line-height: 1.2;
+    }
+
     /* Case Studies 2x3 Grid */
     .case-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6px;
-      margin-bottom: 6px;
+      gap: 5px;
+      margin-bottom: 4px;
     }
     .case-card {
       border: 1px solid #E2E8F0;
       border-left: 2.5px solid #2563EB;
       border-radius: 5px;
-      padding: 5px 8px;
+      padding: 4px 6px;
       background-color: #FCFDFE;
     }
     .case-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     .case-title {
       font-family: 'PT Sans', sans-serif;
-      font-size: 8pt;
+      font-size: 7.8pt;
       font-weight: 700;
       color: #0F172A;
     }
     .case-tag {
-      font-size: 6pt;
+      font-size: 5.5pt;
       font-weight: 700;
       color: #2563EB;
       background-color: #EFF6FF;
-      padding: 1px 4px;
-      border-radius: 3px;
+      padding: 1px 3px;
+      border-radius: 2px;
       border: 0.5px solid #DBEAFE;
       white-space: nowrap;
     }
     .case-detail {
-      font-size: 7.2pt;
+      font-size: 7pt;
       color: #475569;
       margin-bottom: 1px;
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .case-impact {
-      font-size: 7.2pt;
+      font-size: 7pt;
       font-weight: 700;
       color: #10B981;
       line-height: 1.1;
@@ -223,15 +251,15 @@ brief_html_content = """<!DOCTYPE html>
     .stack-container {
       display: flex;
       flex-direction: column;
-      gap: 3px;
-      margin-bottom: 6px;
+      gap: 2px;
+      margin-bottom: 4px;
     }
     .stack-row {
       display: grid;
-      grid-template-columns: 1.4in 1fr;
-      gap: 10px;
-      font-size: 7.5pt;
-      line-height: 1.2;
+      grid-template-columns: 1.35in 1fr;
+      gap: 8px;
+      font-size: 7.2pt;
+      line-height: 1.15;
     }
     .stack-label {
       font-weight: 700;
@@ -245,13 +273,13 @@ brief_html_content = """<!DOCTYPE html>
     .recog-container {
       display: flex;
       flex-direction: column;
-      gap: 2px;
-      margin-bottom: 6px;
+      gap: 1.5px;
+      margin-bottom: 4px;
     }
     .recog-item {
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #334155;
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .recog-bullet {
       color: #2563EB;
@@ -262,11 +290,11 @@ brief_html_content = """<!DOCTYPE html>
     /* Education Footer */
     .edu-footer {
       border-top: 1px solid #CBD5E1;
-      padding-top: 4px;
-      margin-top: 6px;
+      padding-top: 3px;
+      margin-top: 5px;
       display: flex;
       justify-content: space-between;
-      font-size: 7.5pt;
+      font-size: 7.2pt;
       color: #475569;
     }
     .edu-item {
@@ -283,7 +311,7 @@ brief_html_content = """<!DOCTYPE html>
     <!-- Header -->
     <div class="header-content">
       <h1>DAMAK KUMAR VARSHNEY</h1>
-      <div class="subtitle">AI Product Manager | Business Transformation | Enterprise AI Strategy</div>
+      <div class="subtitle">AI Product Manager | Salesforce Solution Architect | Enterprise AI Strategy</div>
       <div class="contacts-grid">
         <span>📍 Gurugram, India</span>
         <span>📞 +91-8077293920</span>
@@ -296,7 +324,7 @@ brief_html_content = """<!DOCTYPE html>
     <div class="p-padded">
       <!-- Positioning -->
       <div class="positioning-text">
-        <strong>POSITIONING:</strong> AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA (KKR Portfolio). Architect of AI systems processing 200,000+ monthly cases with &gt;99% accuracy. Designer of prompts powering sentiment analytics across 20,000+ client communications. Combines technical build depth, financial-services expertise, and enterprise adoption discipline.
+        <strong>POSITIONING:</strong> AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA (KKR Portfolio). Architect of AI systems processing 200,000+ monthly cases with &gt;99% accuracy. Designer of prompts powering sentiment analytics across 20,000+ client communications. Combines technical build depth, financial-services expertise, and enterprise adoption discipline.
       </div>
 
       <!-- Impact Metrics -->
@@ -344,62 +372,61 @@ brief_html_content = """<!DOCTYPE html>
         </div>
       </div>
 
+      <!-- Salesforce ERP Architecture Section -->
+      <div class="section-title">Salesforce ERP Architecture</div>
+      <div class="erp-grid">
+        <div class="erp-quad">
+          <div class="quad-title">Service Cloud Core</div>
+          <div class="quad-detail">Custom schema object relations, Lightning Flow automation, queue routing.</div>
+        </div>
+        <div class="erp-quad">
+          <div class="quad-title">Custom Integrations</div>
+          <div class="quad-detail">Connected Apps OAuth JWT Bearer flow syncing cases with REST endpoints.</div>
+        </div>
+        <div class="erp-quad">
+          <div class="quad-title">Security &amp; SOX</div>
+          <div class="quad-detail">Granular permission set auditing, Shield transaction logs, and security controls.</div>
+        </div>
+        <div class="erp-quad">
+          <div class="quad-title">AI &amp; RAG Gateways</div>
+          <div class="quad-detail">Vertex AI / ChromaDB RAG bots (Dot &amp; ODA) queryable inside support interface.</div>
+        </div>
+      </div>
+
       <!-- Case Studies -->
       <div class="section-title">Selected Case Studies</div>
       <div class="case-grid">
-        <!-- Card 1 -->
         <div class="case-card">
           <div class="case-header">
-            <span class="case-title">NEXUS — Global Capacity Intelligence</span>
-            <span class="case-tag">Personal Lead</span>
+            <span class="case-title">NEXUS Capacity Intelligence</span>
+            <span class="case-tag">Lead</span>
           </div>
-          <div class="case-detail">Before: 150+ spreadsheets &rarr; After: Real-time AI platform</div>
-          <div class="case-impact">Impact: 80%+ adoption | 1,500+ users | 45% faster planning</div>
+          <div class="case-detail">Spreadsheets &rarr; Real-time AI platform</div>
+          <div class="case-impact">Impact: 80%+ adoption | 45% faster planning</div>
         </div>
-        <!-- Card 2 -->
         <div class="case-card">
           <div class="case-header">
             <span class="case-title">Auto-Triaging Ecosystem</span>
-            <span class="case-tag">Personal Lead</span>
+            <span class="case-tag">Lead</span>
           </div>
-          <div class="case-detail">Before: Manual L1 triage &rarr; After: Autonomous routing</div>
-          <div class="case-impact">Impact: 200K+ cases | &gt;99% accuracy | 8.78 FTE reclaimed</div>
+          <div class="case-detail">Manual triage &rarr; Autonomous routing</div>
+          <div class="case-impact">Impact: 200K+ cases | &gt;99% accuracy</div>
         </div>
-        <!-- Card 3 -->
         <div class="case-card">
           <div class="case-header">
-            <span class="case-title">KYC & Onboarding Automation</span>
-            <span class="case-tag">Personal Lead</span>
+            <span class="case-title">KYC Automation</span>
+            <span class="case-tag">Lead</span>
           </div>
-          <div class="case-detail">Before: 18-day manual vetting &rarr; After: 8-day automated cycle</div>
-          <div class="case-impact">Impact: 55% faster | 751 screenings/mo | 1.0 FTE reclaimed</div>
+          <div class="case-detail">Manual vetting &rarr; Automated cycle</div>
+          <div class="case-impact">Impact: 55% faster | 1.0 FTE reclaimed</div>
         </div>
-        <!-- Card 4 -->
         <div class="case-card">
           <div class="case-header">
-            <span class="case-title">Autonomous Failure Management</span>
-            <span class="case-tag">Personal Lead</span>
+            <span class="case-title">Predictive Sentiment</span>
+            <span class="case-tag">Lead</span>
           </div>
-          <div class="case-detail">Before: Manual alert triage &rarr; After: Self-routing system</div>
-          <div class="case-impact">Impact: 4,500+ alerts/mo | Zero human triage required</div>
-        </div>
-        <!-- Card 5 -->
-        <div class="case-card">
-          <div class="case-header">
-            <span class="case-title">Predictive Sentiment Analytics</span>
-            <span class="case-tag">Prompt + Change Lead</span>
-          </div>
-          <div class="case-detail">Before: Reactive escalation &rarr; After: Proactive outreach</div>
-          <div class="case-impact">Impact: 20K+ emails | 40% faster res. | 20% fewer escalations</div>
-        </div>
-        <!-- Card 6 -->
-        <div class="case-card">
-          <div class="case-header">
-            <span class="case-title">Dot, ODA & Transformer Bot</span>
-            <span class="case-tag">Contributing Member</span>
-          </div>
-          <div class="case-detail">Before: Manual queries &rarr; After: RAG-powered self-service</div>
-          <div class="case-impact">Impact: 16% to 3% cases | 4+ FTE freed | 24 initiatives</div>
+          <div class="case-detail">Reactive &rarr; Proactive outreach</div>
+          <div class="case-impact">Impact: 20K emails | 40% faster resolution</div>
         </div>
       </div>
 
@@ -407,42 +434,43 @@ brief_html_content = """<!DOCTYPE html>
       <div class="section-title">Capability Stack</div>
       <div class="stack-container">
         <div class="stack-row">
+          <div class="stack-label">▪ Salesforce Arch.</div>
+          <div class="stack-value">Service Cloud · Apex/LWC · JWT/OAuth · Custom Schema · Tooling API · Shield Encryption</div>
+        </div>
+        <div class="stack-row">
           <div class="stack-label">▪ AI / LLM Stack</div>
-          <div class="stack-value">Vertex AI · Gemini · RAG · Prompt Engineering · Conversational AI · Predictive Sentiment · Agentic Workflows</div>
+          <div class="stack-value">Vertex AI · Gemini · RAG · Prompt Engineering · Conversational AI · Agentic Workflows</div>
         </div>
         <div class="stack-row">
           <div class="stack-label">▪ Cloud & Data</div>
-          <div class="stack-value">Python · SQL · BigQuery · ChromaDB · GCP · Looker · Power BI · Data Analytics · Business Intelligence</div>
+          <div class="stack-value">Python · SQL · BigQuery · ChromaDB · GCP · Looker · Power BI · Data Analytics</div>
         </div>
         <div class="stack-row">
-          <div class="stack-label">▪ Product Management</div>
-          <div class="stack-value">Product Strategy · Roadmapping · User Adoption · KPI Tracking · Cross-Functional Leadership</div>
+          <div class="stack-label">▪ Product Mgmt</div>
+          <div class="stack-value">Strategy · Roadmapping · Adoption · KPI Tracking · Cross-Functional Leadership</div>
         </div>
         <div class="stack-row">
           <div class="stack-label">▪ Methodologies</div>
-          <div class="stack-value">Lean Six Sigma · Agile/Scrum · LUMA Design Thinking · Change Management · Continuous Improvement</div>
+          <div class="stack-value">Lean Six Sigma · Agile/Scrum · LUMA Design Thinking · Change Management</div>
         </div>
         <div class="stack-row">
           <div class="stack-label">▪ Financial Domain</div>
-          <div class="stack-value">OTC Markets · Reference Data · KYC/AML · SOX · Trade Failure Management · Regulatory Reporting</div>
+          <div class="stack-value">OTC Markets · KYC/AML · SOX Compliance · Trade Failure Mgmt</div>
         </div>
       </div>
 
       <!-- Recognition -->
       <div class="section-title">Recognition</div>
       <div class="recog-container">
-        <div class="recog-item"><span class="recog-bullet">★</span> Times of India Feature — InspireTech 2025 (Enterprise AI & Automation)</div>
-        <div class="recog-item"><span class="recog-bullet">★</span> Highflyer Award — OSTTRA Q1 2026 (Looker & Auto-Triaging Impact)</div>
-        <div class="recog-item"><span class="recog-bullet">★</span> Trendsetter Award — OSTTRA Q1 2025 (SOX Compliance Automation)</div>
-        <div class="recog-item"><span class="recog-bullet">★</span> 1st Prize — LUMA Design Thinking Challenge, Protiviti 2023</div>
-        <div class="recog-item"><span class="recog-bullet">★</span> Multiple Quarterly Spot Awards — OSTTRA 2024–2026</div>
+        <div class="recog-item"><span class="recog-bullet">★</span> InspireTech 2025 (Enterprise AI) · Highflyer Award (2026)</div>
+        <div class="recog-item"><span class="recog-bullet">★</span> Trendsetter Award (2025) · 1st Prize - LUMA Challenge (2023)</div>
       </div>
 
       <!-- Education Footer -->
       <div class="edu-footer">
-        <div class="edu-item"><strong>PGPM Finance & Analytics</strong>, IBS Gurgaon (CGPA 9.0/10, 2024)</div>
-        <div class="edu-item"><strong>MBA Finance & Analytics</strong>, IFHE Hyderabad (2024)</div>
-        <div class="edu-item"><strong>BCA Computer Science</strong>, BIT Mesra (2020)</div>
+        <div class="edu-item"><strong>PGPM Finance</strong>, IBS Gurgaon</div>
+        <div class="edu-item"><strong>MBA Finance</strong>, IFHE Hyderabad</div>
+        <div class="edu-item"><strong>BCA</strong>, BIT Mesra</div>
       </div>
     </div>
   </div>
@@ -451,8 +479,6 @@ brief_html_content = """<!DOCTYPE html>
 </html>
 """
 
-# ----------------- 2. ATS-Optimized Resume HTML & CSS -----------------
-# Fully revised: tighter margins, phone number, no arrows, varied verbs, semicolons, compact bullets, pipe-separated skills, correct section order.
 ats_html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -461,7 +487,7 @@ ats_html_content = """<!DOCTYPE html>
   <style>
     @page {
       size: letter;
-      margin: 0.25in 0.45in;
+      margin: 0.15in 0.4in;
       /* Suppress all browser headers and footers */
       @top-left { content: ""; }
       @top-center { content: ""; }
@@ -480,170 +506,60 @@ ats_html_content = """<!DOCTYPE html>
       background-color: #FFFFFF;
       margin: 0;
       padding: 0;
-      font-size: 8.5pt;
-      line-height: 1.05;
+      font-size: 8pt;
+      line-height: 1.03;
     }
     .header-section {
       text-align: center;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .name {
-      font-size: 13pt;
+      font-size: 12.5pt;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 1px;
       letter-spacing: 0.5px;
     }
     .contact-info {
-      font-size: 8pt;
+      font-size: 7.8pt;
       margin-bottom: 1px;
     }
     .headline {
-      font-size: 8.5pt;
+      font-size: 8.2pt;
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 1px solid #000000;
       padding-bottom: 1px;
       margin-top: 1px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .section-title {
-      font-size: 9pt;
+      font-size: 8.5pt;
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 1px solid #000000;
-      margin-top: 4px;
-      margin-bottom: 2px;
+      margin-top: 3px;
+      margin-bottom: 1px;
       padding-bottom: 1px;
     }
     .summary-text {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       margin-bottom: 0;
       text-align: justify;
-      line-height: 1.1;
+      line-height: 1.05;
     }
     .job-entry {
-      margin-bottom: 2px;
+      margin-bottom: 1.5px;
     }
     .job-header {
       font-weight: bold;
-      font-size: 8.5pt;
-      display: flex;
-      justify-content: space-between;
-    }
-    .job-meta {
-      font-style: italic;
-      font-size: 7.8pt;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1px;
-    }
-    ul {
-      margin: 0px;
-      padding-left: 10px;
-    }
-    li {
-      margin-bottom: 0px;
-      text-align: justify;
-      font-size: 8.2pt;
-      line-height: 1.05;
-    }
-    .education-line {
-      font-size: 8.2pt;
-      margin-bottom: 0px;
-      line-height: 1.05;
-    }
-    .skills-category {
-      margin-bottom: 0px;
-      font-size: 8.2pt;
-      line-height: 1.05;
-    }
-    .skills-label {
-      font-weight: bold;
-    }
-    .cert-line {
-      font-size: 8.2pt;
-      margin-bottom: 0px;
-      line-height: 1.05;
-    }
-    .recog-list {
-      margin: 0px;
-        <style>
-    @page {
-      size: letter;
-      margin: 0.25in 0.45in;
-      /* Suppress all browser headers and footers */
-      @top-left { content: ""; }
-      @top-center { content: ""; }
-      @top-right { content: ""; }
-      @bottom-left { content: ""; }
-      @bottom-center { content: ""; }
-      @bottom-right { content: ""; }
-    }
-    @media print {
-      body { margin: 0; }
-      .no-print { display: none; }
-    }
-    body {
-      font-family: 'Calibri', 'Arial', sans-serif;
-      color: #000000;
-      background-color: #FFFFFF;
-      margin: 0;
-      padding: 0;
-      font-size: 8.5pt;
-      line-height: 1.05;
-    }
-    .header-section {
-      text-align: center;
-      margin-bottom: 3px;
-    }
-    .name {
-      font-size: 13pt;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 1px;
-      letter-spacing: 0.5px;
-    }
-    .contact-info {
       font-size: 8pt;
-      margin-bottom: 1px;
-    }
-    .headline {
-      font-size: 8.5pt;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-bottom: 1px solid #000000;
-      padding-bottom: 1px;
-      margin-top: 1px;
-      margin-bottom: 3px;
-    }
-    .section-title {
-      font-size: 9pt;
-      font-weight: bold;
-      text-transform: uppercase;
-      border-bottom: 1px solid #000000;
-      margin-top: 4px;
-      margin-bottom: 2px;
-      padding-bottom: 1px;
-    }
-    .summary-text {
-      font-size: 8.2pt;
-      margin-bottom: 0;
-      text-align: justify;
-      line-height: 1.1;
-    }
-    .job-entry {
-      margin-bottom: 2px;
-    }
-    .job-header {
-      font-weight: bold;
-      font-size: 8.5pt;
       display: flex;
       justify-content: space-between;
     }
     .job-meta {
       font-style: italic;
-      font-size: 7.8pt;
+      font-size: 7.5pt;
       display: flex;
       justify-content: space-between;
       margin-bottom: 1px;
@@ -656,38 +572,40 @@ ats_html_content = """<!DOCTYPE html>
     li {
       margin-bottom: 0px;
       text-align: justify;
-      font-size: 8.2pt;
-      line-height: 1.05;
+      font-size: 7.8pt;
+      line-height: 1.03;
       padding-left: 8px;
       text-indent: -8px;
     }
     .education-line {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       margin-bottom: 0px;
-      line-height: 1.05;
+      line-height: 1.03;
     }
     .skills-category {
       margin-bottom: 0px;
-      font-size: 8.2pt;
-      line-height: 1.05;
+      font-size: 7.8pt;
+      line-height: 1.03;
     }
     .skills-label {
       font-weight: bold;
     }
     .cert-line {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       margin-bottom: 0px;
-      line-height: 1.05;
+      line-height: 1.03;
     }
     .recog-list {
       margin: 0px;
-      padding-left: 10px;
+      padding-left: 0px;
       list-style-type: none;
     }
     .recog-list li {
-      font-size: 8.2pt;
+      font-size: 7.8pt;
       margin-bottom: 0px;
-      line-height: 1.05;
+      line-height: 1.03;
+      padding-left: 8px;
+      text-indent: -8px;
     }
   </style>
 </head>
@@ -699,16 +617,16 @@ ats_html_content = """<!DOCTYPE html>
       Gurugram, India &nbsp;|&nbsp; +91-8077293920 &nbsp;|&nbsp; damakvarshney@gmail.com
     </div>
     <div class="contact-info">
-      linkedin.com/in/damak-varshney &nbsp;|&nbsp; damak-varshney.vercel.app
+      linkedin.com/in/damak-varshney &nbsp;|&nbsp; damak-var-shney.vercel.app
     </div>
     <div class="headline">
-      AI PRODUCT MANAGER &nbsp;|&nbsp; BUSINESS TRANSFORMATION &nbsp;|&nbsp; ENTERPRISE AI STRATEGY
+      AI PRODUCT MANAGER &nbsp;|&nbsp; SALESFORCE SOLUTION ARCHITECT &nbsp;|&nbsp; ENTERPRISE AI STRATEGY
     </div>
   </div>
 
   <div class="section-title">SUMMARY</div>
   <div class="summary-text">
-    AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems processing 200,000+ monthly cases with &gt;99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Change Management, and rigorous adoption discipline. Expertise spans Vertex AI, RAG pipelines, Prompt Engineering, financial-services automation, and data-driven decision making. Open to AI Product Manager, AI Strategy, and Enterprise Transformation roles.
+    AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems and integration mappings processing 200,000+ monthly cases with &gt;99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, CRM Architecture, and rigorous adoption discipline. Expertise spans Salesforce Architecture (Service Cloud, Apex, Flows), Vertex AI, RAG pipelines, and data-driven decision systems.
   </div>
 
   <div class="section-title">WORK EXPERIENCE</div>
@@ -728,6 +646,7 @@ ats_html_content = """<!DOCTYPE html>
       <li>• Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention.</li>
       <li>• Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%.</li>
       <li>• Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.</li>
+      <li>• Architected Salesforce integration mappings for institutional trade flows, connecting Service Cloud, MarkitWire, and downstream data ledgers to eliminate data silos 35% and optimize API pipeline throughput.</li>
     </ul>
   </div>
 
@@ -804,23 +723,28 @@ ats_html_content = """<!DOCTYPE html>
     </ul>
   </div>
 
+  <div class="section-title">PLATFORM ARCHITECTURE: SALESFORCE</div>
+  <ul>
+    <li>• Salesforce Core: Service Cloud Enterprise Architect, Custom Object &amp; Relationship Design, Apex &amp; Flow Automation, Lightning Web Components (LWC).</li>
+    <li>• Integrations: Connected Apps OAuth, REST/SOAP API Pipelines, JWT Bearer Flows, Google Apps Script serverless sync.</li>
+    <li>• Data &amp; Security: Profile &amp; Permission Sets Optimization, Shield Encryption &amp; Audit Trails, Large Data Volume (LDV) query tuning.</li>
+  </ul>
+
   <div class="section-title">EDUCATION</div>
   <div class="education-line"><strong>Post Graduate Programme, Finance &amp; Analytics</strong> &mdash; ICFAI Business School, Gurgaon | 2022 &ndash; Apr 2024 | CGPA: 9.0/10</div>
   <div class="education-line"><strong>MBA, Finance &amp; Analytics</strong> (Online, concurrent with OSTTRA role) &mdash; IFHE Hyderabad | 2022 &ndash; Jul 2024 | CGPA: 8.75/10</div>
   <div class="education-line"><strong>Bachelor of Computer Applications</strong> &mdash; Birla Institute of Technology, Mesra | 2017 &ndash; 2020 | CGPA: 7.52/10</div>
 
   <div class="section-title">SKILLS</div>
+  <div class="skills-category"><span class="skills-label">Salesforce Architecture:</span> Service Cloud, Apex/LWC, Flows &amp; Process Automation, Connected Apps, JWT/OAuth Integration, Profile/Permission Security Models, Large Data Volumes (LDV), Salesforce Tooling API, Shield encryption</div>
   <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI, Google Gemini, Generative AI (GenAI), Machine Learning, RAG Pipelines, Vector Embeddings, Prompt Engineering, LLM Optimization, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT</div>
   <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering, Metrics-Driven Analysis</div>
   <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration</div>
   <div class="skills-category"><span class="skills-label">Product Management:</span> Product Strategy, Requirements Definition, Roadmap Development, User Adoption, Feature Prioritization, Sprint Planning, KPI Tracking, Stakeholder Communication, Executive Reporting, Cross-Functional Leadership, End-to-End Ownership</div>
   <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement, Data-Driven Decision Making, Cost Optimization</div>
-  <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets, Reference Data, Trade Operations, Settlement, Reconciliation, KYC/AML, SOX Compliance, Regulatory Reporting, Audit Trail Management, Trade Failure Management, Financial Services Infrastructure, Credit Analysis</div>
 
   <div class="section-title">CERTIFICATIONS</div>
-  <div class="cert-line">Google Data Analytics Professional Certificate, Google (2022)</div>
-  <div class="cert-line">Certified Data Scientist, Henry Harvin Education (2022)</div>
-  <div class="cert-line">SQL Certification, DataCamp (2022)</div>
+  <div class="cert-line">Google Data Analytics Professional Certificate, Google (2022) | Certified Data Scientist, Henry Harvin Education (2022) | SQL Certification, DataCamp (2022)</div>
 
   <div class="section-title">RECOGNITION</div>
   <ul class="recog-list">
@@ -835,9 +759,6 @@ ats_html_content = """<!DOCTYPE html>
 </html>
 """
 
-# Write HTML files
-with open(brief_html_path, "w", encoding="utf-8") as f:
-    f.write(brief_html_content)
 print(f"Written {brief_html_path}")
 
 with open(ats_html_path, "w", encoding="utf-8") as f:
@@ -933,7 +854,7 @@ def build_docx(output_path):
     p_headline = doc.add_paragraph()
     format_spacing(p_headline, 2, 6)
     p_headline.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run_hl = p_headline.add_run("AI PRODUCT MANAGER  |  BUSINESS TRANSFORMATION  |  ENTERPRISE AI STRATEGY")
+    run_hl = p_headline.add_run("AI PRODUCT MANAGER  |  SALESFORCE SOLUTION ARCHITECT  |  ENTERPRISE AI STRATEGY")
     run_hl.font.size = Pt(10)
     run_hl.bold = True
     add_bottom_border(p_headline)
@@ -953,10 +874,10 @@ def build_docx(output_path):
     p_sum = doc.add_paragraph()
     format_spacing(p_sum, 0, 4)
     run_sum = p_sum.add_run(
-        "AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. "
-        "Architect of AI systems processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. "
-        "Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Change Management, and rigorous adoption discipline. "
-        "Expertise spans Vertex AI, RAG pipelines, Prompt Engineering, financial-services automation, and data-driven decision making. Open to AI Product Manager, AI Strategy, and Enterprise Transformation roles."
+        "AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. "
+        "Architect of AI systems and integration mappings processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. "
+        "Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, CRM Architecture, and rigorous adoption discipline. "
+        "Expertise spans Salesforce Architecture (Service Cloud, Apex, Flows), Vertex AI, RAG pipelines, and data-driven decision systems."
     )
     run_sum.font.size = Pt(9.5)
 
@@ -970,7 +891,7 @@ def build_docx(output_path):
     run_j1 = p_job1.add_run("Associate, AI Strategy & Ops Excellence (DigiOps Programme)")
     run_j1.bold = True
     p_job1.add_run("\t")
-    run_j1_date = p_job1.add_run("Apr 2025 – Present")
+    run_j1_date = p_job1.add_run("Apr 2025 - Present")
     run_j1_date.bold = True
     
     p_job1_meta = doc.add_paragraph()
@@ -984,7 +905,8 @@ def build_docx(output_path):
         "Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability",
         "Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention",
         "Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%",
-        "Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives"
+        "Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives",
+        "Architected Salesforce integration mappings for institutional trade flows, connecting Service Cloud, MarkitWire, and downstream data ledgers to eliminate data silos 35% and optimize API pipeline throughput"
     ]
     for b in bullets_job1:
         pb = doc.add_paragraph(style='List Bullet')
@@ -999,7 +921,7 @@ def build_docx(output_path):
     run_j2 = p_job2.add_run("Senior Operational Excellence Analyst")
     run_j2.bold = True
     p_job2.add_run("\t")
-    run_j2_date = p_job2.add_run("Feb 2024 – Dec 2024")
+    run_j2_date = p_job2.add_run("Feb 2024 - Dec 2024")
     run_j2_date.bold = True
     
     p_job2_meta = doc.add_paragraph()
@@ -1025,7 +947,7 @@ def build_docx(output_path):
     run_j3 = p_job3.add_run("Credit Analyst Intern")
     run_j3.bold = True
     p_job3.add_run("\t")
-    run_j3_date = p_job3.add_run("Feb 2023 – Apr 2023")
+    run_j3_date = p_job3.add_run("Feb 2023 - Apr 2023")
     run_j3_date.bold = True
     
     p_job3_meta = doc.add_paragraph()
@@ -1045,7 +967,7 @@ def build_docx(output_path):
     run_j4 = p_job4.add_run("React Native Developer")
     run_j4.bold = True
     p_job4.add_run("\t")
-    run_j4_date = p_job4.add_run("Apr 2021 – May 2022")
+    run_j4_date = p_job4.add_run("Apr 2021 - May 2022")
     run_j4_date.bold = True
     
     p_job4_meta = doc.add_paragraph()
@@ -1071,7 +993,7 @@ def build_docx(output_path):
     run_j5 = p_job5.add_run("React Native Developer")
     run_j5.bold = True
     p_job5.add_run("\t")
-    run_j5_date = p_job5.add_run("Nov 2020 – Mar 2021")
+    run_j5_date = p_job5.add_run("Nov 2020 - Mar 2021")
     run_j5_date.bold = True
     
     p_job5_meta = doc.add_paragraph()
@@ -1097,7 +1019,7 @@ def build_docx(output_path):
     run_j6 = p_job6.add_run("Mobile Application Developer")
     run_j6.bold = True
     p_job6.add_run("\t")
-    run_j6_date = p_job6.add_run("Jul 2020 – Nov 2020")
+    run_j6_date = p_job6.add_run("Jul 2020 - Nov 2020")
     run_j6_date.bold = True
     
     p_job6_meta = doc.add_paragraph()
@@ -1116,22 +1038,35 @@ def build_docx(output_path):
         run_b6 = pb6.add_run(b)
         run_b6.font.size = Pt(9.5)
 
+    # Platform Architecture: Salesforce
+    add_section("PLATFORM ARCHITECTURE: SALESFORCE")
+    sf_bullets = [
+        "Salesforce Core: Service Cloud Enterprise Architect, Custom Object & Relationship Design, Apex & Flow Automation, Lightning Web Components (LWC)",
+        "Integrations: Connected Apps OAuth, REST/SOAP API Pipelines, JWT Bearer Flows, Google Apps Script serverless sync",
+        "Data & Security: Profile & Permission Sets Optimization, Shield Encryption & Audit Trails, Large Data Volume (LDV) query tuning"
+    ]
+    for b in sf_bullets:
+        psf = doc.add_paragraph(style='List Bullet')
+        format_spacing(psf, 0, 1)
+        run_sf = psf.add_run(b)
+        run_sf.font.size = Pt(9.5)
+
     # Education
     add_section("EDUCATION")
     edu_lines = [
-        "Post Graduate Programme, Finance & Analytics — ICFAI Business School, Gurgaon  |  2022 – Apr 2024  |  CGPA: 9.0/10",
-        "MBA, Finance & Analytics (Online, concurrent with OSTTRA role) — IFHE Hyderabad  |  2022 – Jul 2024  |  CGPA: 8.75/10",
-        "Bachelor of Computer Applications — Birla Institute of Technology, Mesra  |  2017 – 2020  |  CGPA: 7.52/10"
+        "Post Graduate Programme, Finance & Analytics - ICFAI Business School, Gurgaon  |  2022 - Apr 2024  |  CGPA: 9.0/10",
+        "MBA, Finance & Analytics (Online, concurrent with OSTTRA role) - IFHE Hyderabad  |  2022 - Jul 2024  |  CGPA: 8.75/10",
+        "Bachelor of Computer Applications - Birla Institute of Technology, Mesra  |  2017 - 2020  |  CGPA: 7.52/10"
     ]
     for el in edu_lines:
         pe = doc.add_paragraph(style='List Bullet')
         format_spacing(pe, 0, 1)
-        parts = el.split('—')
+        parts = el.split('-')
         if len(parts) > 1:
             run_b = pe.add_run(parts[0])
             run_b.bold = True
             run_b.font.size = Pt(9.5)
-            run_n = pe.add_run("—" + parts[1])
+            run_n = pe.add_run("-" + parts[1])
             run_n.font.size = Pt(9.5)
         else:
             run_n = pe.add_run(el)
@@ -1140,6 +1075,7 @@ def build_docx(output_path):
     # Skills
     add_section("SKILLS")
     skills = [
+        ("Salesforce Architecture: ", "Service Cloud, Apex/LWC, Flows & Process Automation, Connected Apps, JWT/OAuth Integration, Profile/Permission Security Models, Large Data Volumes (LDV), Salesforce Tooling API, Shield encryption"),
         ("AI and LLM Stack: ", "Vertex AI, Google Gemini, Generative AI (GenAI), Machine Learning, RAG Pipelines, Vector Embeddings, Prompt Engineering, LLM Optimization, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT"),
         ("Cloud and Data: ", "Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering, Metrics-Driven Analysis"),
         ("Product and Tools: ", "Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration"),
@@ -1172,11 +1108,11 @@ def build_docx(output_path):
     # Recognition
     add_section("RECOGNITION")
     recogs = [
-        "Featured in Times of India, InspireTech 2025 — Enterprise AI and Automation Systems",
-        "Highflyer Award, OSTTRA Q1 2026 — Looker analytics and Salesforce auto-triaging impact",
-        "Trendsetter Award, OSTTRA Q1 2025 — SOX Compliance automation",
+        "Featured in Times of India, InspireTech 2025 - Enterprise AI and Automation Systems",
+        "Highflyer Award, OSTTRA Q1 2026 - Looker analytics and Salesforce auto-triaging impact",
+        "Trendsetter Award, OSTTRA Q1 2025 - SOX Compliance automation",
         "1st Prize, LUMA Design Thinking Challenge, Protiviti 2023",
-        "Multiple Quarterly Spot Awards, OSTTRA 2024 – 2026"
+        "Multiple Quarterly Spot Awards, OSTTRA 2024 - 2026"
     ]
     for r in recogs:
         pr = doc.add_paragraph(style='List Bullet')
@@ -1195,58 +1131,65 @@ ats_txt_path = os.path.join(output_dir, "damak-kumar-varshney-resume.txt")
 print("Generating TXT version...")
 txt_content = """DAMAK KUMAR VARSHNEY
 Gurugram, India | +91-8077293920 | damakvarshney@gmail.com
-linkedin.com/in/damak-varshney | damak-varshney.vercel.app
+linkedin.com/in/damak-varshney | damak-var-shney.vercel.app
 
-AI PRODUCT MANAGER | BUSINESS TRANSFORMATION | ENTERPRISE AI STRATEGY
+AI PRODUCT MANAGER | SALESFORCE SOLUTION ARCHITECT | ENTERPRISE AI STRATEGY
 
 === SUMMARY ===
-AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Change Management, and rigorous adoption discipline. Expertise spans Vertex AI, RAG pipelines, Prompt Engineering, financial-services automation, and data-driven decision making. Open to AI Product Manager, AI Strategy, and Enterprise Transformation roles.
+AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems and integration mappings processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, CRM Architecture, and rigorous adoption discipline. Expertise spans Salesforce Architecture (Service Cloud, Apex, Flows), Vertex AI, RAG pipelines, and data-driven decision systems.
 
 === WORK EXPERIENCE ===
 
 Associate, AI Strategy & Ops Excellence (DigiOps Programme)
-OSTTRA (KKR Portfolio Company) | Gurugram, India | Apr 2025 – Present
+OSTTRA (KKR Portfolio Company) | Gurugram, India | Apr 2025 - Present
 • Architected NEXUS global capacity intelligence platform consolidating 150+ spreadsheets using Python predictive modeling, Business Intelligence dashboards via Looker, and Data Analytics pipelines; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%.
 • Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with >99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs.
 • Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.
 • Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention.
 • Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%.
 • Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.
+• Architected Salesforce integration mappings for institutional trade flows, connecting Service Cloud, MarkitWire, and downstream data ledgers to eliminate data silos 35% and optimize API pipeline throughput.
 
 Senior Operational Excellence Analyst
-OSTTRA | Gurugram, India | Feb 2024 – Dec 2024
+OSTTRA | Gurugram, India | Feb 2024 - Dec 2024
 • Engineered SOX Compliance automation using Google Apps Script; eliminated 4.1 FTEs of manual audit work, achieved 100% compliance, and compressed audit cycle from 45 to 5 days.
 • Delivered 10+ continuous improvement initiatives applying Lean Six Sigma and Agile across client services and trading operations; unlocked 2+ FTE in quantitative savings.
 • Directed Microsoft to Google Workspace migration during Tel Aviv-to-India transition; removed VDI dependency, cut access latency 40%, and freed 0.4 FTEs.
 
 Credit Analyst Intern
-Kotak Mahindra Bank | Delhi NCR, India | Feb 2023 – Apr 2023
+Kotak Mahindra Bank | Delhi NCR, India | Feb 2023 - Apr 2023
 • Evaluated 20+ MSME credit applications analyzing financial statements and working capital dynamics; delivered recommendations with 95%+ accuracy contributing to $3M+ underwriting decisions.
 
 React Native Developer
-RPQ IT Services | Noida (Sector 16), India | Apr 2021 – May 2022
+RPQ IT Services | Noida (Sector 16), India | Apr 2021 - May 2022
 • Developed 5+ production mobile applications using React Native with advanced state management and component architecture.
 • Managed full Software Development Life Cycle (SDLC) from requirement gathering through production deployment for iOS and Android platforms.
 • Architected cross-platform build pipelines and CI/CD integration enabling multi-platform releases.
 
 React Native Developer
-Markup Designer | Noida (Sector 62), India | Nov 2020 – Mar 2021
+Markup Designer | Noida (Sector 62), India | Nov 2020 - Mar 2021
 • Engineered React Native mobile applications with REST API integration and asynchronous data handling.
 • Collaborated with design teams using Figma and Adobe XD translating wireframes into production-grade cross-platform code.
 • Optimized application performance achieving 40%+ faster load times through code splitting and lazy loading.
 
 Mobile Application Developer
-Sabpay | Remote, India (BCA Freelance Engagement) | Jul 2020 – Nov 2020
+Sabpay | Remote, India (BCA Freelance Engagement) | Jul 2020 - Nov 2020
 • Built mobile application user interfaces using React Native during freelance engagement while completing BCA.
 • Delivered UI/UX prototypes in Figma and Adobe XD shipping production builds on schedule.
 • Implemented OAuth authentication and payment gateway integration within the Sabpay ecosystem.
 
+=== PLATFORM ARCHITECTURE: SALESFORCE ===
+• Salesforce Core: Service Cloud Enterprise Architect, Custom Object & Relationship Design, Apex & Flow Automation, Lightning Web Components (LWC).
+• Integrations: Connected Apps OAuth, REST/SOAP API Pipelines, JWT Bearer Flows, Google Apps Script serverless sync.
+• Data & Security: Profile & Permission Sets Optimization, Shield Encryption & Audit Trails, Large Data Volume (LDV) query tuning.
+
 === EDUCATION ===
-Post Graduate Programme, Finance & Analytics — ICFAI Business School, Gurgaon | 2022 – Apr 2024 | CGPA: 9.0/10
-MBA, Finance & Analytics (Online, concurrent with OSTTRA role) — IFHE Hyderabad | 2022 – Jul 2024 | CGPA: 8.75/10
-Bachelor of Computer Applications — Birla Institute of Technology, Mesra | 2017 – 2020 | CGPA: 7.52/10
+Post Graduate Programme, Finance & Analytics - ICFAI Business School, Gurgaon | 2022 - Apr 2024 | CGPA: 9.0/10
+MBA, Finance & Analytics (Online, concurrent with OSTTRA role) - IFHE Hyderabad | 2022 - Jul 2024 | CGPA: 8.75/10
+Bachelor of Computer Applications - Birla Institute of Technology, Mesra | 2017 - 2020 | CGPA: 7.52/10
 
 === SKILLS ===
+• Salesforce Architecture: Service Cloud, Apex/LWC, Flows & Process Automation, Connected Apps, JWT/OAuth Integration, Profile/Permission Security Models, Large Data Volumes (LDV), Salesforce Tooling API, Shield encryption
 • AI and LLM Stack: Vertex AI, Google Gemini, Generative AI (GenAI), Machine Learning, RAG Pipelines, Vector Embeddings, Prompt Engineering, LLM Optimization, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT
 • Cloud and Data: Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering, Metrics-Driven Analysis
 • Product and Tools: Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration
@@ -1255,16 +1198,14 @@ Bachelor of Computer Applications — Birla Institute of Technology, Mesra | 201
 • Financial Domain: OTC Markets, Reference Data, Trade Operations, Settlement, Reconciliation, KYC/AML, SOX Compliance, Regulatory Reporting, Audit Trail Management, Trade Failure Management, Financial Services Infrastructure, Credit Analysis
 
 === CERTIFICATIONS ===
-• Google Data Analytics Professional Certificate, Google (2022)
-• Certified Data Scientist, Henry Harvin Education (2022)
-• SQL Certification, DataCamp (2022)
+• Google Data Analytics Professional Certificate, Google (2022) | Certified Data Scientist, Henry Harvin Education (2022) | SQL Certification, DataCamp (2022)
 
 === RECOGNITION ===
-• Featured in Times of India, InspireTech 2025 — Enterprise AI and Automation Systems
-• Highflyer Award, OSTTRA Q1 2026 — Looker analytics and Salesforce auto-triaging impact
-• Trendsetter Award, OSTTRA Q1 2025 — SOX Compliance automation
+• Featured in Times of India, InspireTech 2025 - Enterprise AI and Automation Systems
+• Highflyer Award, OSTTRA Q1 2026 - Looker analytics and Salesforce auto-triaging impact
+• Trendsetter Award, OSTTRA Q1 2025 - SOX Compliance automation
 • 1st Prize, LUMA Design Thinking Challenge, Protiviti 2023
-• Multiple Quarterly Spot Awards, OSTTRA 2024 – 2026
+• Multiple Quarterly Spot Awards, OSTTRA 2024 - 2026
 """
 
 with open(ats_txt_path, "w", encoding="utf-8") as f:
