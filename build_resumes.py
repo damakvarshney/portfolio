@@ -554,7 +554,18 @@ ats_html_content = """<!DOCTYPE html>
   <style>
     @page {
       size: letter;
-      margin: 0.6in 0.65in;
+      margin: 0.25in 0.45in;
+      /* Suppress all browser headers and footers */
+      @top-left { content: ""; }
+      @top-center { content: ""; }
+      @top-right { content: ""; }
+      @bottom-left { content: ""; }
+      @bottom-center { content: ""; }
+      @bottom-right { content: ""; }
+    }
+    @media print {
+      body { margin: 0; }
+      .no-print { display: none; }
     }
     body {
       font-family: 'Calibri', 'Arial', sans-serif;
@@ -562,100 +573,100 @@ ats_html_content = """<!DOCTYPE html>
       background-color: #FFFFFF;
       margin: 0;
       padding: 0;
-      font-size: 10pt;
-      line-height: 1.2;
+      font-size: 8.5pt;
+      line-height: 1.05;
     }
     .header-section {
       text-align: center;
-      margin-bottom: 8px;
+      margin-bottom: 3px;
     }
     .name {
-      font-size: 15pt;
+      font-size: 13pt;
       font-weight: bold;
       text-transform: uppercase;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
       letter-spacing: 0.5px;
     }
     .contact-info {
-      font-size: 9pt;
-      margin-bottom: 2px;
+      font-size: 8pt;
+      margin-bottom: 1px;
     }
     .headline {
-      font-size: 10pt;
+      font-size: 8.5pt;
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 1px solid #000000;
-      padding-bottom: 2px;
-      margin-top: 4px;
-      margin-bottom: 8px;
+      padding-bottom: 1px;
+      margin-top: 1px;
+      margin-bottom: 3px;
     }
     .section-title {
-      font-size: 10.5pt;
+      font-size: 9pt;
       font-weight: bold;
       text-transform: uppercase;
       border-bottom: 1px solid #000000;
-      margin-top: 9px;
-      margin-bottom: 4px;
+      margin-top: 4px;
+      margin-bottom: 2px;
       padding-bottom: 1px;
     }
     .summary-text {
-      font-size: 9.5pt;
+      font-size: 8.2pt;
       margin-bottom: 0;
       text-align: justify;
-      line-height: 1.25;
+      line-height: 1.1;
     }
     .job-entry {
-      margin-bottom: 7px;
+      margin-bottom: 2px;
     }
     .job-header {
       font-weight: bold;
-      font-size: 10pt;
+      font-size: 8.5pt;
       display: flex;
       justify-content: space-between;
     }
     .job-meta {
       font-style: italic;
-      font-size: 9pt;
+      font-size: 7.8pt;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
     ul {
-      margin: 2px 0 0 0;
-      padding-left: 14px;
+      margin: 0px;
+      padding-left: 10px;
     }
     li {
-      margin-bottom: 2px;
+      margin-bottom: 0px;
       text-align: justify;
-      font-size: 9.5pt;
-      line-height: 1.2;
+      font-size: 8.2pt;
+      line-height: 1.05;
     }
     .education-line {
-      font-size: 9.5pt;
-      margin-bottom: 2px;
-      line-height: 1.2;
+      font-size: 8.2pt;
+      margin-bottom: 0px;
+      line-height: 1.05;
     }
     .skills-category {
-      margin-bottom: 2px;
-      font-size: 9.5pt;
-      line-height: 1.2;
+      margin-bottom: 0px;
+      font-size: 8.2pt;
+      line-height: 1.05;
     }
     .skills-label {
       font-weight: bold;
     }
     .cert-line {
-      font-size: 9.5pt;
-      margin-bottom: 2px;
-      line-height: 1.2;
+      font-size: 8.2pt;
+      margin-bottom: 0px;
+      line-height: 1.05;
     }
     .recog-list {
-      margin: 2px 0 0 0;
-      padding-left: 14px;
+      margin: 0px;
+      padding-left: 10px;
     }
     .recog-list li {
-      font-size: 9.5pt;
-      margin-bottom: 2px;
-      line-height: 1.2;
+      font-size: 8.2pt;
+      margin-bottom: 0px;
+      line-height: 1.05;
     }
   </style>
 </head>
@@ -736,7 +747,33 @@ ats_html_content = """<!DOCTYPE html>
       <span>RPQ IT Services | Remote, India</span>
     </div>
     <ul>
-      <li>Developed 5+ production mobile applications using React Native; designed UI/UX wireframes in Figma and shipped cross-platform iOS and Android builds.</li>
+      <li>Developed cross-platform mobile applications using React Native; managed full Software Development Life Cycle (SDLC) from requirement gathering to production deployment for iOS and Android builds.</li>
+    </ul>
+  </div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span>React Native Developer</span>
+      <span>Nov 2020 &ndash; Mar 2021</span>
+    </div>
+    <div class="job-meta">
+      <span>Markup Designer | Remote, India</span>
+    </div>
+    <ul>
+      <li>Engineered React Native mobile applications with REST API integration; collaborated with design teams using Figma and Adobe XD to translate wireframes into production-grade cross-platform code.</li>
+    </ul>
+  </div>
+
+  <div class="job-entry">
+    <div class="job-header">
+      <span>Mobile Application Developer</span>
+      <span>Jul 2020 &ndash; Nov 2020</span>
+    </div>
+    <div class="job-meta">
+      <span>Sabpay | Remote, India</span>
+    </div>
+    <ul>
+      <li>Built mobile application interfaces using React Native during BCA freelance engagement; delivered UI/UX prototypes in Figma and Adobe XD shipping production builds on schedule.</li>
     </ul>
   </div>
 
@@ -786,6 +823,7 @@ brief_cmd = [
     chrome_path,
     "--headless",
     "--disable-gpu",
+    "--no-header-footer",
     f"--print-to-pdf={brief_pdf_path}",
     brief_html_path
 ]
@@ -797,6 +835,7 @@ ats_cmd = [
     chrome_path,
     "--headless",
     "--disable-gpu",
+    "--no-header-footer",
     f"--print-to-pdf={ats_pdf_path}",
     ats_html_path
 ]
@@ -989,8 +1028,48 @@ def build_docx(output_path):
 
     pb4 = doc.add_paragraph(style='List Bullet')
     format_spacing(pb4, 0, 1)
-    run_b4 = pb4.add_run("Developed 5+ production mobile applications using React Native; designed UI/UX wireframes in Figma and shipped cross-platform iOS and Android builds")
+    run_b4 = pb4.add_run("Developed cross-platform mobile applications using React Native; managed full Software Development Life Cycle (SDLC) from requirement gathering to production deployment for iOS and Android builds")
     run_b4.font.size = Pt(9.5)
+
+    # Job 5
+    p_job5 = doc.add_paragraph()
+    format_spacing(p_job5, 3, 1)
+    p_job5.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j5 = p_job5.add_run("React Native Developer")
+    run_j5.bold = True
+    p_job5.add_run("\t")
+    run_j5_date = p_job5.add_run("Nov 2020 – Mar 2021")
+    run_j5_date.bold = True
+    
+    p_job5_meta = doc.add_paragraph()
+    format_spacing(p_job5_meta, 0, 2)
+    run_j5m = p_job5_meta.add_run("Markup Designer | Remote, India")
+    run_j5m.italic = True
+
+    pb5 = doc.add_paragraph(style='List Bullet')
+    format_spacing(pb5, 0, 1)
+    run_b5 = pb5.add_run("Engineered React Native mobile applications with REST API integration; collaborated with design teams using Figma and Adobe XD to translate wireframes into production-grade cross-platform code")
+    run_b5.font.size = Pt(9.5)
+
+    # Job 6
+    p_job6 = doc.add_paragraph()
+    format_spacing(p_job6, 3, 1)
+    p_job6.paragraph_format.tab_stops.add_tab_stop(Inches(7.0), docx.enum.text.WD_TAB_ALIGNMENT.RIGHT)
+    run_j6 = p_job6.add_run("Mobile Application Developer")
+    run_j6.bold = True
+    p_job6.add_run("\t")
+    run_j6_date = p_job6.add_run("Jul 2020 – Nov 2020")
+    run_j6_date.bold = True
+    
+    p_job6_meta = doc.add_paragraph()
+    format_spacing(p_job6_meta, 0, 2)
+    run_j6m = p_job6_meta.add_run("Sabpay | Remote, India")
+    run_j6m.italic = True
+
+    pb6 = doc.add_paragraph(style='List Bullet')
+    format_spacing(pb6, 0, 1)
+    run_b6 = pb6.add_run("Built mobile application interfaces using React Native during BCA freelance engagement; delivered UI/UX prototypes in Figma and Adobe XD shipping production builds on schedule")
+    run_b6.font.size = Pt(9.5)
 
     # Education
     add_section("EDUCATION")
