@@ -1,77 +1,59 @@
 DAMAK KUMAR VARSHNEY
 Gurugram, India | +91-8077293920 | damakvarshney@gmail.com
-linkedin.com/in/damak-varshney | damak-var-shney.vercel.app
+linkedin.com/in/damak-varshney | damak-varshney.vercel.app
 
-AI PRODUCT MANAGER | SALESFORCE SOLUTION ARCHITECT | ENTERPRISE AI STRATEGY
+AI PRODUCT MANAGER | BUSINESS TRANSFORMATION | ENTERPRISE AI STRATEGY
 
 === SUMMARY ===
-AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems and integration mappings processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, CRM Architecture, and rigorous adoption discipline. Expertise spans Salesforce Architecture (Service Cloud, Apex, Flows), Vertex AI, RAG pipelines, and data-driven decision systems.
+AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company, and 4+ years total in enterprise automation and product delivery. Architect of AI systems and Salesforce integration mappings processing 200,000+ monthly cases in Salesforce with >99% routing accuracy, and designer of prompts powering predictive sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in total annualized savings (8 FTE annualized impact) and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Salesforce Architecture, and rigorous adoption discipline.
 
 === WORK EXPERIENCE ===
 
 Associate, AI Strategy & Ops Excellence (DigiOps Programme)
-OSTTRA (KKR Portfolio Company) | Gurugram, India | Apr 2025 - Present
-• Architected NEXUS global capacity intelligence platform consolidating 150+ spreadsheets using Python predictive modeling, Business Intelligence dashboards via Looker, and Data Analytics pipelines; drove 80%+ adoption across 1,500+ users and compressed planning cycles 45%.
-• Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with >99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs.
-• Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.
+OSTTRA (KKR Portfolio Company) | Cybercity, Gurugram, India | Jan 2026 - Present
+• Developed and deployed NEXUS for 300+ employees -- an enterprise application centralizing skill matrix and operational tracking with role-based dashboards enabling self-service entry, bulk manager overrides, and executive telemetry; eliminated manual tracking overhead and unlocked real-time visibility into BAU vs. project workloads and skill gaps for cross-training.
+• Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with >99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 1.88 additional FTEs.
+• Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings and automating checklist and investigation gathering; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.
 • Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention.
-• Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%.
-• Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.
-• Architected Salesforce integration mappings for institutional trade flows, connecting Service Cloud, MarkitWire, and downstream data ledgers to eliminate data silos 35% and optimize API pipeline throughput.
+• Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails monthly; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation and decreasing escalations 20%.
+• Contributed to the design and rollout of Dot, ODA, and Transformer Bot -- RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.
 
 Senior Operational Excellence Analyst
-OSTTRA | Gurugram, India | Feb 2024 - Dec 2024
-• Engineered SOX Compliance automation using Google Apps Script; eliminated 4.1 FTEs of manual audit work, achieved 100% compliance, and compressed audit cycle from 45 to 5 days.
+OSTTRA | Cybercity, Gurugram, India | Feb 2024 - Dec 2024
+• Engineered SOX Compliance automation using Google Apps Script with audit trail maintained in Salesforce; eliminated 4.1 FTEs of manual user access review work, achieved 100% compliance, and compressed audit cycle from 45 to 5 days.
 • Delivered 10+ continuous improvement initiatives applying Lean Six Sigma and Agile across client services and trading operations; unlocked 2+ FTE in quantitative savings.
-• Directed Microsoft to Google Workspace migration during Tel Aviv-to-India transition; removed VDI dependency, cut access latency 40%, and freed 0.4 FTEs.
+• Directed Microsoft to Google Workspace migration during Tel Aviv-to-India transition; removed VDI dependency for client services documentation, cut access latency 40%, and freed 0.4 FTEs.
 
 Credit Analyst Intern
 Kotak Mahindra Bank | Delhi NCR, India | Feb 2023 - Apr 2023
-• Evaluated 20+ MSME credit applications analyzing financial statements and working capital dynamics; delivered recommendations with 95%+ accuracy contributing to $3M+ underwriting decisions.
+• Evaluated 4+ MSME working capital credit applications analyzing financial statements and creating credit memos; delivered recommendations contributing to Rs.7 Cr in loan disbursements and underwriting decisions.
 
 React Native Developer
 RPQ IT Services | Noida (Sector 16), India | Apr 2021 - May 2022
-• Developed 5+ production mobile applications using React Native with advanced state management and component architecture.
-• Managed full Software Development Life Cycle (SDLC) from requirement gathering through production deployment for iOS and Android platforms.
-• Architected cross-platform build pipelines and CI/CD integration enabling multi-platform releases.
+• Developed 5+ production mobile applications using React Native with advanced state management; managed full Software Development Life Cycle from requirement gathering through production deployment for iOS and Android, and architected cross-platform build pipelines with CI/CD integration.
 
 React Native Developer
 Markup Designer | Noida (Sector 62), India | Nov 2020 - Mar 2021
-• Engineered React Native mobile applications with REST API integration and asynchronous data handling.
-• Collaborated with design teams using Figma and Adobe XD translating wireframes into production-grade cross-platform code.
-• Optimized application performance achieving 40%+ faster load times through code splitting and lazy loading.
-
-Mobile Application Developer
-Sabpay | Remote, India (BCA Freelance Engagement) | Jul 2020 - Nov 2020
-• Built mobile application user interfaces using React Native during freelance engagement while completing BCA.
-• Delivered UI/UX prototypes in Figma and Adobe XD shipping production builds on schedule.
-• Implemented OAuth authentication and payment gateway integration within the Sabpay ecosystem.
-
-=== PLATFORM ARCHITECTURE: SALESFORCE ===
-• Salesforce Core: Service Cloud Enterprise Architect, Custom Object & Relationship Design, Apex & Flow Automation, Lightning Web Components (LWC).
-• Integrations: Connected Apps OAuth, REST/SOAP API Pipelines, JWT Bearer Flows, Google Apps Script serverless sync.
-• Data & Security: Profile & Permission Sets Optimization, Shield Encryption & Audit Trails, Large Data Volume (LDV) query tuning.
+• Engineered React Native mobile applications with REST API integration and asynchronous data handling; collaborated with design teams using Figma and Adobe XD to translate wireframes into production code, and optimized performance achieving 40%+ faster load times through code splitting and lazy loading.
 
 === EDUCATION ===
-Post Graduate Programme, Finance & Analytics - ICFAI Business School, Gurgaon | 2022 - Apr 2024 | CGPA: 9.0/10
-MBA, Finance & Analytics (Online, concurrent with OSTTRA role) - IFHE Hyderabad | 2022 - Jul 2024 | CGPA: 8.75/10
-Bachelor of Computer Applications - Birla Institute of Technology, Mesra | 2017 - 2020 | CGPA: 7.52/10
+• Post Graduate Programme, Finance & Analytics -- ICFAI Business School, Gurgaon | 2022 - Apr 2024 | CGPA: 9.0/10
+• MBA, Finance & Analytics (Online, concurrent with OSTTRA role) -- IFHE Hyderabad | 2022 - Jul 2024 | CGPA: 8.75/10
+• Bachelor of Computer Applications -- Birla Institute of Technology, Mesra | 2017 - 2020 | CGPA: 7.52/10
 
 === SKILLS ===
-• Salesforce Architecture: Service Cloud, Apex/LWC, Flows & Process Automation, Connected Apps, JWT/OAuth Integration, Profile/Permission Security Models, Large Data Volumes (LDV), Salesforce Tooling API, Shield encryption
 • AI and LLM Stack: Vertex AI, Google Gemini, Generative AI (GenAI), Machine Learning, RAG Pipelines, Vector Embeddings, Prompt Engineering, LLM Optimization, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT
 • Cloud and Data: Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering, Metrics-Driven Analysis
-• Product and Tools: Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration
+• Product and Tools: Salesforce (Administration, Dashboards, Case Management, Custom Fields, Workflow Automation), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration
 • Product Management: Product Strategy, Requirements Definition, Roadmap Development, User Adoption, Feature Prioritization, Sprint Planning, KPI Tracking, Stakeholder Communication, Executive Reporting, Cross-Functional Leadership, End-to-End Ownership
 • Methodologies: Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement, Data-Driven Decision Making, Cost Optimization
-• Financial Domain: OTC Markets, Reference Data, Trade Operations, Settlement, Reconciliation, KYC/AML, SOX Compliance, Regulatory Reporting, Audit Trail Management, Trade Failure Management, Financial Services Infrastructure, Credit Analysis
 
 === CERTIFICATIONS ===
 • Google Data Analytics Professional Certificate, Google (2022) | Certified Data Scientist, Henry Harvin Education (2022) | SQL Certification, DataCamp (2022)
 
 === RECOGNITION ===
-• Featured in Times of India, InspireTech 2025 - Enterprise AI and Automation Systems
-• Highflyer Award, OSTTRA Q1 2026 - Looker analytics and Salesforce auto-triaging impact
-• Trendsetter Award, OSTTRA Q1 2025 - SOX Compliance automation
+• Featured in Times of India, InspireTech 2025 -- Enterprise AI and Automation Systems
+• Highflyer Award, OSTTRA Q1 2026 -- Looker analytics and Salesforce auto-triaging impact
+• Trendsetter Award, OSTTRA Q1 2025 -- SOX Compliance automation
 • 1st Prize, LUMA Design Thinking Challenge, Protiviti 2023
 • Multiple Quarterly Spot Awards, OSTTRA 2024 - 2026

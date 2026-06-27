@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Damak Kumar Varshney - Executive Brief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: letter; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #0F172A;
+      background-color: #FFFFFF;
+      margin: 0; padding: 0;
+      -webkit-print-color-adjust: exact;
+      font-size: 7.6pt;
+      line-height: 1.18;
+    }
+    .page {
+      width: 8.5in; height: 11in;
+      position: relative;
+      box-sizing: border-box;
+      background-color: #FFFFFF;
+      overflow: hidden;
+    }
+    .header-content {
+      background-color: #080C10;
+      color: #FFFFFF;
+      padding: 0.13in 0.4in;
+    }
+    .header-content h1 {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 18pt;
+      margin: 0 0 1px 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+    .header-content .subtitle {
+      color: #2563EB;
+      font-family: 'PT Sans', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      margin: 0 0 4px 0;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+    .header-content .contacts-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px 10px;
+      font-size: 7pt;
+      color: #94A3B8;
+    }
+    .header-content .contacts-grid span { display: flex; align-items: center; gap: 3px; }
+    .header-content .contacts-grid a { color: #94A3B8; text-decoration: none; }
+    .p-padded { padding: 0.1in 0.4in; }
+    .section-title {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #2563EB;
+      border-bottom: 1px solid #CBD5E1;
+      padding-bottom: 1px;
+      margin-top: 5px;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .positioning-text {
+      font-size: 7.3pt;
+      color: #334155;
+      line-height: 1.28;
+      margin-bottom: 4px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .metric-box {
+      background-color: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 5px;
+      padding: 3px 2px;
+      text-align: center;
+    }
+    .metric-value {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #2563EB;
+      font-family: 'PT Sans', sans-serif;
+      line-height: 1.05;
+    }
+    .metric-label {
+      font-size: 5pt;
+      font-weight: 700;
+      color: #0F172A;
+      margin-top: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.1px;
+      line-height: 1;
+    }
+    .scale-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      background-color: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 5px;
+      padding: 4px 10px;
+      margin-bottom: 4px;
+    }
+    .scale-col { font-size: 7pt; color: #334155; line-height: 1.25; }
+    .scale-item { display: flex; justify-content: space-between; }
+    .scale-item span:first-child { font-weight: 700; color: #0F172A; }
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .case-card {
+      border: 1px solid #E2E8F0;
+      border-left: 2.5px solid #2563EB;
+      border-radius: 4px;
+      padding: 3px 6px;
+      background-color: #FCFDFE;
+    }
+    .case-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1px; }
+    .case-title { font-family: 'PT Sans', sans-serif; font-size: 7.5pt; font-weight: 700; color: #0F172A; }
+    .case-tag {
+      font-size: 5.5pt; font-weight: 700; color: #2563EB;
+      background-color: #EFF6FF; padding: 1px 3px;
+      border-radius: 2px; border: 0.5px solid #DBEAFE; white-space: nowrap;
+    }
+    .case-detail { font-size: 6.8pt; color: #475569; margin-bottom: 1px; line-height: 1.15; }
+    .case-impact { font-size: 6.8pt; font-weight: 700; color: #10B981; line-height: 1.1; }
+    .stack-container { display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; }
+    .stack-row {
+      display: grid;
+      grid-template-columns: 1.3in 1fr;
+      gap: 6px;
+      font-size: 7pt;
+      line-height: 1.15;
+    }
+    .stack-label { font-weight: 700; color: #0F172A; }
+    .stack-value { color: #334155; }
+    .recog-container { display: flex; flex-direction: column; gap: 1.5px; margin-bottom: 3px; }
+    .recog-item { font-size: 7pt; color: #334155; line-height: 1.15; }
+    .recog-bullet { color: #2563EB; font-weight: bold; margin-right: 3px; }
+    .edu-footer {
+      border-top: 1px solid #CBD5E1;
+      padding-top: 3px;
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7pt;
+      color: #475569;
+    }
+    .edu-item strong { color: #0F172A; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-content">
+      <h1>DAMAK KUMAR VARSHNEY</h1>
+      <div class="subtitle">AI Product Manager &bull; Business Transformation &bull; Enterprise AI Strategy</div>
+      <div class="contacts-grid">
+        <span>&#128205; Gurugram, India</span>
+        <span>&#128222; +91-8077293920</span>
+        <span>&#9993; <a href="mailto:damakvarshney@gmail.com">damakvarshney@gmail.com</a></span>
+        <span>&#128279; <a href="https://linkedin.com/in/damak-varshney" target="_blank">linkedin.com/in/damak-varshney</a></span>
+        <span>&#127760; <a href="https://damak-varshney.vercel.app" target="_blank">damak-varshney.vercel.app</a></span>
+      </div>
+    </div>
+
+    <div class="p-padded">
+      <div class="positioning-text">
+        <strong>POSITIONING:</strong> AI Product Manager and Salesforce Solution Architect with 2+ years driving enterprise AI transformation at OSTTRA (KKR Portfolio) and 4+ years total in enterprise automation. Architect of AI systems and Salesforce integration mappings processing 200,000+ monthly cases with &gt;99% accuracy. Designer of prompts powering sentiment analytics across 20,000+ client communications. Combines technical build depth, financial-services expertise, and enterprise adoption discipline.
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-box"><div class="metric-value">20+</div><div class="metric-label">FTE Saved</div></div>
+        <div class="metric-box"><div class="metric-value">200K+</div><div class="metric-label">Cases Monthly</div></div>
+        <div class="metric-box"><div class="metric-value">1,500+</div><div class="metric-label">Users</div></div>
+        <div class="metric-box"><div class="metric-value">55%</div><div class="metric-label">Faster KYC</div></div>
+        <div class="metric-box"><div class="metric-value">&gt;99%</div><div class="metric-label">Accuracy</div></div>
+        <div class="metric-box"><div class="metric-value">20%</div><div class="metric-label">Less Escalations</div></div>
+      </div>
+
+      <div class="section-title">Operating at Enterprise Scale</div>
+      <div class="scale-grid">
+        <div class="scale-col">
+          <div class="scale-item"><span>200,000+</span> <span>cases routed monthly</span></div>
+          <div class="scale-item"><span>4,500+</span> <span>system alerts handled</span></div>
+        </div>
+        <div class="scale-col" style="border-left: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; padding: 0 8px;">
+          <div class="scale-item"><span>20,000+</span> <span>client emails analyzed</span></div>
+          <div class="scale-item"><span>751</span> <span>compliance screenings monthly</span></div>
+        </div>
+        <div class="scale-col">
+          <div class="scale-item"><span>71</span> <span>AI initiatives delivered</span></div>
+          <div class="scale-item"><span>1,500+</span> <span>active users at 80% adoption</span></div>
+        </div>
+      </div>
+
+      <div class="section-title">Selected Case Studies</div>
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">NEXUS &mdash; Skill Matrix &amp; Operational Intelligence</span>
+            <span class="case-tag">Personal Lead</span>
+          </div>
+          <div class="case-detail">Before: Manual tracking across 300+ employees &rarr; After: Role-based self-service platform</div>
+          <div class="case-impact">Impact: Real-time BAU vs Project visibility | Executive telemetry</div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Auto-Triaging Ecosystem</span>
+            <span class="case-tag">Personal Lead</span>
+          </div>
+          <div class="case-detail">Before: Manual L1 triage burden &rarr; After: Autonomous routing at scale</div>
+          <div class="case-impact">Impact: 200K+ cases | &gt;99% accuracy | 6.78 FTE reclaimed</div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">KYC &amp; Onboarding Automation</span>
+            <span class="case-tag">Personal Lead</span>
+          </div>
+          <div class="case-detail">Before: 18-day manual vetting &rarr; After: 8-day automated cycle</div>
+          <div class="case-impact">Impact: 55% faster | 751 monthly screenings | 1.0 FTE reclaimed</div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Autonomous Failure Management</span>
+            <span class="case-tag">Personal Lead</span>
+          </div>
+          <div class="case-detail">Before: Manual alert triage &rarr; After: Self-routing intelligence</div>
+          <div class="case-impact">Impact: 4,500+ alerts monthly | Zero human triage</div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Predictive Sentiment Analytics</span>
+            <span class="case-tag">Prompt + Change Lead</span>
+          </div>
+          <div class="case-detail">Before: Reactive escalation handling &rarr; After: Proactive client outreach</div>
+          <div class="case-impact">Impact: 20K+ emails monthly | 20% fewer escalations</div>
+        </div>
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Dot, ODA &amp; Transformer Bot</span>
+            <span class="case-tag">Contributing Member</span>
+          </div>
+          <div class="case-detail">Before: Manual client query support &rarr; After: RAG-powered self-service</div>
+          <div class="case-impact">Impact: 16% to 3% case reduction | 4+ FTE freed | 24 initiatives</div>
+        </div>
+      </div>
+
+      <div class="section-title">Capability Stack</div>
+      <div class="stack-container">
+        <div class="stack-row">
+          <div class="stack-label">&#9642; AI / LLM Stack</div>
+          <div class="stack-value">Vertex AI &middot; Gemini &middot; RAG &middot; Prompt Engineering &middot; Conversational AI &middot; Predictive Sentiment &middot; Agentic Workflows</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">&#9642; Cloud &amp; Data</div>
+          <div class="stack-value">Python &middot; SQL &middot; BigQuery &middot; ChromaDB &middot; GCP &middot; Looker &middot; Power BI &middot; Data Analytics &middot; BI</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">&#9642; Product Management</div>
+          <div class="stack-value">Product Strategy &middot; Roadmapping &middot; User Adoption &middot; KPI Tracking &middot; Cross-Functional Leadership</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">&#9642; Methodologies</div>
+          <div class="stack-value">Lean Six Sigma &middot; Agile/Scrum &middot; LUMA Design Thinking &middot; Change Management &middot; Continuous Improvement</div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-label">&#9642; Financial Domain</div>
+          <div class="stack-value">OTC Markets &middot; Reference Data &middot; KYC/AML &middot; SOX &middot; Trade Failure Management &middot; Regulatory Reporting</div>
+        </div>
+      </div>
+
+      <div class="section-title">Recognition</div>
+      <div class="recog-container">
+        <div class="recog-item"><span class="recog-bullet">&#9733;</span> Times of India Feature &mdash; InspireTech 2025 (Enterprise AI &amp; Automation)</div>
+        <div class="recog-item"><span class="recog-bullet">&#9733;</span> Highflyer Award &mdash; OSTTRA Q1 2026 (Looker &amp; Auto-Triaging Impact)</div>
+        <div class="recog-item"><span class="recog-bullet">&#9733;</span> Trendsetter Award &mdash; OSTTRA Q1 2025 (SOX Compliance Automation)</div>
+        <div class="recog-item"><span class="recog-bullet">&#9733;</span> 1st Prize &mdash; LUMA Design Thinking Challenge, Protiviti 2023</div>
+        <div class="recog-item"><span class="recog-bullet">&#9733;</span> Multiple Quarterly Spot Awards &mdash; OSTTRA 2024&ndash;2026</div>
+      </div>
+
+      <div class="edu-footer">
+        <div class="edu-item"><strong>PGPM Finance &amp; Analytics</strong>, IBS Gurgaon (CGPA 9.0/10, 2024)</div>
+        <div class="edu-item"><strong>MBA Finance &amp; Analytics</strong>, IFHE Hyderabad (CGPA 8.75/10, 2024)</div>
+        <div class="edu-item"><strong>BCA Computer Science</strong>, BIT Mesra (CGPA 7.52/10, 2020)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
