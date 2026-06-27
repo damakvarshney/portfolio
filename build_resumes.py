@@ -676,7 +676,7 @@ ats_html_content = """<!DOCTYPE html>
 
   <div class="section-title">SUMMARY</div>
   <div class="summary-text">
-    AI Product Manager with 2+ years driving enterprise AI automation at OSTTRA, a KKR portfolio company. Architected and contributed to AI systems processing 200,000+ monthly cases with &gt;99% routing accuracy. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users. Expertise spans Vertex AI, RAG pipelines, predictive sentiment analytics, financial services automation, and process reengineering. Combines technical build depth, financial-services domain expertise, and enterprise adoption discipline.
+    AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company. Architected AI systems processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering sentiment analytics across 20,000+ client communications. Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Change Management, and rigorous adoption discipline. Expertise spans Vertex AI, RAG pipelines, Prompt Engineering, financial-services automation, and process reengineering.
   </div>
 
   <div class="section-title">WORK EXPERIENCE</div>
@@ -694,8 +694,8 @@ ats_html_content = """<!DOCTYPE html>
       <li>Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with &gt;99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs.</li>
       <li>Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability.</li>
       <li>Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention.</li>
+      <li>Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%.</li>
       <li>Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives.</li>
-      <li>Part of the team that delivered AI-powered case management with predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; supported deployment of live call transcription and Salesforce summary glances accelerating resolution 40%.</li>
     </ul>
   </div>
 
@@ -749,6 +749,7 @@ ats_html_content = """<!DOCTYPE html>
   <div class="skills-category"><span class="skills-label">AI and LLM Stack:</span> Vertex AI, Google Gemini, Generative AI (GenAI), RAG Pipelines, Vector Embeddings, Prompt Engineering, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT</div>
   <div class="skills-category"><span class="skills-label">Cloud and Data:</span> Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering</div>
   <div class="skills-category"><span class="skills-label">Product and Tools:</span> Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration</div>
+  <div class="skills-category"><span class="skills-label">Product Management:</span> Product Strategy, User Adoption, Feature Prioritization, Roadmapping, Product Discovery, Go-to-Market Strategy, Cross-Functional Leadership, Stakeholder Management</div>
   <div class="skills-category"><span class="skills-label">Methodologies:</span> Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement</div>
   <div class="skills-category"><span class="skills-label">Financial Domain:</span> OTC Markets, Reference Data, KYC/AML, SOX Compliance, Trade Failure Management, Financial Services Infrastructure, Credit Analysis</div>
 
@@ -886,11 +887,10 @@ def build_docx(output_path):
     p_sum = doc.add_paragraph()
     format_spacing(p_sum, 0, 4)
     run_sum = p_sum.add_run(
-        "AI Product Manager with 2+ years driving enterprise AI automation at OSTTRA, a KKR portfolio company. "
-        "Architected and contributed to AI systems processing 200,000+ monthly cases with >99% routing accuracy. "
-        "Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users. Expertise "
-        "spans Vertex AI, RAG pipelines, predictive sentiment analytics, financial services automation, and "
-        "process reengineering. Combines technical build depth, financial-services domain expertise, and enterprise adoption discipline."
+        "AI Product Manager with 2+ years driving enterprise AI transformation at OSTTRA, a KKR portfolio company. "
+        "Architected AI systems processing 200,000+ monthly cases with >99% routing accuracy and designed prompts powering sentiment analytics across 20,000+ client communications. "
+        "Delivered 20+ FTE in annualized savings and 80%+ adoption across 1,500+ enterprise users through Product Strategy, Change Management, and rigorous adoption discipline. "
+        "Expertise spans Vertex AI, RAG pipelines, Prompt Engineering, financial-services automation, and process reengineering."
     )
     run_sum.font.size = Pt(9.5)
 
@@ -917,8 +917,8 @@ def build_docx(output_path):
         "Spearheaded Generative AI-powered Auto-Triaging ecosystem processing 200,000+ monthly cases with >99% routing accuracy; reclaimed 4.9 FTEs through Process Automation and scaled duplicate flagging to 15,206 monthly checks recovering 3.88 additional FTEs",
         "Led intelligent KYC and onboarding automation through API Integration with reference registry systems executing 751 monthly compliance screenings; shortened cycle time 55% from 18 to 8 days, reclaimed 1.0 FTE, and established 100% audit traceability",
         "Engineered autonomous failure management for 4,500+ monthly complex system alerts including LimitHub and TOC FIX disconnections; eliminated reactive triage burden by routing non-actionable items without human intervention",
-        "Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives",
-        "Part of the team that delivered AI-powered case management with predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; supported deployment of live call transcription and Salesforce summary glances accelerating resolution 40%"
+        "Designed AI prompts and led change management for predictive sentiment analytics across 20,000+ client emails on MarkitWire and TriResolve; engineered dual-category classification (positive, negative, neutral) for Client Services and Product, enabling proactive client outreach before escalation accelerating resolution 40% and decreasing escalations 20%",
+        "Contributed to the design and rollout of Dot, ODA, and Transformer Bot, RAG-based Conversational AI assistants powered by Vertex AI; supported the team that cut routine client information cases from 16% to 3%, freed 4+ FTE annually, and deployed across 24 knowledge initiatives"
     ]
     for b in bullets_job1:
         pb = doc.add_paragraph(style='List Bullet')
@@ -1019,6 +1019,7 @@ def build_docx(output_path):
         ("AI and LLM Stack: ", "Vertex AI, Google Gemini, Generative AI (GenAI), RAG Pipelines, Vector Embeddings, Prompt Engineering, Conversational AI, Predictive Sentiment Analysis, Agentic Workflows, LLM-Powered Automation, ChatGPT"),
         ("Cloud and Data: ", "Python, SQL, Google BigQuery, ChromaDB, Google Cloud Platform (GCP), Looker Studio, Power BI, Data Analytics, Business Intelligence, Data Engineering"),
         ("Product and Tools: ", "Salesforce (Administration, Dashboards, Case Management, Custom Fields), Jira, Confluence, Google AppSheet, Google Apps Script, REST APIs, API Integration"),
+        ("Product Management: ", "Product Strategy, User Adoption, Feature Prioritization, Roadmapping, Product Discovery, Go-to-Market Strategy, Cross-Functional Leadership, Stakeholder Management"),
         ("Methodologies: ", "Lean Six Sigma, Agile/Scrum, LUMA Design Thinking, Process Reengineering, Change Management, Stakeholder Enablement, Continuous Improvement"),
         ("Financial Domain: ", "OTC Markets, Reference Data, KYC/AML, SOX Compliance, Trade Failure Management, Financial Services Infrastructure, Credit Analysis")
     ]
